@@ -3,7 +3,7 @@
         <div class="header-contact"></div>
         <div class="flex justify-center w-11/12 m-auto">
             <div class="w-7/12 mt-4">
-                <p class="text-2xl font-bold">Contact us</p>
+                <p class="text-3xl font-bold Acme">Contact us</p>
                 <p class="text-base ml-5">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quasi, id tempore aperiam est odio dignissimos voluptatum esse dolore dolor natus error, vitae ipsam animi eligendi necessitatibus atque dicta sunt.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quasi, id tempore aperiam est odio dignissimos voluptatum esse dolore dolor natus error, vitae ipsam animi eligendi necessitatibus atque dicta sunt.

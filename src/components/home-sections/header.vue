@@ -12,7 +12,7 @@
         </div>
         <div class="flex justify-center items-center pr-6">
             <img src="../../assets/logo.png" class="w-24" alt="">
-            <p class="font-bold">AFAM TREAD</p>
+            <p class="font-bold Acme">AFAM TREAD</p>
         </div>
     </nav>
     <div class="flex w-full py-9 px-16 justify-between items-center">

@@ -1,5 +1,6 @@
 <template>
     <div id="bg" class="w-10/12 rounded-2xl bg-gray-400 m-auto">
+        <p class="text-3xl font-bold text-center mb-6 text-white -mb-8 Acme">Our characteristics</p>
         <div class="grid grid-cols-5 my-10 mx-4">
             <div class="w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
                 <div class="blur-box "></div>
@@ -7,7 +8,7 @@
                 <div class="grid justify-items-center z-10">
                     <div class="rounded-lg w-14 h-14 grid justify-items-center relative content-center">
                         <div class="sm-box"></div>
-                        <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-500">
+                        <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-400">
                             <img src="../../assets/svg/tree.svg" class="img " alt="">
                         </div>
                     </div>
@@ -15,13 +16,13 @@
                 </div>
                 
             </div>           
-            <div class="w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
+            <div class="xl:mt-8 w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
                 <div class="blur-box "></div>
                 <div class="solid-box"></div>
                 <div class="grid justify-items-center z-10">
                     <div class="rounded-lg w-14 h-14 grid justify-items-center relative content-center">
                         <div class="sm-box"></div>
-                        <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-500">
+                        <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-400">
                             <img src="../../assets/svg/1.svg" class="img " alt="">
                         </div>
                     </div>
@@ -29,13 +30,13 @@
                 </div>
                 
             </div>           
-            <div class="w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
+            <div class="xl:mt-12 w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
                 <div class="blur-box "></div>
                 <div class="solid-box"></div>
                 <div class="grid justify-items-center z-10">
                     <div class="rounded-lg w-14 h-14 grid justify-items-center relative content-center">
                         <div class="sm-box"></div>
-                        <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-500">
+                        <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-400">
                             <img src="../../assets/svg/earth-africa-solid.svg" class="img " alt="">
                         </div>
                     </div>
@@ -43,13 +44,13 @@
                 </div>
                 
             </div>           
-            <div class="w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
+            <div class="xl:mt-8 w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
                 <div class="blur-box "></div>
                 <div class="solid-box"></div>
                 <div class="grid justify-items-center z-10">
                     <div class="rounded-lg w-14 h-14 grid justify-items-center relative content-center">
                         <div class="sm-box"></div>
-                        <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-500">
+                        <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-400">
                             <img src="../../assets/svg/user.svg" class="img " alt="">
                         </div>
                     </div>
@@ -63,7 +64,7 @@
                 <div class="grid justify-items-center z-10">
                     <div class="rounded-lg w-14 h-14 grid justify-items-center relative content-center">
                         <div class="sm-box"></div>
-                        <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-500">
+                        <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-400">
                             <img src="../../assets/svg/thumbs-up-regular.svg" class="img " alt="">
                         </div>
                     </div>
@@ -117,7 +118,7 @@
     width: 120%;
     height: 120%;
     /* From https://css.glass */
-    background: rgba(20, 188, 255, 0.308);
+    background: #47b5ff49;
     border-radius: 0.5rem;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.1px);

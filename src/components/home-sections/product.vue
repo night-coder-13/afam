@@ -18,25 +18,30 @@
             </div>
         </div>
         <div class="w-4/12">
-            <div class="grid justify-center p-4 overflow-y-scroll h-full">
-                <div class="grid mt-4 grid-cols-1 justify-items-center items-center ">
-                    <img src="../../assets/img/1-27.jpg" class="w-24 h-24 rounded-full" alt="">
-                    <p class="mt-4 text-lg">lorme ipsum sit</p>
+            <div class="grid justify-center px-4 overflow-y-scroll h-full">
+                <div class="flex mt-4 justify-center shadow-md p-3 rounded-md bg-gray-100">
+                    <img src="../../assets/img/1-26.jpg" class="w-24 h-24 rounded-xl" alt="">
+                    <div class="ml-2">
+                        <p class="mt-4 text-lg">lorme ipsum sit</p>
+                        <p class="text-base text-gray-500 ml-2">view 185 <i class="ti-eye"></i></p>
+                    </div>
+                   
                 </div>
-                
-                <div class="grid mt-4 grid-cols-1 justify-items-center items-center ">
-                    <img src="../../assets/img/1-27.jpg" class="w-24 h-24 rounded-full" alt="">
-                    <p class="mt-4 text-lg">lorme ipsum sit</p>
+                <div class="flex mt-4 justify-center p-3 rounded-md bg-gray-100">
+                    <img src="../../assets/img/1-27.jpg" class="w-24 h-24 rounded-xl" alt="">
+                    <div class="ml-2">
+                        <p class="mt-4 text-lg">lorme ipsum sit</p>
+                        <p class="text-base text-gray-500 ml-2">view 185 <i class="ti-eye"></i></p>
+                    </div>
+                   
                 </div>
-                
-                <div class="grid mt-4 grid-cols-1 justify-items-center items-center ">
-                    <img src="../../assets/img/1-27.jpg" class="w-24 h-24 rounded-full" alt="">
-                    <p class="mt-4 text-lg">lorme ipsum sit</p>
-                </div>
-                
-                <div class="grid mt-4 grid-cols-1 justify-items-center items-center ">
-                    <img src="../../assets/img/1-27.jpg" class="w-24 h-24 rounded-full" alt="">
-                    <p class="mt-4 text-lg">lorme ipsum sit</p>
+                <div class="flex mt-4 justify-center p-3 rounded-md bg-gray-100">
+                    <img src="../../assets/img/1-29.jpg" class="w-24 h-24 rounded-xl" alt="">
+                    <div class="ml-2">
+                        <p class="mt-4 text-lg">lorme ipsum sit</p>
+                        <p class="text-base text-gray-500 ml-2">view 185 <i class="ti-eye"></i></p>
+                    </div>
+                   
                 </div>
                 
             </div>
@@ -63,5 +68,6 @@
     -webkit-mask-image: url(../../assets/slider-stone-house-11.png);
     mask-image: url(../../assets/slider-stone-house-11.png);
     mask-size: 100% 100%;
+    filter: blur(5px);
 }
 </style>
