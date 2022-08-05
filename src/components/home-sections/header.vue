@@ -1,20 +1,6 @@
 <template>
 <header class="w-full">
-    <nav class="flex w-full px-10 py-3 justify-between text-lg font-medium">
-        <div>
-            <ul class="flex ">
-                <li class="px-2 m-1">Home</li>
-                <li class="px-2 m-1">Products</li>
-                <li class="px-2 m-1">Contact us</li>
-                <li class="px-2 m-1">About us</li>
-                <li class="px-2 m-1">Catalog</li>
-            </ul>
-        </div>
-        <div class="flex justify-center items-center pr-6">
-            <img src="../../assets/logo.png" class="w-24" alt="">
-            <p class="font-bold Acme">AFAM TREAD</p>
-        </div>
-    </nav>
+   <Hed />
     <div class="flex w-full py-9 px-16 justify-between items-center">
         <div class="p-4 lg:w-7/12 w-6/12">
             <small class="text-base -mb-1 text-gray-500">Lorem ipsum dolor</small>
@@ -40,8 +26,8 @@
 </header>
 </template>
 
-<script>
-
+<script setup>
+import Hed from './hed.vue'
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

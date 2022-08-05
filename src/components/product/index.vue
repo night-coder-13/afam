@@ -1,12 +1,121 @@
 <template>
     <Header />
-    test
+        <div class="w-full">
+            <div class="w-full h-52 overflow-hidden">
+                <div>
+                    <img src="../../assets/img/21.jpg" class="w-full -mt-80" alt="">
+                </div>
+            </div>
+            <div class="flex">
+                <div class="w-5/12 p-5">
+                    <div>
+                        <img src="../../assets/img/21.jpg" class="w-10/12 m-auto rounded-xl shadow-md -mt-32" alt="">
+                    </div>
+                    
+                </div>
+                <div class="w-7/12">
+                    <div class="mt-8 ml-5">
+                        <button class="px-5 py-1 text-base text-white rounded-xl shadow bg-blue-400 mx-1">slab</button>
+                        <button class="px-5 py-1 text-base text-white rounded-xl shadow bg-blue-400 mx-1">til</button>
+                    </div>
+                    <table class=" mt-4">
+                        <thead>
+                            <tr class="bg-gray-200 p-1 ">
+                            <th class="rounded-tl-lg">Song</th>
+                            <th>Artist</th>
+                            <th class="rounded-tr-lg">Year</th>
+                            </tr>
+                        </thead>
+                        <tbody >
+                            <tr class="">
+                            <td class="px-3 py-2">The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+                            <td class="px-3 py-2">Malcolm Lockyer</td>
+                            <td class="px-3 py-2">1961</td>
+                            </tr>
+                            <tr class="">
+                            <td class="px-3 py-2">Witchy Woman</td>
+                            <td class="px-3 py-2">The Eagles</td>
+                            <td class="px-3 py-2">1972</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold mb-2">description</h4>
+                        <div class="text-base ml-4 text-gray-600">
+                            <p class="mb-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia accusamus nihil esse repellat quia fuga, nobis iusto vitae aut nemo consectetur tempora reprehenderit error, possimus explicabo! Assumenda tempore modi repudiandae.</p>
+                            <p class=" ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam incidunt aperiam vel maxime ipsa fuga dolores veritatis hic eius numquam dolore sed ducimus, eligendi excepturi architecto. Quasi, assumenda! Reprehenderit, commodi.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div><!---->
+            <div class="flex mt-16">
+                <div class="w-4/12 m-auto">
+                    <p class="text-xl font-bold mb-10">Usage :</p>
+                    <div class="grid grid-cols-3 justify-items-center text-center">
+                        <div>
+                            <!-- <img src="../../assets/svg/use1.svg" class="w-14 h-14 m-auto" alt=""> -->
+                            <p class="text-base text-gray-500 font-bold mt-2">Lorme ipsum site</p>
+                        </div>
+                        <div>
+                            <!-- <img src="../../assets/svg/use2.svg" class="w-14 h-14 m-auto" alt=""> -->
+                            <p class="text-base text-gray-500 font-bold mt-2">Lorme ipsum site</p>
+                        </div>
+                        <div>
+                            <!-- <img src="../../assets/svg/use3.svg" class="w-14 h-14 m-auto" alt=""> -->
+                            <p class="text-base text-gray-500 font-bold mt-2">Lorme ipsum site</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-8/12 lg:w-7/12 md:w-9/12 m-auto ">
+                    <p class="text-xl font-bold mb-2">Stone Analysis :</p>
+                    <table class="ml-3 mt-8">
+                        <thead>
+                            <tr class="bg-gray-200 p-1 first-row-analysis ">
+                            <th class="rounded-tl-lg">Optimal Rate	</th>
+                            <th>Porosity</th>
+                            <th>Density</th>
+                            <th>Abrasion Resistance	</th>
+                            <th>Pushing Resistance	</th>
+                            <th class="rounded-tr-lg">Water Absorption</th>
+                            </tr>
+                        </thead>
+                        <tbody >
+                            <tr class="">
+                            <td class="px-3 py-2">Min</td>
+                            <td class="px-3 py-2">Petty</td>
+                            <td class="px-3 py-2">2.16</td>
+                            <td class="px-3 py-2">2</td>
+                            <td class="px-3 py-2">500</td>
+                            <td class="px-3 py-2">0.3</td>
+                            </tr>
+                            <tr class="">
+                            <td class="px-3 py-2">Max</td>
+                            <td class="px-3 py-2">2.5</td>
+                            <td class="px-3 py-2">6.16</td>
+                            <td class="px-3 py-2">2</td>
+                            <td class="px-3 py-2">1500</td>
+                            <td class="px-3 py-2">7.5</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+           
+        </div>
+
+    <Footer />
 </template>
 
 <script setup>
-import Header from '../home-sections/header.vue'
+import Header from '../home-sections/hed.vue'
+import Footer from '../home-sections/footer.vue'
+
 </script>
 
-<style>
-
+<style scoped>
+.first-row-analysis th{
+    padding: 0 10px;
+}
 </style>

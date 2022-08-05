@@ -13,7 +13,10 @@ import { createRouter, createWebHistory } from 'vue-router'
       },
       {
         path: '/product', name: 'Product', component: () => import('./components/product/index.vue')
-      }
+      },
+      {
+        path: '/archive', name: 'Archive', component: () => import('./components/archive/index.vue')
+      },
     ]
     const router = createRouter({
         history : createWebHistory(),
