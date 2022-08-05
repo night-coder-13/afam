@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+afam.zip
 /src/assets/components
 /dist
 

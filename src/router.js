@@ -10,6 +10,9 @@ import { createRouter, createWebHistory } from 'vue-router'
       },
       {
         path: '/', name: 'Home', component: () => import('./components/home.vue')
+      },
+      {
+        path: '/product', name: 'Product', component: () => import('./components/product/index.vue')
       }
     ]
     const router = createRouter({
