@@ -17,6 +17,9 @@ import { createRouter, createWebHistory } from 'vue-router'
       {
         path: '/archive', name: 'Archive', component: () => import('./components/archive/index.vue')
       },
+      {
+        path: '/about', name: 'About', component: () => import('./components/about/index.vue')
+      },
     ]
     const router = createRouter({
         history : createWebHistory(),
