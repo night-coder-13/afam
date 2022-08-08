@@ -2,11 +2,11 @@
     <nav class="flex w-full px-10 py-3 justify-between text-lg font-medium">
         <div>
             <ul class="flex ">
-                <li class="px-2 m-1">Home</li>
-                <li class="px-2 m-1">Products</li>
-                <li class="px-2 m-1">Contact us</li>
-                <li class="px-2 m-1">About us</li>
-                <li class="px-2 m-1">Catalog</li>
+                <router-link class="px-2 m-1" :to="{name : 'Home'}">Home</router-link>
+                <!-- <router-link :to="{name : 'Product'}"></router-link> -->
+                <!-- <router-link :to="{name : 'ContactUs'}"></router-link> -->
+                <router-link class="px-2 m-1" :to="{name : 'About'}">About us</router-link>
+                <!-- <router-link :to="{name : 'Catalog'}">Catalog</router-link> -->
             </ul>
         </div>
         <div class="flex justify-center items-center pr-6">

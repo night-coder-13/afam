@@ -1,8 +1,8 @@
 <template>
     <div class="py-24 px-16 my-10 w-full section-coop">
-        <div class="flex items-center relative">
+        <div class="flex flex-col lg:flex-row items-center relative">
             <img src="../../assets/quotes-right.svg" class="absolute -top-36 w-32" alt="">
-            <div class="w-7/12 text-white">
+            <div class="w-full lg:w-7/12 text-white">
                 <h2 class="text-3xl font-bold Acme">Cope stone</h2>
                 <p class="text-base ml-3 mt-2">Another name is Coop stone, block stone. Cope stone does not have a specific type in terms of gender, and all types of stones that are extracted from the mine are initially in the form of cope.
                     Therefore, coupe stones can be made of granite, marble and travertine. But the classification of all kinds of Kop stones is done based on its size and quality. In this category, there are a total of three types of Kop stones:
@@ -17,8 +17,8 @@
                     The dimensions of three cup stones are smaller than two cup stones. In fact, all three three-cup stones are equal to one single-cup stone. Therefore, in transportation, three pieces of stone, three cups, are transported on one trailer.</p>
                     
             </div>
-            <div class="w-5/12">
-                <img src="../../assets/img/stone.jpg" class="w-11/12 rounded-xl shadow m-auto" alt="">
+            <div class="w-full lg:w-5/12">
+                <img src="../../assets/img/stone.jpg" class="w-11/12 rounded-xl shadow m-auto mt-5 lg:mt-0" alt="">
             </div>
         </div>
     </div>

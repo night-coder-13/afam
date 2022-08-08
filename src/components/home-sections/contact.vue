@@ -1,8 +1,8 @@
 <template>
     <div class="w-full my-20">
         <div class="header-contact"></div>
-        <div class="flex justify-center w-11/12 m-auto">
-            <div class="w-7/12 mt-4">
+        <div class="flex lg:flex-row flex-col justify-center w-11/12 m-auto">
+            <div class="w-full lg:w-7/12 mt-4 order-2 lg:order-none">
                 <p class="text-3xl font-bold Acme">Contact us</p>
                 <p class="text-base ml-5">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quasi, id tempore aperiam est odio dignissimos voluptatum esse dolore dolor natus error, vitae ipsam animi eligendi necessitatibus atque dicta sunt.
@@ -12,15 +12,15 @@
                     031-45461111 | 031-45462222 | 09902774517 <i class="text-xl ti-mobile"></i>
                 </p>
             </div>
-            <div class="w-4/12 ml-10 relative">
-                <form class="w-9/12 p-2 absolute -top-24 m-auto h-96 rounded-xl shadow-md bg-gray-50" action="">
+            <div class="w-full lg:w-4/12 lg:ml-10 relative order-1 lg:order-none">
+                <form class="w-9/12 p-2 lg:absolut -mt-24 mb-8 m-auto h-96 rounded-xl shadow-md bg-gray-50" action="">
                     <div class="grid my-4 mx-2">
                         <label for="">Name</label>
-                        <input type="text" placeholder="Name" required class="rounded-lg px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
+                        <input type="text" placeholder="Name" required class="w-11/12 rounded-lg px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
                     </div>
                     <div class="grid my-4 mx-2">
                         <label for="">Email</label>
-                        <input type="email" placeholder="Email" required class="rounded-lg px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
+                        <input type="email" placeholder="Email" required class="w-11/12 rounded-lg px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
                     </div>
                     <div class="grid my-4 mx-2">
                         <label for="">Masseage</label>

@@ -6,14 +6,14 @@
                     <img src="../../assets/img/21.jpg" class="w-full -mt-80" alt="">
                 </div>
             </div>
-            <div class="flex">
-                <div class="w-5/12 p-5">
+            <div class="flex md:flex-row flex-col">
+                <div class="w-full md:w-5/12 p-5">
                     <div>
-                        <img src="../../assets/img/1-1.jpg" class="w-10/12 m-auto rounded-xl shadow-md -mt-32" alt="">
+                        <img src="../../assets/img/1-1.jpg" class="w-9/12 md:w-10/12 m-auto rounded-xl shadow-md -mt-32" alt="">
                     </div>
                     
                 </div>
-                <div class="w-7/12">
+                <div class="w-full md:w-7/12 px-6 md:px-0">
                     
                     <h4 class="text-2xl font-bold Acme mt-5 mb-2">Trevanter</h4>
                     <div class="text-base ml-4 text-gray-600">

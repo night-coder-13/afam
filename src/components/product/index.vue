@@ -6,14 +6,14 @@
                     <img src="../../assets/img/21.jpg" class="w-full -mt-80" alt="">
                 </div>
             </div>
-            <div class="flex">
-                <div class="w-5/12 p-5">
+            <div class="flex md:flex-row flex-col">
+                <div class="w-full md:w-5/12 p-5">
                     <div>
                         <img src="../../assets/img/21.jpg" class="w-10/12 m-auto rounded-xl shadow-md -mt-32" alt="">
                     </div>
                     
                 </div>
-                <div class="w-7/12">
+                <div class="w-full md:w-7/12 px-6 md:px-0">
                     <div class="mt-8 ml-5">
                         <button class="px-5 py-1 text-base text-white rounded-xl shadow bg-blue-400 mx-1">slab</button>
                         <button class="px-5 py-1 text-base text-white rounded-xl shadow bg-blue-400 mx-1">til</button>
@@ -49,25 +49,25 @@
                     </div>
                 </div>
             </div><!---->
-            <div class="flex mt-16">
-                <div class="w-4/12 m-auto">
+            <div class="flex md:flex-row flex-col mt-16">
+                <div class="w-10/12 md:w-4/12 m-auto">
                     <p class="text-xl font-bold mb-10">Usage :</p>
                     <div class="grid grid-cols-3 justify-items-center text-center">
                         <div>
-                            <!-- <img src="../../assets/svg/use1.svg" class="w-14 h-14 m-auto" alt=""> -->
+                            <img src="../../assets/svg/p1.svg" class="w-14 h-14 m-auto" alt="">
                             <p class="text-base text-gray-500 font-bold mt-2">Lorme ipsum site</p>
                         </div>
                         <div>
-                            <!-- <img src="../../assets/svg/use2.svg" class="w-14 h-14 m-auto" alt=""> -->
+                            <img src="../../assets/svg/p2.svg" class="w-14 h-14 m-auto" alt="">
                             <p class="text-base text-gray-500 font-bold mt-2">Lorme ipsum site</p>
                         </div>
                         <div>
-                            <!-- <img src="../../assets/svg/use3.svg" class="w-14 h-14 m-auto" alt=""> -->
+                            <img src="../../assets/svg/p3.svg" class="w-14 h-14 m-auto" alt="">
                             <p class="text-base text-gray-500 font-bold mt-2">Lorme ipsum site</p>
                         </div>
                     </div>
                 </div>
-                <div class="w-8/12 lg:w-7/12 md:w-9/12 m-auto ">
+                <div class="w-full px-2 mt-6 md:mt-0 md:w-8/12 lg:w-7/12 md:w-9/12 m-auto ">
                     <p class="text-xl font-bold mb-2">Stone Analysis :</p>
                     <table class="ml-3 mt-8">
                         <thead>

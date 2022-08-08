@@ -1,8 +1,8 @@
 <template>
-   <div class="w-full px-12 my-32">
+   <div class="w-full px-8 lg:px-12 my-28 md:my-32">
     <!-- <p class="text-2xl font-bold text-center mb-6">Blog</p> -->
-    <div class="flex items-center">
-        <div class="w-4/12">
+    <div class="flex flex-col lg:flex-row items-center">
+        <div class="w-full md:w-6/12 lg:w-4/12">
             <div class="blog-title flex justify-center items-center">
                 <div class="w-6/12 m-auto relative">
                     <h3 class="text-3xl font-bold Acme">Blog</h3>
@@ -12,8 +12,8 @@
                 </div>
             </div>
         </div>
-        <div class="grid grid-cols-3 w-8/12 m-auto">
-            <div class="rounded-xl shadow-md mx-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-8/12 m-auto">
+            <div class="rounded-xl shadow-md mx-4 mt-4">
                 <div class="w-full h-44 overflow-hidden">
                     <img src="../../assets/img/images.jpg" class="w-full rounded-t-xl" alt="">
                 </div>
@@ -28,7 +28,7 @@
                 </div>
             </div>
             
-            <div class="rounded-xl shadow-md mx-4">
+            <div class="rounded-xl shadow-md mx-4 mt-4">
                 <div class="w-full h-44 overflow-hidden">
                     <img src="../../assets/img/21.jpg" class="w-full rounded-t-xl" alt="">
                 </div>
@@ -43,7 +43,7 @@
                 </div>
             </div>
             
-            <div class="rounded-xl shadow-md mx-4">
+            <div class="rounded-xl shadow-md mx-4 mt-4">
                 <div class="w-full h-44 overflow-hidden">
                     <img src="../../assets/img/s_limestone_6272.jpg" class="w-full rounded-t-xl" alt="">
                 </div>
