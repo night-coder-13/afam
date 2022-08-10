@@ -16,7 +16,7 @@
                 </div>
                 
             </div>           
-            <div class="xl:mt-8 w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
+            <div class="lg:mt-8 w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
                 <div class="blur-box "></div>
                 <div class="solid-box"></div>
                 <div class="grid justify-items-center z-10">
@@ -30,7 +30,7 @@
                 </div>
                 
             </div>           
-            <div class="xl:mt-12 w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
+            <div class="lg:mt-12 w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
                 <div class="blur-box "></div>
                 <div class="solid-box"></div>
                 <div class="grid justify-items-center z-10">
@@ -44,7 +44,7 @@
                 </div>
                 
             </div>           
-            <div class="xl:mt-8 w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
+            <div class="lg:mt-8 w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
                 <div class="blur-box "></div>
                 <div class="solid-box"></div>
                 <div class="grid justify-items-center z-10">

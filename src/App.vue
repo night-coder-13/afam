@@ -1,5 +1,5 @@
 <template>
-<div class="w-full">
+<div class="w-full" id="body">
   <router-view>  </router-view>
 </div>
   

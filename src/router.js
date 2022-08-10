@@ -23,6 +23,17 @@ import { createRouter, createWebHistory } from 'vue-router'
     ]
     const router = createRouter({
         history : createWebHistory(),
-        routes: routes
+        routes: routes,
+        scrollBehavior (to) {
+          if (to.hash) {
+             return { el: to.hash }
+          }
+          return new Promise((resolve) => {
+            setTimeout(() => {
+              resolve({ left: 0, top: 0 })
+            }, 100)
+          })
+        }
     })
+    
     export default router
