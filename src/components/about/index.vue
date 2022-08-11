@@ -3,25 +3,25 @@
         <div class="w-full">
             <div class="w-full h-52 overflow-hidden">
                 <div>
-                    <img src="../../assets/img/male-worker-with-bulldozer-sand-quarry.jpg" class="w-full -mt-96" alt="">
+                    <img src="../../assets/img/male-worker-with-bulldozer-sand-quarry.jpg" class="w-full md:-mt-96 " alt="">
                 </div>
             </div>
             <div class="w-10/12 m-auto">
                 <p class="text-center font-bold text-3xl Acme mb-4 mt-8">About us</p>
-                <div class="flex">
-                    <p class="w-8/12 ml-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut tortor pretium viverra suspendisse potenti nullam. Et molestie ac feugiat sed lectus. Non nisi est sit amet facilisis magna. Dignissim diam quis enim lobortis scelerisque fermentum. Odio ut enim blandit volutpat maecenas volutpat. Ornare lectus sit amet est placerat in egestas erat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Placerat duis ultricies lacus sed turpis tincidunt id aliquet.</p>
-                    <div class="pl-10 w-4/12">
+                <div class="flex md:flex-row flex-col">
+                        <p class="w-full md:w-8/12 ml-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut tortor pretium viverra suspendisse potenti nullam. Et molestie ac feugiat sed lectus. Non nisi est sit amet facilisis magna. Dignissim diam quis enim lobortis scelerisque fermentum. Odio ut enim blandit volutpat maecenas volutpat. Ornare lectus sit amet est placerat in egestas erat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Placerat duis ultricies lacus sed turpis tincidunt id aliquet.</p>
+                    
+                    <div class="pl-10 w-10/12 md:w-4/12 pt-6 md:pt-0">
                         <p class="text-lg Acme ">Quick access</p>
                         <ul class="ml-2 mt-1">
-                            <li>lorem </li>
-                            <li>lorem ipsum site dolor</li>
-                            <li>lorem ipsum</li>
-                            <li>lorem </li>
+                            <li><button @click="movTo('electronic-commerce')">Electronic Commerce</button> </li>
+                            <li><button @click="movTo('customer-satisfaction')">Customer Satisfaction</button> </li>
+                            <li><button @click="movTo('our-history')">Our history</button> </li>
                         </ul>
                     </div>
 
                 </div>
-                <div>
+                <div id="electronic-commerce">
                     <div class="w-full mt-14">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 2035 722">
                             <defs>
@@ -37,23 +37,23 @@
                     <button class="px-7 py-2 text-sm bg-blue-600 rounded-lg text-white mt-6 ml-10">Read more</button>
                 </div>
             </div>
-            <div class="flex mt-40 w-10/12 m-auto">
-                <div class="w-5/12">
+            <div class="flex md:flex-row flex-col mt-24 md:mt-40 w-10/12 m-auto" id="customer-satisfaction">
+                <div class="w-full md:w-5/12">
                     <img src="../../assets/img/businessmen-handshaking.jpg" class="w-full rounded-xl shadow-md" alt="">
                 </div>
-                <div class="w-7/12 pl-8">
+                <div class="w-full md:w-7/12 pl-8">
                     <h2 class="text-start text-2xl Acme mb-1 mt-8">Customer Satisfaction</h2>
                     <p class="text-gray-600 text-base w-11/12 ml-4 h-56 overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut tortor pretium viverra suspendisse potenti nullam. Et molestie ac feugiat sed lectus. Non nisi est sit amet facilisis magna. Dignissim diam quis enim lobortis scelerisque fermentum. Odio ut enim blandit volutpat maecenas volutpat. Ornare lectus sit amet est placerat in egestas erat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Placerat duis ultricies lacus sed turpis tincidunt id aliquet.</p>
                    <button class="px-7 py-2 text-sm bg-blue-600 rounded-lg text-white mt-6 ml-10">Read more</button>
                 </div>
             </div>
-            <div class="flex mt-40 w-10/12 m-auto">
-                <div class="w-7/12 pl-8">
+            <div class="flex md:flex-row flex-col mt-20 md:mt-40 w-10/12 m-auto" id="our-history">
+                <div class="w-full md:w-7/12 pl-8">
                     <h2 class="text-start text-2xl Acme mb-1 mt-8">Our history</h2>
                     <p class="text-gray-600 text-base w-11/12 ml-4 h-56 overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut tortor pretium viverra suspendisse potenti nullam. Et molestie ac feugiat sed lectus. Non nisi est sit amet facilisis magna. Dignissim diam quis enim lobortis scelerisque fermentum. Odio ut enim blandit volutpat maecenas volutpat. Ornare lectus sit amet est placerat in egestas erat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Placerat duis ultricies lacus sed turpis tincidunt id aliquet.</p>
                    
                 </div>
-                <div class="w-5/12">
+                <div class="w-full md:w-5/12 md:mt-2 mt-7">
                     <img src="../../assets/img/stone.jpg" class="w-full rounded-xl shadow-md rotate-12 history-img" alt="">
                 </div>
             </div>
@@ -65,7 +65,11 @@
 <script setup>
 import Header from '../home-sections/hed.vue'
 import Footer from '../home-sections/footer.vue'
+import {smoothScroll} from '../../scroll'
 
+function movTo(id){
+    smoothScroll(id);
+}
 </script>
 
 <style scoped>

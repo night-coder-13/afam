@@ -1,11 +1,10 @@
 <template>
-    <nav class="flex w-full px-10 py-3 justify-between text-lg font-medium">
+    <nav class="flex w-full px-10 py-3 justify-between text-lg font-medium" id="hed">
         <div>
             <ul class="flex ">
                 <router-link class="px-2 m-1" :to="{name : 'Home'}">Home</router-link>
                 <!-- <router-link :to="{name : 'Product'}"></router-link> -->
-                <!-- <p @click.prevent="Scroll('contact-us')" :to="{}">Contact us</p> -->
-                <router-link @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }">Contact Us</router-link>
+                <router-link class="px-2 m-1" @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }">Contact Us</router-link>
                 <router-link class="px-2 m-1" :to="{name : 'About'}">About us</router-link>
                 <!-- <router-link :to="{name : 'Catalog'}">Catalog</router-link> -->
             </ul>

@@ -47,6 +47,7 @@
                         </div>
                         
                     </div>
+                    
                 </div>
             </div><!---->
             <div class="flex md:flex-row flex-col mt-16">
@@ -101,6 +102,36 @@
                         </tbody>
                     </table>
                 </div>
+            </div>
+            <div class="w-full px-4 lg:w-8/12 m-auto mt-10 relative lg:order-none">
+                <form class="w-full p-2 pb-3 mb-8 m-auto rounded-xl shadow-md bg-gray-50" action="">
+                    <p class="text-lg font-bold mt-2 ml-1">Request registration</p>
+                    <div class="grid md:grid-cols-2 grid-cols-1 ml-2">
+                        <div>
+                            <div class="grid my-4 mx-2">
+                                <label for="">Name</label>
+                                <input type="text" placeholder="Name" required class="w-11/12 rounded-lg px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
+                            </div>
+                            <div class="grid my-4 mx-2">
+                                <label for="">Number</label>
+                                <input type="number" placeholder="Number" required class="w-11/12 rounded-lg px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="grid my-4 mx-2">
+                                <label for="">Email</label>
+                                <input type="email" placeholder="Email" required class="w-11/12 rounded-lg px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
+                            </div>
+                            <div class="grid my-4 mx-2">
+                                <label for="">Discription</label>
+                                <textarea type="text" placeholder="Discription" required class="rounded-lg  px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <button class="ml-10 flex items-center -mt-2 px-5 py-1 text-lg rounded-lg bg-blue-400 text-white">send <img src="../../assets/Untitled-1-Recdovered.svg" class="w-6 mx-2" alt=""></button>
+                </form>
             </div>
            
         </div>

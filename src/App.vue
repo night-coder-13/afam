@@ -1,12 +1,29 @@
 <template>
-<div class="w-full" id="body">
+<div class="w-full" >
   <router-view>  </router-view>
 </div>
-  
+  <div class=" ">
+    <button @click="scrollTop('hed')" :class="upBtn" class="upBtn fixed bottom-8 font-bold right-10 animate__animated animate__slideInUp"><i class="ti-arrow-circle-up text-2xl"></i></button>
+  </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from '@vue/reactivity';
 
+import {smoothScroll} from './scroll'
+
+import 'animate.css';
+const upBtn = ref('')
+window.addEventListener('scroll',()=>{
+  if(window.pageYOffset > 500){
+    upBtn.value='active'
+  }else{
+    upBtn.value = ''
+  }
+})
+function scrollTop(id){
+    smoothScroll(id);
+}
 </script>
 
 <style>
@@ -19,5 +36,11 @@ body{
 .Acme{
   font-family: Volkhov !important;
   /* font-style: italic; */
+}
+.upBtn{
+  display: none;
+}
+.upBtn.active{
+  display: block;
 }
 </style>
