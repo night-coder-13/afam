@@ -1,6 +1,12 @@
 <template>
 <div class="w-full" >
-  <router-view>  </router-view>
+  <!-- <Hed /> -->
+  <router-view v-slot="{ Component , route }" > 
+    <transition name="fade" >
+      <component :is="Component" :key="route.path"></component>
+    </transition>
+    
+  </router-view>
 </div>
   <div class=" ">
     <button @click="scrollTop('hed')" :class="upBtn" class="upBtn fixed bottom-8 font-bold right-10 animate__animated animate__slideInUp"><i class="ti-arrow-circle-up text-2xl"></i></button>
@@ -8,11 +14,20 @@
 </template>
 
 <script setup>
+// import Hed from './components/home-sections/hed.vue'
 import { ref } from '@vue/reactivity';
 
 import {smoothScroll} from './scroll'
 
 import 'animate.css';
+
+import { onMounted } from "vue";
+import AOS from "aos";
+
+onMounted(() => {
+    AOS.init();
+})
+
 const upBtn = ref('')
 window.addEventListener('scroll',()=>{
   if(window.pageYOffset > 500){
@@ -42,5 +57,13 @@ body{
 }
 .upBtn.active{
   display: block;
+}
+.fade-enter-from , .fade-leave-to{
+  background-color: #000;
+  opacity: 0;
+}
+.fade-enter-active , .fade-leave-active{
+  transition: all .3s ease-out;
+  background-color: #000;
 }
 </style>

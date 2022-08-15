@@ -1,17 +1,19 @@
 <template>
-    <Header />
-    <Customer />
-    <Newsletter />
-    <GlobalMarket />
-    <Feature />
-    <Product />
-    <Coop />
-    <Blog />
-    <Contact />
+    <Hed />
+    <Header data-aos="fade-up" />
+    <Customer  data-aos="fade-up" />
+    <Newsletter data-aos="fade-up" />
+    <GlobalMarket data-aos="fade-up" />
+    <Feature data-aos="fade-up" />
+    <Product data-aos="fade-up" />
+    <Coop data-aos="fade-up" />
+    <Blog data-aos="fade-up" />
+    <Contact data-aos="fade-up" />
     <Footer />
 </template>
 
 <script setup>
+import Hed from './home-sections/hed.vue'
 import Header from './home-sections/header.vue'
 import Customer from './home-sections/customer.vue'
 import GlobalMarket from './home-sections/global-market.vue'

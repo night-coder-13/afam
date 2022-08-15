@@ -1,6 +1,6 @@
 <template>
     <Header />
-        <div class="w-full">
+        <div class="w-full" data-aos="fade-up">
             <div class="w-full h-52 overflow-hidden">
                 <div>
                     <img src="../../assets/img/21.jpg" class="w-full -mt-80" alt="">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
             </div><!---->
-            <div class="flex mt-16">
+            <div class="flex mt-16" data-aos="fade-up">
                 <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 w-10/12 md:w-11/12 lg:w-10/12 m-auto">
                     
                     <div v-for="img in imgs" :key="img.a">

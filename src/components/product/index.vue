@@ -1,6 +1,6 @@
 <template>
     <Header />
-        <div class="w-full">
+        <div class="w-full" data-aos="fade-up" id="product">
             <div class="w-full h-52 overflow-hidden">
                 <div>
                     <img src="../../assets/img/21.jpg" class="w-full -mt-80" alt="">

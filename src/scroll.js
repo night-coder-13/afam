@@ -74,6 +74,19 @@ function smoothhScroll(id) {
     }
 }//endif
 }
+
+function CheckScroll(){
+    // const el = document.getElementById(id)
+    if(window.pageYOffset > 200){
+        return 'active'
+    }else{
+        return ''
+    }
+}
+
 export function smoothScroll(id){
     smoothhScroll(id)
+}
+export function checkScroll(){
+    CheckScroll()
 }

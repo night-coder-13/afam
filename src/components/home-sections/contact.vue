@@ -13,7 +13,7 @@
                 </p>
             </div>
             <div class="w-full lg:w-4/12 lg:ml-10 relative order-1 lg:order-none">
-                <form class="w-9/12 p-2 lg:absolut -mt-24 mb-8 m-auto h-96 rounded-xl shadow-md bg-gray-50" action="">
+                <form class="w-9/12 p-2 lg:absolut -mt-24 mb-8 m-auto rounded-xl shadow-md bg-gray-50" action="">
                     <div class="grid my-4 mx-2">
                         <label for="">Name</label>
                         <input type="text" placeholder="Name" required class="w-11/12 rounded-lg px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">

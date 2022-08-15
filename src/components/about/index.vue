@@ -1,6 +1,6 @@
-<template>
+<template  >
     <Header />
-        <div class="w-full">
+        <div class="w-full" :key="$route.path" data-aos="fade-up">
             <div class="w-full h-52 overflow-hidden">
                 <div>
                     <img src="../../assets/img/male-worker-with-bulldozer-sand-quarry.jpg" class="w-full md:-mt-96 " alt="">

@@ -1,7 +1,7 @@
 <template>
     <div id="bg" class="w-10/12 rounded-2xl bg-gray-400 m-auto">
         <p class="text-3xl font-bold text-center mb-6 text-white -mb-8 Acme">Our characteristics</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 justify-items-center my-10 mx-4">
+        <div class="grid grid-cols-2 lg:grid-cols-5 justify-items-center my-10 mx-4">
             <div class="w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
                 <div class="blur-box "></div>
                 <div class="solid-box"></div>

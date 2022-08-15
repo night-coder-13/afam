@@ -1,67 +1,91 @@
 <template>
    <div class="w-full lg:w-10/12 m-auto px-12 my-32">
     <p class="text-3xl font-bold text-center mb-6 Acme">Product</p>
-    <div class="grid grid-cols-2 lg:grid-cols-4">
+    <div class="sm:grid sm:grid-cols-2 lg:grid-cols-4 items product--slider">
       <router-link :to="{name:'Archive'}">
          <div class="box-productimg mx-2 my-3 rounded-xl relative overflow-hidden">
             <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
             <img src="../../assets/img/1-26.jpg" class="h-full w-full" alt="">
          </div>
       </router-link>
-      <router-link :to="{name:'Archive'}">
+      <router-link :to="{name:'Archive'}" class="item--slider">
          <div class="box-productimg relative mx-2 my-3 rounded-xl overflow-hidden">
             <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
             <img src="../../assets/img/1-27.jpg" class="img h-full w-full" alt="">
          </div>
       </router-link>
-      <router-link :to="{name:'Archive'}">
+      <router-link :to="{name:'Archive'}" class="item--slider">
          <div class="box-productimg relative mx-2 my-3 rounded-xl overflow-hidden">
             <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
             <img src="../../assets/img/1-29.jpg" class="img h-full w-full" alt="">
          </div>
       </router-link>
-      <router-link :to="{name:'Archive'}">
+      <router-link :to="{name:'Archive'}" class="item--slider">
          <div class="box-productimg relative mx-2 my-3 rounded-xl overflow-hidden">
             <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
             <img src="../../assets/img/1-26.jpg" class="img h-full w-full" alt="">
          </div>
       </router-link>
-      <router-link :to="{name:'Archive'}">
+      <router-link :to="{name:'Archive'}" class="item--slider">
          <div class="box-productimg mx-2 my-3 rounded-xl relative overflow-hidden">
             <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
             <img src="../../assets/img/1-26.jpg" class="h-full w-full" alt="">
          </div>
       </router-link>
-      <router-link :to="{name:'Archive'}">
+      <router-link :to="{name:'Archive'}" class="item--slider">
          <div class="box-productimg relative mx-2 my-3 rounded-xl overflow-hidden">
             <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
             <img src="../../assets/img/1-27.jpg" class="img h-full w-full" alt="">
          </div>
       </router-link>
-      <router-link :to="{name:'Archive'}">
+      <router-link :to="{name:'Archive'}" class="item--slider">
          <div class="box-productimg relative mx-2 my-3 rounded-xl overflow-hidden">
             <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
             <img src="../../assets/img/1-29.jpg" class="img h-full w-full" alt="">
          </div>
       </router-link>
-      <router-link :to="{name:'Archive'}">
+      <router-link :to="{name:'Archive'}" class="item--slider">
          <div class="box-productimg relative mx-2 my-3 rounded-xl overflow-hidden">
             <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
             <img src="../../assets/img/1-26.jpg" class="img h-full w-full" alt="">
          </div>
       </router-link>
-       
-       
-      
-       
-       
         
     </div>
    </div>
 </template>
 
-<script>
+<script setup>
+import { onMounted } from "@vue/runtime-core";
 
+onMounted(()=>{
+  const slider = document.querySelector('.items');
+let isDown = false;
+let startX;
+let scrollLeft;
+console.log(slider)
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add("active");
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft ;
+  })
+  slider.addEventListener('mouseleave', () =>{
+    isDown = false;
+    slider.classList.remove("active");
+  })
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove("active");
+  })
+  slider.addEventListener('mousemove', (e) =>{
+    if(!isDown) return; 
+    e.preventDefault () ;
+    const x = e.pageX - slider.offsetLeft
+    const walk = (x - startX)* 3;
+    slider.scrollLeft = scrollLeft - walk;
+  })
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -80,5 +104,20 @@
     transform: scale(1.2);
     transition: .7s;
     
+}
+
+@media only screen and (max-width: 500px){
+   .product--slider{
+   display: flex;
+   flex-wrap: nowrap;
+   overflow-x: scroll;
+   scroll-snap-type: x mandatory;
+   scroll-padding: 4px;
+   gap: 0;
+}
+.product--slider .item--slider{
+   flex: 0 0 47%;
+   scroll-snap-align: start;
+}
 }
 </style>
