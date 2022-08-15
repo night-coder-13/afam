@@ -57,34 +57,10 @@
 
 <script setup>
 import { onMounted } from "@vue/runtime-core";
+import {clickScroll} from '../../scroll.js'
 
 onMounted(()=>{
-  const slider = document.querySelector('.items');
-let isDown = false;
-let startX;
-let scrollLeft;
-console.log(slider)
-  slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider.classList.add("active");
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft ;
-  })
-  slider.addEventListener('mouseleave', () =>{
-    isDown = false;
-    slider.classList.remove("active");
-  })
-  slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.classList.remove("active");
-  })
-  slider.addEventListener('mousemove', (e) =>{
-    if(!isDown) return; 
-    e.preventDefault () ;
-    const x = e.pageX - slider.offsetLeft
-    const walk = (x - startX)* 3;
-    slider.scrollLeft = scrollLeft - walk;
-  })
+    clickScroll('.items')
 })
 </script>
 
@@ -108,16 +84,19 @@ console.log(slider)
 
 @media only screen and (max-width: 500px){
    .product--slider{
-   display: flex;
-   flex-wrap: nowrap;
-   overflow-x: scroll;
-   scroll-snap-type: x mandatory;
-   scroll-padding: 4px;
-   gap: 0;
-}
-.product--slider .item--slider{
-   flex: 0 0 47%;
-   scroll-snap-align: start;
-}
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      /* scroll-snap-type: x mandatory; */
+      scroll-padding: 4px;
+      gap: 0;
+   }
+   .product--slider:focus{
+      cursor: grabbing;
+   }
+   .product--slider .item--slider{
+      flex: 0 0 47%;
+      scroll-snap-align: start;
+   }
 }
 </style>

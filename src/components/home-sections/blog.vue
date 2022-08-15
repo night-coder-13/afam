@@ -12,8 +12,8 @@
                 </div>
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-8/12 m-auto">
-            <div class="rounded-xl shadow-md mx-4 mt-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 md:w-8/12 m-auto items--slider">
+            <div class="rounded-xl shadow-md mx-2 mt-4 item--slider">
                 <div class="w-full h-44 overflow-hidden">
                     <img src="../../assets/img/images.jpg" class="w-full rounded-t-xl" alt="">
                 </div>
@@ -28,7 +28,7 @@
                 </div>
             </div>
             
-            <div class="rounded-xl shadow-md mx-4 mt-4">
+            <div class="rounded-xl shadow-md mx-2 mt-4 item--slider">
                 <div class="w-full h-44 overflow-hidden">
                     <img src="../../assets/img/21.jpg" class="w-full rounded-t-xl" alt="">
                 </div>
@@ -43,7 +43,7 @@
                 </div>
             </div>
             
-            <div class="rounded-xl shadow-md mx-4 mt-4">
+            <div class="rounded-xl shadow-md mx-2 mt-4 item--slider">
                 <div class="w-full h-44 overflow-hidden">
                     <img src="../../assets/img/s_limestone_6272.jpg" class="w-full rounded-t-xl" alt="">
                 </div>
@@ -63,8 +63,13 @@
    </div>
 </template>
 
-<script>
+<script setup>
+import { onMounted } from '@vue/runtime-core'
+import {clickScroll} from '../../scroll.js'
 
+onMounted(()=>{
+    clickScroll('.items--slider')
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -76,5 +81,22 @@
     background-size: 105% 100%;
     background-position: center;
     background-repeat: no-repeat;
+}
+@media only screen and (max-width: 500px){
+   .items--slider{
+   display: flex;
+   flex-wrap: nowrap;
+   overflow-x: scroll;
+   /* scroll-snap-type: x mandatory; */
+   scroll-padding: 0px;
+   gap: 0;
+}
+.items--slider.active{
+      cursor: grab;
+   }
+.items--slider .item--slider{
+   flex: 0 0 85%;
+   scroll-snap-align: start;
+}
 }
 </style>
