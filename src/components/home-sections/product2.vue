@@ -1,5 +1,5 @@
 <template>
-   <div class="w-full lg:w-10/12 m-auto px-12 my-32">
+   <div class="w-full lg:w-10/12 m-auto px-4 md:px-12 mt-10 mb-24 sm:my-32">
     <p class="text-3xl font-bold text-center mb-6 Acme">Product</p>
     <div class="sm:grid sm:grid-cols-2 lg:grid-cols-4 items product--slider">
       <router-link :to="{name:'Archive'}">
@@ -53,11 +53,14 @@
         
     </div>
    </div>
+
 </template>
 
 <script setup>
 import { onMounted } from "@vue/runtime-core";
 import {clickScroll} from '../../scroll.js'
+// import VueScrollTo  from 'vue-scrollto';
+
 
 onMounted(()=>{
     clickScroll('.items')
@@ -87,7 +90,8 @@ onMounted(()=>{
       display: flex;
       flex-wrap: nowrap;
       overflow-x: scroll;
-      /* scroll-snap-type: x mandatory; */
+      
+      scroll-snap-type: x mandatory;
       scroll-padding: 4px;
       gap: 0;
    }

@@ -5,7 +5,11 @@ import './assets/components/themify-icons/themify-icons.css'
 import router from './router'
 // importing AOS css style globally
 import 'aos/dist/aos.css'
+import VueScrollTo  from '../node_modules/vue-scrollto/vue-scrollto';
+
 
 const app=createApp(App)
 app.use(router)
+app.use(VueScrollTo)
+
 app.mount('#app')

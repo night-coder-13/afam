@@ -2,7 +2,7 @@
     <Header />
         <div class="w-full" data-aos="fade-up">
             <div class="w-full h-52 overflow-hidden">
-                <div>
+                <div class="mt-10 sm:mt-0 img-hed">
                     <img src="../../assets/img/21.jpg" class="w-full -mt-80" alt="">
                 </div>
             </div>
@@ -31,9 +31,9 @@
                 </div>
             </div><!---->
             <div class="flex mt-16" data-aos="fade-up">
-                <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 w-10/12 md:w-11/12 lg:w-10/12 m-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 w-10/12 md:w-11/12 lg:w-10/12 m-auto items--slider">
                     
-                    <div v-for="img in imgs" :key="img.a">
+                    <div v-for="img in imgs" :key="img.a" class="item--slider">
                     <router-link :to="{name:'Product'}">
                         <div class="mx-4 mt-3 mb-5 h-60 relative archive">
                             <div class="w-full bg-name rounded-b-xl h-full"></div>
@@ -59,7 +59,12 @@
 import Header from '../home-sections/hed.vue'
 import Footer from '../home-sections/footer.vue'
 import { ref } from '@vue/reactivity'
+import { onMounted } from '@vue/runtime-core'
+import {clickScroll} from '../../scroll.js'
 
+onMounted(()=>{
+    clickScroll('.items--slider')
+})
 const imgs = ref([
     {
         a:'slider-stone-house-1.jpg',
@@ -107,5 +112,26 @@ const imgs = ref([
 .archive:hover img:not(.box-img){
     transition: .5s;
     filter: grayscale(1);
+}
+@media only screen and (max-width: 400px){
+    .img-hed{
+        margin-top: 130px !important;
+    }
+}@media only screen and (max-width: 500px){
+   .items--slider{
+   display: flex;
+   flex-wrap: nowrap;
+   overflow-x: scroll;
+   /* scroll-snap-type: x mandatory; */
+   scroll-padding: 0px;
+   gap: 0;
+}
+.items--slider.active{
+      cursor: grab;
+   }
+.items--slider .item--slider{
+   flex: 0 0 85%;
+   scroll-snap-align: start;
+}
 }
 </style>

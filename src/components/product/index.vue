@@ -2,7 +2,7 @@
     <Header />
         <div class="w-full" data-aos="fade-up" id="product">
             <div class="w-full h-52 overflow-hidden">
-                <div>
+                <div class="mt-8 sm:mt-0 img-hed">
                     <img src="../../assets/img/21.jpg" class="w-full -mt-80" alt="">
                 </div>
             </div>
@@ -149,4 +149,10 @@ import Footer from '../home-sections/footer.vue'
 .first-row-analysis th{
     padding: 0 10px;
 }
+@media only screen and (max-width: 400px){
+    .img-hed{
+        margin-top: 140px !important;
+    }
+}
+
 </style>

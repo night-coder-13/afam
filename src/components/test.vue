@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="product--slider items">
     <div class="box-productimg">d</div>
     <div class="box-productimg">f</div>
@@ -56,8 +56,8 @@ console.log(slider)
 })
 
 </script>
-<style>
-.product--slider{
+<style> -->
+<!-- .product--slider{
    display: flex;
    overflow-x: scroll;
    width: 300px;
@@ -72,5 +72,31 @@ console.log(slider)
 .items div{
    flex: 0 0 50%;
    scroll-snap-align: start;
+} -->
+<!-- </style> new_file.riv-->
+<template>
+  <div>
+    <canvas ref="canvas" width="400" height="400"></canvas>
+  </div>
+</template>
+
+<script>
+import { Rive } from '../../node_modules/@rive-app/webgl/rive';
+
+export default {
+  name: 'Rive',
+  props: {
+    src: String,
+    fit: String,
+    alignment: String
+  },
+  mounted() {
+    new Rive({
+        canvas: this.$refs.canvas,
+        src: 'assets/new_file.riv',
+        
+        autoplay: true
+    })
+  }
 }
-</style>
+</script>

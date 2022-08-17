@@ -16,7 +16,7 @@
                <p></p>
                <div class="grid my-4 mx-2">
                   <label for="">Subscribe to our newsletter</label>
-                  <input type="email" placeholder="Email" required class="rounded-lg px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
+                  <input type="email" placeholder="Email" required class="rounded-lg w-full px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
                </div>
                <button class="ml-10 px-5 py-1 text-lg rounded-lg bg-blue-400 text-white">Send</button>
             </div>

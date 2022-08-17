@@ -1,78 +1,94 @@
 <template>
-    <div id="bg" class="w-10/12 rounded-2xl bg-gray-400 m-auto">
+    <div id="bg" class="w-11/12 sm:w-10/12 rounded-2xl bg-gray-400 m-auto sm:p-0">
         <p class="text-3xl font-bold text-center mb-6 text-white -mb-8 Acme">Our characteristics</p>
-        <div class="grid grid-cols-2 lg:grid-cols-5 justify-items-center my-10 mx-4">
-            <div class="w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
+        <div class="grid grid-cols-2 lg:grid-cols-5 justify-items-center my-10 mx-0 md:mx-4">
+            <div class="w-32 h-32 md:w-40 md:h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
                 <div class="blur-box "></div>
                 <div class="solid-box"></div>
                 <div class="grid justify-items-center z-10">
-                    <div class="rounded-lg w-14 h-14 grid justify-items-center relative content-center">
+                    <div class="rounded-lg w-12 h-12 md:w-14 md:h-14 grid justify-items-center relative content-center">
                         <div class="sm-box"></div>
                         <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-400">
                             <img src="../../assets/svg/tree.svg" class="img " alt="">
                         </div>
                     </div>
-                    <p class="mt-3">Lorem ipsum dolor</p>
+                    <p class="mt-3 md:text-lg text-sm">Lorem ipsum dolor</p>
                 </div>
                 
             </div>           
-            <div class="lg:mt-8 w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
+            <div class="lg:mt-8 w-32 h-32 md:w-40 md:h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
                 <div class="blur-box "></div>
                 <div class="solid-box"></div>
                 <div class="grid justify-items-center z-10">
-                    <div class="rounded-lg w-14 h-14 grid justify-items-center relative content-center">
+                    <div class="rounded-lg w-12 h-12 md:w-14 md:h-14 grid justify-items-center relative content-center">
                         <div class="sm-box"></div>
                         <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-400">
                             <img src="../../assets/svg/1.svg" class="img " alt="">
                         </div>
                     </div>
-                    <p class="mt-3">Lorem ipsum dolor</p>
+                    <p class="mt-3 md:text-lg text-sm">Lorem ipsum dolor</p>
                 </div>
                 
             </div>           
-            <div class="lg:mt-12 w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
+            <div class="lg:mt-12 w-32 h-32 md:w-40 md:h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
                 <div class="blur-box "></div>
                 <div class="solid-box"></div>
                 <div class="grid justify-items-center z-10">
-                    <div class="rounded-lg w-14 h-14 grid justify-items-center relative content-center">
+                    <div class="rounded-lg w-12 h-12 md:w-14 md:h-14 grid justify-items-center relative content-center">
                         <div class="sm-box"></div>
                         <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-400">
                             <img src="../../assets/svg/earth-africa-solid.svg" class="img " alt="">
                         </div>
                     </div>
-                    <p class="mt-3">Lorem ipsum dolor</p>
+                    <p class="mt-3 md:text-lg text-sm">Lorem ipsum dolor</p>
                 </div>
                 
             </div>           
-            <div class="lg:mt-8 w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
+            <div class="lg:mt-8 w-32 h-32 md:w-40 md:h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
                 <div class="blur-box "></div>
                 <div class="solid-box"></div>
                 <div class="grid justify-items-center z-10">
-                    <div class="rounded-lg w-14 h-14 grid justify-items-center relative content-center">
+                    <div class="rounded-lg w-12 h-12 md:w-14 md:h-14 grid justify-items-center relative content-center">
                         <div class="sm-box"></div>
                         <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-400">
                             <img src="../../assets/svg/user.svg" class="img " alt="">
                         </div>
                     </div>
-                    <p class="mt-3">Lorem ipsum dolor</p>
+                   <p class="mt-3 md:text-lg text-sm">Lorem ipsum dolor</p>
                 </div>
                 
             </div>           
-            <div class="w-40 h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
+            <div class="hidden md:grid w-32 h-32 md:w-40 md:h-40 m-4 bg-white z-10 relative rounded-lg justify-items-center content-center">
                 <div class="blur-box "></div>
                 <div class="solid-box"></div>
                 <div class="grid justify-items-center z-10">
-                    <div class="rounded-lg w-14 h-14 grid justify-items-center relative content-center">
+                    <div class="rounded-lg w-12 h-12 md:w-14 md:h-14 grid justify-items-center relative content-center">
                         <div class="sm-box"></div>
                         <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-400">
                             <img src="../../assets/svg/thumbs-up-regular.svg" class="img " alt="">
                         </div>
                     </div>
-                    <p class="mt-3">Lorem ipsum dolor</p>
+                    <p class="mt-3 md:text-lg text-sm">Lorem ipsum dolor</p>
                 </div>
                 
             </div>           
             
+        </div><!--  -->
+        <div class="w-full -mt-5 md:hidden block">
+            <div class="w-32 h-32 md:w-40 md:h-40 m-auto my-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
+                <div class="blur-box "></div>
+                <div class="solid-box"></div>
+                <div class="grid justify-items-center z-10">
+                    <div class="rounded-lg w-11 h-11 md:w-14 md:h-14 grid justify-items-center relative content-center">
+                        <div class="sm-box"></div>
+                        <div class="img-box w-full h-full grid justify-items-center content-center rounded-lg bg-blue-400">
+                            <img src="../../assets/svg/thumbs-up-regular.svg" class="img " alt="">
+                        </div>
+                    </div>
+                    <p class="mt-3 md:text-lg text-sm">Lorem ipsum dolor</p>
+                </div>
+                
+            </div>  
         </div>
     </div>
     <br><br>
@@ -130,7 +146,19 @@
 .img{
     width: 35px;
 }
-
+@media only screen and (max-width: 500px){
+    .sm-box{
+        top: -5px;
+        width: 125%;
+        height: 125%;
+    }
+    .img{
+        width: 28px;
+    }
+    #bg{
+        padding: 15px 5px;
+    }
+}
 /* #bg::before{
     content: '';
     position: relative;
