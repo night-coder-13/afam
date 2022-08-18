@@ -1,6 +1,6 @@
 <template>
     <div id="bg" class="w-11/12 sm:w-10/12 rounded-2xl bg-gray-400 m-auto sm:p-0">
-        <p class="text-3xl font-bold text-center mb-6 text-white -mb-8 Acme">Our characteristics</p>
+        <h3 class="font-bold text-center mb-6 text-white -mb-8 Acme">Our characteristics</h3>
         <div class="grid grid-cols-2 lg:grid-cols-5 justify-items-center my-10 mx-0 md:mx-4">
             <div class="w-32 h-32 md:w-40 md:h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
                 <div class="blur-box "></div>

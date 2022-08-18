@@ -3,7 +3,7 @@
         <div class="header-contact"></div>
         <div class="flex lg:flex-row flex-col justify-center w-11/12 m-auto">
             <div class="w-full lg:w-7/12 mt-4 order-2 lg:order-none">
-                <p class="text-3xl font-bold Acme">Contact us</p>
+                <h3 class="font-bold Acme">Contact us</h3>
                 <p class="text-base ml-5">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quasi, id tempore aperiam est odio dignissimos voluptatum esse dolore dolor natus error, vitae ipsam animi eligendi necessitatibus atque dicta sunt.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quasi, id tempore aperiam est odio dignissimos voluptatum esse dolore dolor natus error, vitae ipsam animi eligendi necessitatibus atque dicta sunt.
@@ -13,7 +13,7 @@
                 </p>
             </div>
             <div class="w-full lg:w-4/12 lg:ml-10 relative order-1 lg:order-none">
-                <form class="w-9/12 p-2 lg:absolut -mt-24 mb-8 m-auto rounded-xl shadow-md bg-gray-50" action="">
+                <form class=" sm:w-9/12 p-2 lg:absolut -mt-24 mb-8 m-auto rounded-xl shadow-md bg-gray-50" action="">
                     <div class="grid my-4 mx-2">
                         <label for="">Name</label>
                         <input type="text" placeholder="Name" required class="w-11/12 rounded-lg px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
@@ -45,5 +45,10 @@
     background: url(../../assets/blue-gold-marble-textured-background.png) ;
     background-size: 100% 100%;
     background-position: center;
+}
+@media only screen and (max-width: 450px){
+.header-contact{
+    background-size: 170% 100%;
+}
 }
 </style>

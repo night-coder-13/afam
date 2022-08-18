@@ -6,9 +6,11 @@ import router from './router'
 // importing AOS css style globally
 import 'aos/dist/aos.css'
 import VueScrollTo  from '../node_modules/vue-scrollto/vue-scrollto';
+import Popper from "vue3-popper";
 
 
 const app=createApp(App)
+app.component("Popper", Popper)
 app.use(router)
 app.use(VueScrollTo)
 

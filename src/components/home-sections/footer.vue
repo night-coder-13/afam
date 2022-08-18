@@ -1,18 +1,18 @@
 <template>
    <div class="w-full mt-20 px-12 py-10">
       <div class="mb-10">
-          <div class="grid grid-cols-4 justify-items-center content-center w-11/12 sm:w-8/12 md:w-4/12 m-auto mb-5">
-            <img src="../../assets/svg/facebook-brands.svg" class="w-12" alt="">
-            <img src="../../assets/svg/instagram-brands.svg" class="w-12" alt="">
-            <img src="../../assets/svg/linkedin-in-brands.svg" class="w-12" alt="">
-            <img src="../../assets/svg/twitter-brands.svg" class="w-12 mt-2" alt="">
+          <div class="grid grid-cols-4 justify-items-center content-center w-10/12 sm:w-8/12 md:w-4/12 m-auto mb-5">
+            <img src="../../assets/svg/facebook-brands.svg" class="w-8 sm:w-12" alt="">
+            <img src="../../assets/svg/instagram-brands.svg" class="w-8 sm:w-12" alt="">
+            <img src="../../assets/svg/linkedin-in-brands.svg" class="w-8 sm:w-12" alt="">
+            <img src="../../assets/svg/twitter-brands.svg" class="w-8 sm:w-12 mt-2" alt="">
           </div>
          <span id="line"></span>
       </div>
      
-      <div class="w-full md:w-10/12 m-auto pl-12 mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div class="w-full md:w-10/12 m-auto sm:pl-12 mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
          <div class="mt-4">
-            <div class="w-11/12 rounded-xl shadow-md bg-gray-50 px-3 py-5">
+            <div class="sm:w-11/12 rounded-xl shadow-md bg-gray-50 px-3 py-5">
                <p></p>
                <div class="grid my-4 mx-2">
                   <label for="">Subscribe to our newsletter</label>
@@ -58,15 +58,15 @@
 }
 #line{
    width: 45%;
-   height: 10px;
+   height: 5px;
    display: block;
    margin: auto;
    border-radius: 15px;
-   background: radial-gradient(#47B5FF, #3D84F2);
+   background: radial-gradient(#89d0ff, #337dec);
 }
 @media only screen and (max-width: 650px){
 #line{
-   width: 80%;
+   width: 100%;
 }
 }
 </style>

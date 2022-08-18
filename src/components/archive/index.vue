@@ -14,7 +14,6 @@
                     
                 </div>
                 <div class="w-full md:w-7/12 px-6 md:px-0">
-                    
                     <h4 class="text-2xl font-bold Acme mt-5 mb-2">Trevanter</h4>
                     <div class="text-base ml-4 text-gray-600">
                         <p class="mb-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia accusamus nihil esse repellat quia fuga, nobis iusto vitae aut nemo consectetur tempora reprehenderit error, possimus explicabo! Assumenda tempore modi repudiandae.</p>
@@ -117,7 +116,8 @@ const imgs = ref([
     .img-hed{
         margin-top: 130px !important;
     }
-}@media only screen and (max-width: 500px){
+}
+@media only screen and (max-width: 500px){
    .items--slider{
    display: flex;
    flex-wrap: nowrap;

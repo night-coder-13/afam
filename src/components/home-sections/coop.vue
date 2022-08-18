@@ -1,9 +1,9 @@
 <template>
-    <div class="py-24 px-16 my-10 w-full section-coop">
+    <div class="py-16 sm:py-24 px-2 sm:px-16 my-10 w-full section-coop">
         <div class="flex flex-col lg:flex-row items-center relative">
-            <img src="../../assets/quotes-right.svg" class="absolute -top-36 w-32" alt="">
+            <img src="../../assets/quotes-right.svg" class="absolute left-4 -top-28 sm:-top-36 w-28 md:w-32" alt="">
             <div class="w-full lg:w-7/12 text-white">
-                <h2 class="text-3xl font-bold Acme">Cope stone</h2>
+                <h3 class="font-bold Acme">Cope stone</h3>
                 <p class="text-base ml-3 mt-2 h-60 sm:h-auto overflow-hidden">Another name is Coop stone, block stone. Cope stone does not have a specific type in terms of gender, and all types of stones that are extracted from the mine are initially in the form of cope.
                     Therefore, coupe stones can be made of granite, marble and travertine. But the classification of all kinds of Kop stones is done based on its size and quality. In this category, there are a total of three types of Kop stones:
 

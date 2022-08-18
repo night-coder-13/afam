@@ -1,11 +1,11 @@
 <template>
-   <div class="w-full px-8 lg:px-12 my-28 md:my-32">
+   <div class="w-full px-8 lg:px-12 my-10 sm:my-28 md:my-32">
     <!-- <p class="text-2xl font-bold text-center mb-6">Blog</p> -->
     <div class="flex flex-col lg:flex-row items-center">
         <div class="w-full md:w-6/12 lg:w-4/12">
             <div class="blog-title flex justify-center items-center">
-                <div class="w-6/12 m-auto relative">
-                    <h3 class="text-3xl font-bold Acme">Blog</h3>
+                <div class="w-9/12 sm:w-6/12 m-auto relative">
+                    <h3 class="font-bold Acme">Blog</h3>
                     <p class="text-base text-gray-500 ml-3 mt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, inventore provident aut sed quis eum impedit ut numquam.</p>
                     <a class="absolute right-8 -bottom-10 text-blue-500" href="#">Show all <i class="ti-arrow-circle-right text-sm"></i></a>
 

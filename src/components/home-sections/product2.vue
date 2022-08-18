@@ -1,6 +1,6 @@
 <template>
    <div class="w-full lg:w-10/12 m-auto px-4 md:px-12 mt-10 mb-24 sm:my-32">
-    <p class="text-3xl font-bold text-center mb-6 Acme">Product</p>
+    <h3 class="font-bold text-center mb-6 Acme">Product</h3>
     <div class="sm:grid sm:grid-cols-2 lg:grid-cols-4 items product--slider">
       <router-link :to="{name:'Archive'}">
          <div class="box-productimg mx-2 my-3 rounded-xl relative overflow-hidden">
