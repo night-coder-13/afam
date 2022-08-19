@@ -1,4 +1,5 @@
 <template>
+
 <div class="w-full" >
   <!-- <Hed /> -->
   <router-view v-slot="{ Component , route }" > 
@@ -42,6 +43,7 @@ function scrollTop(id){
 </script>
 
 <style>
+
 *{
   margin: 0;
   padding: 0;
@@ -61,6 +63,7 @@ body{
 }
 .upBtn{
   display: none;
+  z-index: 9999;
 }
 .upBtn.active{
   display: block;

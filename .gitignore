@@ -2,6 +2,7 @@
 node_modules
 afam.rar
 /src/assets/components
+/src/assets/video
 /src/components/test.vue
 /dist
 
