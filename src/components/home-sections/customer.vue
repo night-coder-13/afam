@@ -1,15 +1,15 @@
 <template>
     <Waypoint @change="onChange" class="grid grid-cols-2 lg:grid-cols-4 w-full sm:w-10/12 lg:w-11/12 m-auto my-12 sm:my-20 ">
         <div class="mt-4 lg:mt-0 flex grid grid-cols-1 justify-items-center items-center px-4 py-8">
-            <p class="text-4xl flex"><span class="font-bold">+</span> <count-up :end-val="number.product > 0 ? number.product : 0"></count-up></p>
+            <p class="text-4xl flex Anton"><span class="font-bold">+</span> <count-up :end-val="number.product > 0 ? number.product : 0"></count-up></p>
             <p class="mt-3 font-bold uppercase text-center">Product</p>
         </div>
         <div class="mt-4 lg:mt-0 flex grid grid-cols-1 justify-items-center items-center px-4 py-8">
-            <p class="text-4xl flex"><span class="font-bold">+</span> <count-up :end-val="number.years > 0 ? number.years : 0"></count-up></p>
+            <p class="text-4xl flex Anton"><span class="font-bold">+</span> <count-up :end-val="number.years > 0 ? number.years : 0"></count-up></p>
             <p class="mt-3 font-bold uppercase text-center">years of experience</p>
         </div>
         <div class="mt-4 lg:mt-0 grid grid-cols-1 justify-items-center items-center px-4 py-8">
-            <p class="text-4xl flex"><span class="font-bold">+</span> <count-up :end-val="number.work > 0 ? number.work : 0"></count-up></p>
+            <p class="text-4xl flex Anton"><span class="font-bold">+</span> <count-up :end-val="number.work > 0 ? number.work : 0"></count-up></p>
             <p class="mt-3 font-bold uppercase text-center">Work samples</p>
         </div>
         <div class="mt-4 lg:mt-0 ">

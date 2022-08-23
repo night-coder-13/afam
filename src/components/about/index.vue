@@ -41,14 +41,14 @@
                 <div class="w-full md:w-5/12">
                     <img src="../../assets/img/businessmen-handshaking.jpg" class="w-full rounded-xl shadow-md" alt="">
                 </div>
-                <div class="w-full md:w-7/12 pl-8">
+                <div class="w-full md:w-7/12 sm:pl-8">
                     <h2 class="text-start text-2xl Acme mb-1 mt-8">Customer Satisfaction</h2>
                     <p class="text-gray-600 text-base w-11/12 ml-4 h-56 overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut tortor pretium viverra suspendisse potenti nullam. Et molestie ac feugiat sed lectus. Non nisi est sit amet facilisis magna. Dignissim diam quis enim lobortis scelerisque fermentum. Odio ut enim blandit volutpat maecenas volutpat. Ornare lectus sit amet est placerat in egestas erat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Placerat duis ultricies lacus sed turpis tincidunt id aliquet.</p>
                    <button class="px-7 py-2 text-sm bg-blue-600 rounded-lg text-white mt-6 ml-10">Read more</button>
                 </div>
             </div>
             <div class="flex md:flex-row flex-col mt-20 md:mt-40 w-10/12 m-auto" id="our-history">
-                <div class="w-full md:w-7/12 pl-8">
+                <div class="w-full md:w-7/12 sm:pl-8">
                     <h2 class="text-start text-2xl Acme mb-1 mt-8">Our history</h2>
                     <p class="text-gray-600 text-base w-11/12 ml-4 h-56 overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut tortor pretium viverra suspendisse potenti nullam. Et molestie ac feugiat sed lectus. Non nisi est sit amet facilisis magna. Dignissim diam quis enim lobortis scelerisque fermentum. Odio ut enim blandit volutpat maecenas volutpat. Ornare lectus sit amet est placerat in egestas erat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Placerat duis ultricies lacus sed turpis tincidunt id aliquet.</p>
                    

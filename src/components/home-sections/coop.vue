@@ -1,7 +1,10 @@
 <template>
-    <div class="py-16 sm:py-24 px-2 sm:px-16 my-10 w-full section-coop">
+    <div class="py-16 sm:py-24 px-2 sm:px-16 my-10 w-full section-coop overflow-hidden">
+        <video autoplay muted loop id="myVideo">
+            <source src="../../assets/video/noise.mp4" type="video/mp4">
+        </video>
         <div class="flex flex-col lg:flex-row items-center relative">
-            <img src="../../assets/quotes-right.svg" class="absolute left-4 -top-28 sm:-top-36 w-28 md:w-32" alt="">
+            <img src="../../assets/quotes-right.svg" class="absolute left-4 -top-28 sm:-top-36 w-28 md:w-32 z-50" alt="">
             <div class="w-full lg:w-7/12 text-white">
                 <h3 class="font-bold Acme">Cope stone</h3>
                 <p class="text-base ml-3 mt-2 h-60 sm:h-auto overflow-hidden">Another name is Coop stone, block stone. Cope stone does not have a specific type in terms of gender, and all types of stones that are extracted from the mine are initially in the form of cope.
@@ -36,5 +39,12 @@
     background-position: center;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 </style>
