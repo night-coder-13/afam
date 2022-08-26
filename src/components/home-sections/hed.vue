@@ -28,8 +28,8 @@
 
       <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
       <ul
-        :class="showMenu ? 'flex' : 'hidden'"
-        class=" flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 animate__animated animate__fadeInLeft">
+        :class="showMenu ? 'flex animate__animated animate__fadeInLeft' : 'hidden'"
+        class=" flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 ">
         <li class="text-gray-800 ">
             <router-link :to="{name : 'Home'}">Home</router-link>
         </li>
@@ -71,8 +71,8 @@
 
       <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
       <ul
-        :class="showMenu ? 'flex' : 'hidden'"
-        class=" flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 animate__animated animate__fadeInLeft" >
+        :class="showMenu ? 'flex animate__animated animate__fadeInLeft' : 'hidden'"
+        class=" flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 " >
         <li class="text-gray-800 ">
             <router-link :to="{name : 'Home'}">Home</router-link>
         </li>
