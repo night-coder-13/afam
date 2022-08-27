@@ -4,7 +4,7 @@
     <nav id="hed" class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
       <div class="flex items-center justify-between">
         <router-link to="/" class="text-xl font-bold text-gray-800 md:text-2xl">
-            Logo
+            <img src="../../assets/logo_.png" class="w-40" alt="">
         </router-link>
         <!-- Mobile menu button -->
         <div class="flex md:hidden">
@@ -47,7 +47,7 @@
     <nav id="hed" class="container px-6 mx-auto md:flex md:justify-between md:items-center">
       <div class="flex items-center justify-between">
         <router-link to="/" class="text-xl font-bold text-gray-800 md:text-2xl">
-            Logo
+            <img src="../../assets/logo_.png" class="w-40" alt="">
         </router-link>
         <!-- Mobile menu button -->
         <div class="flex md:hidden">

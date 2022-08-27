@@ -1,14 +1,15 @@
 <template>
-    <div class="w-full m-auto mb-8 sm:mb-0 justify-start relative py-8 pt-20 flex flex-col lg:flex-row pl-1 lg:pl-0 content-center">
-        <div class="w-12/12 lg:w-9/12 h-80 sm:h-96 md:h-128 sm:order-2 mb-8 sm:mb-0 bg--image"></div>
-        
+    <div class="w-full m-auto mb-8 sm:mb-0 relative py-8 pb-24 flex flex-col lg:flex-row pl-1 lg:pl-0 justify-end content-center">
         <div class="grid content-center sm:order-1 sm:shadow-lg box-vision">
+            <!-- <img src="../../assets/arrow.png" class="pl-8" alt=""> -->
 
-            <h3 class="font-bold mb-2 Acme" id="title">Subscribe to AFMA newsletter</h3>
-            <div class="mt-8 text-center">
-                <input type="text" placeholder="Email" class="rounded-lg px-3 w-9/12 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
-                <button class="ml-2 px-6 py-1 text-lg rounded-lg bg-blue-400 text-white">Send</button>
-            </div>
+            <h3 class="font-bold mb-2 Acme" id="title">Building new visions</h3>
+            <p class="text-lg ml-4 max-h-56 overflow-hidden">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque.
+            </p>
+        </div>
+        <div class="w-12/12 lg:w-9/12 h-80 sm:h-96 md:h-128 sm:order-2 mb-8 sm:mb-0 bg--image">
+            <!-- <img src="../../assets/img/q1.jpg" class="sm:pl-8" alt=""> -->
         </div>
     </div>
 </template>
@@ -28,10 +29,10 @@
     background-size:cover; */
     position:absolute;
     top: -10px;
-    right: -55px;
+    left: -55px;
     height: 50px;
     width: 50px;
-    /* transform: rotateY(200deg); */
+    transform: rotateY(200deg);
 }
 .grayscale{
 -webkit-filter: grayscale(1);
@@ -45,7 +46,7 @@
 .box-vision{
     position: absolute;
     top: 220px;
-    right: 200px;
+    left: 200px;
     width: 550px;
     background: #ffffff;
     padding: 30px 40px;
@@ -53,7 +54,8 @@
     /* backdrop-filter: blur(1px); */
 }
 .bg--image{
-    background:  linear-gradient(70deg, #07070738 , rgba(6, 60, 122, 0.034) ) ,url(../../assets/img/email-messages-network.jpg) no-repeat;
+    background: url('../../assets/img/q1.jpg');
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -73,4 +75,3 @@
 }
 }
 </style>
-

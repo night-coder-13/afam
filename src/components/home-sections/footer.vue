@@ -23,8 +23,7 @@
          </div>
          <div class="mt-4">
             <div class="flex justify-start items-center">
-               <img src="../../assets/logo.png" class="w-24" alt="">
-               <p class="font-bold Acme">AFAM TREAD</p>
+               <img src="../../assets/logo_.png" class="w-44 mb-2" alt="">
             </div>
             <p class="text-base text-gray-600 ml-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum atque similique, reiciendis labore placeat accusamus doloribus corrupti earum quis, maxime facere nam temporibus voluptatem unde commodi aliquid sed, eius dolorum.\</p>
          </div>
