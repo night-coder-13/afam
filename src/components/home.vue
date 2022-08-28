@@ -2,8 +2,8 @@
     <Hed />
     <Header data-aos="fade-up" />
     <Customer  data-aos="fade-up" />
-    <!-- <Newsletter data-aos="fade-up" /> -->
     <Vision data-aos="fade-up" />
+    <Newsletter data-aos="fade-up" />
     <Feature data-aos="fade-up" />
     <Product data-aos="fade-up" />
     <Quarries data-aos="fade-up" />
@@ -23,7 +23,7 @@ import Quarries from './home-sections/quarries.vue'
 import Blog from './home-sections/blog.vue'
 import Contact from './home-sections/contact.vue'
 import Footer from './home-sections/footer.vue'
-// import Newsletter from './home-sections/newsletter.vue'
+import Newsletter from './home-sections/newsletter.vue'
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

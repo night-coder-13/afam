@@ -1,9 +1,9 @@
 <template>
-    <div class="w-full m-auto mb-8 sm:mb-0 justify-start relative py-8 pt-20 flex flex-col lg:flex-row pl-1 lg:pl-0 content-center">
-        <div class="w-12/12 lg:w-9/12 h-80 sm:h-96 md:h-128 sm:order-2 mb-8 sm:mb-0 bg--image"></div>
-        
-        <div class="grid content-center sm:order-1 sm:shadow-lg box-vision">
-
+<Waypoint @change="onchange"></Waypoint>
+<div @click="close" class="bg hidden">
+    <div class="w-full rounded-lg shadow-lg overflow-hidden box-alert animate__animated animate__zoomIn">
+        <img src="../../assets/img/email-messages-network.jpg" class="w-full" alt="">
+        <div class="p-4">
             <h3 class="font-bold mb-2 Acme" id="title">Subscribe to AFMA newsletter</h3>
             <div class="mt-8 text-center">
                 <input type="text" placeholder="Email" class="rounded-lg px-3 w-9/12 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
@@ -11,66 +11,58 @@
             </div>
         </div>
     </div>
+</div>
+
 </template>
 
-<script>
+<script setup>
+import { Waypoint } from "vue-waypoint";
+
+
+function onchange(waypointState){
+    if(waypointState.going === 'IN'){
+        if(sessionStorage.getItem('newsletter') !== 'true'){
+            sessionStorage.setItem('newsletter', 'true');
+            document.querySelector('.bg').style.display='block'
+        }
+        console.log(sessionStorage.getItem('newsletter'))
+    }
+}
+function close(){
+    document.querySelector('.bg').style.display='none'
+}
 
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#title{
-    position: relative;
+.bg{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.37);
+    z-index: 999;
 }
-#title::before{
-    content: url(../../assets/arrow.png);
-    /* background-image: url(../../assets/arrow.png);
-    background-size:cover; */
-    position:absolute;
-    top: -10px;
-    right: -55px;
-    height: 50px;
-    width: 50px;
-    /* transform: rotateY(200deg); */
-}
-.grayscale{
--webkit-filter: grayscale(1);
-        filter: grayscale(1);
-}
-.grayscale:hover{
--webkit-filter: grayscale(0);
-        filter: grayscale(0);
-        transition: .5s;
-}
-.box-vision{
+.box-alert{
     position: absolute;
-    top: 220px;
-    right: 200px;
-    width: 550px;
-    background: #ffffff;
-    padding: 30px 40px;
-    border-radius: 10px;
-    /* backdrop-filter: blur(1px); */
+    top: 100px;
+    left: 33%;
+    width: 38%;
+    z-index: 9999;
+    background: #fff;
 }
-.bg--image{
-    background:  linear-gradient(70deg, #07070738 , rgba(6, 60, 122, 0.034) ) ,url(../../assets/img/email-messages-network.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+@media only screen and (max-width: 920px){
+    .box-alert{
+        left: 29%;
+        width: 47%;
+    }
 }
-@media only screen and (max-width: 650px){
-.box-vision{
-    position: unset;
-    top: unset;
-    bottom: 0px;
-    left: 0;
-    width: auto;
-    background: transparent;
-    margin: 0 15px;
-    padding: 30px 40px;
-    border-radius: 10px;
-    /* backdrop-filter: blur(1px); */
-}
+@media only screen and (max-width: 550px){
+    .box-alert{
+        left: 2%;
+        width: 96%;
+    }
 }
 </style>
 
