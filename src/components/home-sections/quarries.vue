@@ -10,7 +10,7 @@
         <div class="flex flex-col lg:flex-row items-center relative">
             <div class="w-full lg:w-7/12 text-white">
                 <h3 class="font-bold Acme">Quarries</h3>
-                <p class="text-base ml-3 mt-2 h-60 sm:h-auto overflow-hidden">Another name is Coop stone, block stone. Cope stone does not have a specific type in terms of gender, and all types of stones that are extracted from the mine are initially in the form of cope.
+                <p class="text-base ml-3 mt-2 h-60 sm:h-auto px-2 overflow-hidden">Another name is Coop stone, block stone. Cope stone does not have a specific type in terms of gender, and all types of stones that are extracted from the mine are initially in the form of cope.
                     Therefore, coupe stones can be made of granite, marble and travertine. But the classification of all kinds of Kop stones is done based on its size and quality. In this category, there are a total of three types of Kop stones:
 
                     One coupe

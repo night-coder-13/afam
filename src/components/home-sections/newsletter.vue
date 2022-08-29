@@ -25,7 +25,6 @@ function onchange(waypointState){
             sessionStorage.setItem('newsletter', 'true');
             document.querySelector('.bg').style.display='block'
         }
-        console.log(sessionStorage.getItem('newsletter'))
     }
 }
 function close(){

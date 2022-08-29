@@ -77,10 +77,10 @@ onMounted(()=>{
 .blog-title{
     width: 100%;
     height: 350px;
-    background: url(../../assets/Path\ 2106.svg);
+    /* background: url(../../assets/Path\ 2106.svg);
     background-size: 105% 100%;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 @media only screen and (max-width: 500px){
    .items--slider{

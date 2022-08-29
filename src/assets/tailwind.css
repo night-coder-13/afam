@@ -11,6 +11,9 @@
       padding: theme('spacing.6');
       box-shadow: theme('boxShadow.xl');
     }
+    .center--center{
+      @apply flex justify-center items-center;
+    }
     /* ... */
   }
 

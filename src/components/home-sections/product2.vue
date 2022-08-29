@@ -2,54 +2,17 @@
    <div class="w-full lg:w-10/12 m-auto px-4 md:px-12 mt-10 mb-24 sm:my-32">
     <h3 class="font-bold text-center mb-6 Acme">Product</h3>
     <div class="sm:grid sm:grid-cols-2 lg:grid-cols-4 items product--slider">
-      <router-link :to="{name:'Archive'}">
-         <div class="box-productimg mx-2 my-3 rounded-xl relative overflow-hidden">
-            <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
-            <img src="../../assets/img/1-26.jpg" class="h-full w-full" alt="">
-         </div>
-      </router-link>
-      <router-link :to="{name:'Archive'}" class="item--slider">
-         <div class="box-productimg relative mx-2 my-3 rounded-xl overflow-hidden">
-            <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
-            <img src="../../assets/img/1-27.jpg" class="img h-full w-full" alt="">
-         </div>
-      </router-link>
-      <router-link :to="{name:'Archive'}" class="item--slider">
-         <div class="box-productimg relative mx-2 my-3 rounded-xl overflow-hidden">
-            <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
-            <img src="../../assets/img/1-29.jpg" class="img h-full w-full" alt="">
-         </div>
-      </router-link>
-      <router-link :to="{name:'Archive'}" class="item--slider">
-         <div class="box-productimg relative mx-2 my-3 rounded-xl overflow-hidden">
-            <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
-            <img src="../../assets/img/1-26.jpg" class="img h-full w-full" alt="">
-         </div>
-      </router-link>
-      <router-link :to="{name:'Archive'}" class="item--slider">
-         <div class="box-productimg mx-2 my-3 rounded-xl relative overflow-hidden">
-            <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
-            <img src="../../assets/img/1-26.jpg" class="h-full w-full" alt="">
-         </div>
-      </router-link>
-      <router-link :to="{name:'Archive'}" class="item--slider">
-         <div class="box-productimg relative mx-2 my-3 rounded-xl overflow-hidden">
-            <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
-            <img src="../../assets/img/1-27.jpg" class="img h-full w-full" alt="">
-         </div>
-      </router-link>
-      <router-link :to="{name:'Archive'}" class="item--slider">
-         <div class="box-productimg relative mx-2 my-3 rounded-xl overflow-hidden">
-            <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
-            <img src="../../assets/img/1-29.jpg" class="img h-full w-full" alt="">
-         </div>
-      </router-link>
-      <router-link :to="{name:'Archive'}" class="item--slider">
-         <div class="box-productimg relative mx-2 my-3 rounded-xl overflow-hidden">
-            <div class="w-full absolute h-full flex justify-center items-center"><p class="text-lg text-white">lorem ipsum</p></div>
-            <img src="../../assets/img/1-26.jpg" class="img h-full w-full" alt="">
-         </div>
-      </router-link>
+      <div v-for="item in items" :key="item.id" class="item--slider">
+         <router-link :to="{name:'Archive'}">
+            <div class="box-productimg mx-2 my-3 rounded-xl relative overflow-hidden">
+               <div class="w-9 h-9 bg-gray-50 center--center absolute z-30 rounded-full top-4 right-3">
+                  <i class="ti-bookmark text-blue-500 font-bold text-xl"></i>
+               </div>
+               <div class="w-full absolute h-full flex justify-center items-center title"><p class="text-lg text-white" v-text="item.title"></p></div>
+               <img :src="require('../../assets/img/'+item.img)" class="h-full w-full" alt="">
+            </div>
+         </router-link>
+      </div>
         
     </div>
    </div>
@@ -57,10 +20,52 @@
 </template>
 
 <script setup>
-import { onMounted } from "@vue/runtime-core";
+import { onMounted, ref } from "@vue/runtime-core";
 import {clickScroll} from '../../scroll.js'
 // import VueScrollTo  from 'vue-scrollto';
 
+const items=ref([
+   {
+      id:1,
+      img:'1-26.jpg',
+      title:'lorme ipsum'
+   },
+   {
+      id:2,
+      img:'1-27.jpg',
+      title:'lorme ipsum'
+   },
+   {
+      id:3,
+      img:'1-29.jpg',
+      title:'lorme ipsum'
+   },
+   {
+      id:4,
+      img:'21.jpg',
+      title:'lorme ipsum'
+   },
+   {
+      id:1,
+      img:'1-26.jpg',
+      title:'lorme ipsum'
+   },
+   {
+      id:2,
+      img:'1-27.jpg',
+      title:'lorme ipsum'
+   },
+   {
+      id:3,
+      img:'1-29.jpg',
+      title:'lorme ipsum'
+   },
+   {
+      id:4,
+      img:'21.jpg',
+      title:'lorme ipsum'
+   }
+])
 
 onMounted(()=>{
     clickScroll('.items')
@@ -69,12 +74,12 @@ onMounted(()=>{
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.box-productimg div{
+.box-productimg .title{
    opacity: 0;
    z-index: 99;
    background: rgba(12, 12, 12, 0.103);
 }
-.box-productimg:hover div{
+.box-productimg:hover .title{
    opacity: 1;
    transition: .5s;
 }
