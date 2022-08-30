@@ -33,11 +33,32 @@
         <li class="text-gray-800 ">
             <router-link :to="{name : 'Home'}">Home</router-link>
         </li>
+        
+        <li class="text-gray-800 ">
+          <Popper arrow>
+              <button class="text-lg flex items-center"> product </button>
+              <template #content="{}" >
+                <div class="px-4 py-2">
+                  <p><router-link :to="{name:'Archive',params:{id:1}}"> one </router-link></p>
+                  <!-- <p><router-link :to="{name:'Archive'}"> two </router-link></p> -->
+                </div>
+              </template>
+            </Popper>
+        </li>
         <li class="text-gray-800 ">
             <router-link :to="{name : 'About'}">About us</router-link>
         </li>
         <li class="text-gray-800 ">
             <router-link  @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }">Contact Us</router-link>
+        </li>
+        <li>
+          <Popper arrow>
+              <button class="text-lg mx-3 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
+              <template #content="{}">
+                <button class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
+                <button class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/fa.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> fa </button>
+              </template>
+            </Popper>
         </li>
       </ul>
     </nav>

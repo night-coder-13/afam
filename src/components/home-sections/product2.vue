@@ -5,8 +5,10 @@
       <div v-for="item in items" :key="item.id" class="item--slider">
          <router-link :to="{name:'Archive'}">
             <div class="box-productimg mx-2 my-3 rounded-xl relative overflow-hidden">
-               <div class="w-9 h-9 bg-gray-50 center--center absolute z-30 rounded-full top-4 right-3">
-                  <i class="ti-bookmark text-blue-500 font-bold text-xl"></i>
+               <div class="w-9 h-9 bg-gray-50 center--center absolute z-30 rounded-full top-4 right-3 text-blue-500
+               hover:text-white hover:bg-blue-500 
+               ">
+                  <i class="ti-bookmark font-bold text-xl"></i>
                </div>
                <div class="w-full absolute h-full flex justify-center items-center title"><p class="text-lg text-white" v-text="item.title"></p></div>
                <img :src="require('../../assets/img/'+item.img)" class="h-full w-full" alt="">
@@ -76,7 +78,7 @@ onMounted(()=>{
 <style scoped>
 .box-productimg .title{
    opacity: 0;
-   z-index: 99;
+   z-index: 20;
    background: rgba(12, 12, 12, 0.103);
 }
 .box-productimg:hover .title{
