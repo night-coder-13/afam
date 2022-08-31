@@ -6,6 +6,7 @@
   <!-- <Hed /> -->
   <router-view > 
   </router-view>
+  
 </div>
   <div >
     <button @click="scrollTop('hed')" :class="upBtn" class="bg-blue-400 shadow-md text-white w-10 h-10 rounded-full upBtn fixed bottom-8 font-bold right-10 animate__animated animate__slideInUp"><i class="ti-angle-up text-xl"></i></button>
@@ -20,19 +21,21 @@ import {smoothScroll} from './scroll'
 
 import 'animate.css';
 
-import { onMounted } from "vue";
+import { computed, onMounted } from "vue";
 import AOS from "aos";
+import { useStore } from 'vuex';
+const store =useStore()
 
-const loadingPage=ref(true)
+const loadingPage=computed(() => store.state.statusLoader)
     // setInterval(()=>{console.log(document.readyState)},100)
 
 onMounted(() => {
     AOS.init();
-  document.onreadystatechange = () => {
-    if(document.readyState === 'complete'){
-      loadingPage.value = false;
-    }
-  }
+  // document.onreadystatechange = () => {
+  //   if(document.readyState === 'complete'){
+  //     loadingPage.value = false;
+  //   }
+  // }
 })
 
 const upBtn = ref('')

@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import store from './store/index.js'
+    // const store=useStore();
     const routes = [
       {
         path: '/about',
@@ -41,5 +43,13 @@ import { createRouter, createWebHistory } from 'vue-router'
           })
         }
     })
-    
+    router.beforeEach((to, from, next) => {
+      store.getters.changeLoader;
+      // if the user is not authenticated, `next` is called twice
+      next()
+    })
+    router.afterEach(() => {
+      store.getters.changeLoader;
+      // sendToAnalytics(to.fullPath)
+    })
     export default router

@@ -2,6 +2,7 @@ import { createStore } from "vuex";
 
 const store = createStore({
     state:{
+        statusLoader:false,
         category:[
             {
                 id:1,
@@ -62,7 +63,10 @@ const store = createStore({
         //blog
     },
     getters:{
-
+        changeLoader(state){
+            state.statusLoader = !state.statusLoader
+            return state.statusLoader
+        },
     },
     mutations:{
 
