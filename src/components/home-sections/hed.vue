@@ -1,5 +1,6 @@
 <template>
 
+  <!-- <img src="https://deelay.me/5000/https://picsum.photos/200/300" alt=""> -->
   <div class="">
     <nav id="hed" class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
       <div class="flex items-center justify-between">
@@ -36,22 +37,26 @@
         
         <li class="text-gray-800 ">
           <Popper arrow>
-              <button class="text-lg flex items-center"> product </button>
-              <template #content="{}" >
-                <div class="px-4 py-2">
-                  <p><router-link :to="{name:'Archive',params:{id:1}}"> one </router-link></p>
-                  <!-- <p><router-link :to="{name:'Archive'}"> two </router-link></p> -->
-                </div>
-              </template>
-            </Popper>
+            <button class="text-lg flex items-center"> Product </button>
+            <template #content="{}" >
+              <div class="px-4 py-2"> 
+                <p v-for="cat in category" :key="cat.id" class="text-gray-500 text-start capitalize ">
+                  <router-link :to="{name:'Archive',params:{id:cat.id}}" v-text="cat.title"></router-link>
+                </p>
+              </div>
+            </template>
+          </Popper>
         </li>
         <li class="text-gray-800 ">
             <router-link :to="{name : 'About'}">About us</router-link>
         </li>
         <li class="text-gray-800 ">
+            <router-link :to="{name : 'Quarries'}">Quarries</router-link>
+        </li>
+        <li class="text-gray-800 ">
             <router-link  @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }">Contact Us</router-link>
         </li>
-        <li>
+        <li id="flag">
           <Popper arrow>
               <button class="text-lg mx-3 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
               <template #content="{}">
@@ -63,7 +68,7 @@
       </ul>
     </nav>
   </div>
-
+          <!-- nav sticky -->
   <div class="nav--sticky animate__animated animate__slideInDown" id="nav--sticky">
     <nav id="hed" class="container px-6 mx-auto md:flex md:justify-between md:items-center">
       <div class="flex items-center justify-between">
@@ -93,15 +98,37 @@
       <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
       <ul
         :class="showMenu ? 'flex animate__animated animate__fadeInLeft' : 'hidden'"
-        class=" flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 " >
+        class=" flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 ">
         <li class="text-gray-800 ">
             <router-link :to="{name : 'Home'}">Home</router-link>
+        </li>
+        
+        <li class="text-gray-800 ">
+          <Popper arrow>
+              <button class="text-lg flex items-center"> Product </button>
+              <template #content="{}" >
+                <div class="px-4 py-2">
+                  <p v-for="cat in category" :key="cat.id" class="text-gray-500 text-start capitalize ">
+                    <router-link :to="{name:'Archive',params:{id:cat.id}}" v-text="cat.title"></router-link>
+                  </p>
+                </div>
+              </template>
+            </Popper>
         </li>
         <li class="text-gray-800 ">
             <router-link :to="{name : 'About'}">About us</router-link>
         </li>
         <li class="text-gray-800 ">
             <router-link  @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }">Contact Us</router-link>
+        </li>
+        <li id="flag">
+          <Popper arrow>
+              <button class="text-lg mx-3 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
+              <template #content="{}">
+                <button class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
+                <button class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/fa.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> fa </button>
+              </template>
+            </Popper>
         </li>
       </ul>
     </nav>
@@ -112,6 +139,11 @@
 import { ref } from '@vue/reactivity';
 import {smoothScroll } from '../../scroll'
 import Popper from "vue3-popper";
+import { useStore } from 'vuex';
+import { computed } from '@vue/runtime-core';
+
+const store=useStore();
+const category=computed(()=>store.state.category);
 
 function Scroll(id){
     smoothScroll(id);
@@ -162,5 +194,10 @@ const toggleNav = () => (showMenu.value = !showMenu.value);
   :deep(.popper:hover),
   :deep(.popper:hover > #arrow::before) {
     background: #ffffff;
+  }
+  @media only screen and (max-width: 750px){
+    #flag{
+      display:none;
+    }
   }
 </style>

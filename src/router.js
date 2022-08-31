@@ -21,6 +21,9 @@ import { createRouter, createWebHistory } from 'vue-router'
         path: '/about', name: 'About', component: () => import('./components/about/index.vue')
       },
       {
+        path: '/quarries', name: 'Quarries', component: () => import('./components/quarries/index.vue')
+      },
+      {
         path: '/test', name: 'Test', component: () => import('./components/test.vue')
       },
     ]

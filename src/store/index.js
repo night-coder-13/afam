@@ -2,12 +2,47 @@ import { createStore } from "vuex";
 
 const store = createStore({
     state:{
-        productList:[
+        category:[
             {
                 id:1,
-                title:'title',
-                img:'q1.jpg'
-            },
+                img:'1-26.jpg',
+                title:'lorme ipsum'
+             },
+             {
+                id:2,
+                img:'1-27.jpg',
+                title:'lorme ipsum'
+             },
+             {
+                id:3,
+                img:'1-29.jpg',
+                title:'lorme ipsum'
+             },
+             {
+                id:4,
+                img:'21.jpg',
+                title:'lorme ipsum'
+             },
+             {
+                id:1,
+                img:'1-26.jpg',
+                title:'lorme ipsum'
+             },
+             {
+                id:2,
+                img:'1-27.jpg',
+                title:'lorme ipsum'
+             },
+             {
+                id:3,
+                img:'1-29.jpg',
+                title:'lorme ipsum'
+             },
+             {
+                id:4,
+                img:'21.jpg',
+                title:'lorme ipsum'
+             }
         ],
         header:{title:'title' , description:'description',image:{a:'',b:'' ,c:''}},
         customer:[

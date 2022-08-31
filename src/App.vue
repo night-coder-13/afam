@@ -1,12 +1,10 @@
 <template>
-
+  <div class="fixed bg-black w-full h-full top-0 z-50" v-if="loadingPage">
+    <img src="https://i.pinimg.com/originals/08/42/4d/08424d7de0893189bf2047184a2421f5.gif" class="w-full" alt="">
+  </div>
 <div class="w-full" >
   <!-- <Hed /> -->
-  <router-view v-slot="{ Component , route }" > 
-    <transition name="fade" >
-      <component :is="Component" :key="route.path"></component>
-    </transition>
-    
+  <router-view > 
   </router-view>
 </div>
   <div >
@@ -25,8 +23,16 @@ import 'animate.css';
 import { onMounted } from "vue";
 import AOS from "aos";
 
+const loadingPage=ref(true)
+    // setInterval(()=>{console.log(document.readyState)},100)
+
 onMounted(() => {
     AOS.init();
+  document.onreadystatechange = () => {
+    if(document.readyState === 'complete'){
+      loadingPage.value = false;
+    }
+  }
 })
 
 const upBtn = ref('')
