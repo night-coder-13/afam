@@ -16,6 +16,7 @@
     "autoprefixer": "^9.8.8",
     "axios": "^0.27.2",
     "core-js": "^3.6.5",
+    "flowbite": "^1.5.3",
     "postcss": "^7.0.39",
     "sweetalert2": "^11.4.29",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",

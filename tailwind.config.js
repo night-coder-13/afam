@@ -1,21 +1,3 @@
-// // tailwind.config.js
-// const colors = require('tailwindcss/colors')
-
-// module.exports = {
-//   purge:["./src/**/*.vue"],
-//   darkMode: false, // or 'media' or 'class'
-//   theme: {
-//     colors: {
-//       // Build your palette here
-//       transparent: 'transparent',
-//       current: 'currentColor',
-//       gray: colors.trueGray,
-//       red: colors.red,
-//       blue: colors.sky,
-//       yellow: colors.amber,
-//     }
-//   }
-// }
 module.exports = {
   purge:["./src/**/*.vue"],
   darkMode: false, // or 'media' or 'class'
@@ -67,5 +49,10 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
+  content: [
+    "./node_modules/flowbite/**/*.js"
+  ]
 }
