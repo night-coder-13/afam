@@ -44,12 +44,16 @@ import store from './store/index.js'
         }
     })
     router.beforeEach((to, from, next) => {
-      store.getters.changeLoader;
+      if(to.fullPath !== from.fullPath)
+        store.getters.changeLoader;
+      
       // if the user is not authenticated, `next` is called twice
       next()
     })
-    router.afterEach(() => {
-      store.getters.changeLoader;
+    router.afterEach((to,from) => {
+      if(to.fullPath !== from.fullPath)
+        store.getters.changeLoader;
+      
       // sendToAnalytics(to.fullPath)
     })
     export default router

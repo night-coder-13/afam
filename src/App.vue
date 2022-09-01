@@ -1,6 +1,6 @@
 <template>
-  <div class="fixed bg-black w-full h-full top-0 z-50" v-if="loadingPage">
-    <img src="https://i.pinimg.com/originals/08/42/4d/08424d7de0893189bf2047184a2421f5.gif" class="w-full" alt="">
+  <div class="fixed w-full h-full top-0 z-50 loader center--center" v-if="loadingPage">
+    <img src="./assets/gif/loader.gif" class="w-full md:w-6/12 lg:w-4/12 m-auto" alt="">
   </div>
 <div class="w-full" >
   <!-- <Hed /> -->
@@ -16,26 +16,17 @@
 <script setup>
 // import Hed from './components/home-sections/hed.vue'
 import { ref } from '@vue/reactivity';
-
 import {smoothScroll} from './scroll'
-
 import 'animate.css';
-
 import { computed, onMounted } from "vue";
 import AOS from "aos";
 import { useStore } from 'vuex';
 const store =useStore()
 
 const loadingPage=computed(() => store.state.statusLoader)
-    // setInterval(()=>{console.log(document.readyState)},100)
 
 onMounted(() => {
     AOS.init();
-  // document.onreadystatechange = () => {
-  //   if(document.readyState === 'complete'){
-  //     loadingPage.value = false;
-  //   }
-  // }
 })
 
 const upBtn = ref('')
@@ -66,6 +57,9 @@ body{
   font-family: Source Sans Pro !important;
   background-color: rgb(245, 245, 245);
  
+}
+.loader{
+  background: linear-gradient(179deg, #0b1726, #0c1a2b);
 }
 .Anton{
   font-family: 'Anton', sans-serif !important;
