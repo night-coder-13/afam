@@ -1,4 +1,5 @@
 <template>
+  
   <div class="fixed w-full h-full top-0 z-50 loader center--center" v-if="loadingPage">
     <img src="./assets/gif/loader.gif" class="w-full md:w-6/12 lg:w-4/12 m-auto" alt="">
   </div>

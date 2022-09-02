@@ -3,14 +3,6 @@ import store from './store/index.js'
     // const store=useStore();
     const routes = [
       {
-        path: '/about',
-        name: 'About',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "about" */ './components/views/About.vue')
-      },
-      {
         path: '/', name: 'Home', component: () => import('./components/home.vue')
       },
       {
@@ -25,9 +17,7 @@ import store from './store/index.js'
       {
         path: '/quarries', name: 'Quarries', component: () => import('./components/quarries/index.vue')
       },
-      {
-        path: '/test', name: 'Test', component: () => import('./components/test.vue')
-      },
+      
     ]
     const router = createRouter({
         history : createWebHistory(),
