@@ -120,6 +120,9 @@
         <li class="text-gray-800 ">
             <router-link  @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }">Contact Us</router-link>
         </li>
+        <li class="text-gray-800 ">
+            <router-link :to="{name : 'Quarries'}">Quarries</router-link>
+        </li>
         <li id="flag">
           <Popper arrow>
               <button class="text-lg mx-3 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>

@@ -9,7 +9,9 @@
             <div class="flex md:flex-row flex-col">
                 <div class="w-full md:w-5/12 p-5">
                     <div>
-                        <img src="../../assets/img/21.jpg" class="w-10/12 m-auto rounded-xl shadow-md -mt-32" alt="">
+                        <v-lazy-image class="w-10/12 m-auto rounded-xl shadow-md -mt-32"
+                            :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                            :src="require('../../assets/img/21.jpg')" alt="Image blog"/> 
                     </div>
                     
                 </div>
@@ -142,6 +144,7 @@
 <script setup>
 import Header from '../home-sections/hed.vue'
 import Footer from '../home-sections/footer.vue'
+import VLazyImage from "v-lazy-image";
 
 </script>
 

@@ -9,7 +9,9 @@
             <div class="flex md:flex-row flex-col">
                 <div class="w-full md:w-5/12 p-5">
                     <div>
-                        <img src="../../assets/img/1-1.jpg" class="w-9/12 md:w-10/12 m-auto rounded-xl shadow-md -mt-32" alt="">
+                        <v-lazy-image class="w-9/12 md:w-10/12 m-auto rounded-xl shadow-md -mt-32"
+                            :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                            :src="require('../../assets/img/1-1.jpg')" alt="Image blog"/> 
                     </div>
                     
                 </div>
@@ -36,9 +38,13 @@
                     <router-link :to="{name:'Product'}">
                         <div class="mx-4 mt-3 mb-5 h-60 relative archive">
                             <div class="w-full bg-name rounded-b-xl h-full"></div>
-                            <img :src="require('../../assets/img/'+img.a)" class="img h-full w-full rounded-xl" alt="">
+                            <v-lazy-image class="img h-full w-full rounded-xl"
+                                :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                                :src="require('../../assets/img/'+img.a)" :alt="img.a"/> 
                             <div>
-                                <img :src="require('../../assets/img/'+img.b)" class="box-img img rounded-lg absolute -right-4 shadow-md -bottom-4 w-5/12 h-24" alt="">
+                                <v-lazy-image class="box-img img rounded-lg absolute -right-4 shadow-md -bottom-4 w-5/12 h-24"
+                                    :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                                    :src="require('../../assets/img/'+img.b)" :alt="img.b"/> 
                                 <div class="absolute text-white bottom-0 p-2 pl-3 w-7/12">
                                     <p class="text-base">Lorem ipsum dolor sit amet</p>
                                 </div>
@@ -59,7 +65,8 @@ import Header from '../home-sections/hed.vue'
 import Footer from '../home-sections/footer.vue'
 import { ref } from '@vue/reactivity'
 import { onMounted } from '@vue/runtime-core'
-import {clickScroll} from '../../scroll.js'
+import {clickScroll} from '../../scroll'
+import VLazyImage from 'v-lazy-image'
 
 onMounted(()=>{
     clickScroll('.items--slider')

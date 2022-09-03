@@ -55,7 +55,6 @@
 }
 .bg--image{
     background: url('../../assets/img/q1.jpg');
-    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -22,13 +22,16 @@
                 <button class="px-4 py-1 border rounded-md border-gray-100 mt-4 ml-10 hover:bg-gray-100 hover:text-black">Read more</button>
             </div>
             <div class="w-full lg:w-5/12">
-                <img src="../../assets/img/stone.jpg" class="w-11/12 rounded-xl shadow m-auto mt-5 lg:mt-0" alt="">
+                <v-lazy-image  class="w-11/12 rounded-xl shadow m-auto mt-5 bg-gray-100 lg:mt-0"
+                    :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                    :src="require('../../assets/img/stone.jpg')" alt="Image Quarries"/> 
             </div>
         </div>
     </div>
 </template>
 
-<script>
+<script setup>
+import VLazyImage from "v-lazy-image";
 
 </script>
 

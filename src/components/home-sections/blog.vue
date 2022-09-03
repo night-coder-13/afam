@@ -15,7 +15,9 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 md:w-8/12 m-auto items--slider">
             <div class="rounded-xl shadow-md mx-2 mt-4 item--slider">
                 <div class="w-full h-44 overflow-hidden">
-                    <img src="../../assets/img/images.jpg" class="w-full rounded-t-xl" alt="">
+                    <v-lazy-image class="w-full rounded-t-xl"
+                    :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                    :src="require('../../assets/img/images.jpg')" alt="Image blog"/> 
                 </div>
                 
                 <div class="py-3 px-1">
@@ -30,7 +32,9 @@
             
             <div class="rounded-xl shadow-md mx-2 mt-4 item--slider">
                 <div class="w-full h-44 overflow-hidden">
-                    <img src="../../assets/img/21.jpg" class="w-full rounded-t-xl" alt="">
+                    <v-lazy-image class="w-full rounded-t-xl"
+                    :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                    :src="require('../../assets/img/21.jpg')" alt="Image blog"/> 
                 </div>
                 
                 <div class="py-3 px-1">
@@ -45,7 +49,9 @@
             
             <div class="rounded-xl shadow-md mx-2 mt-4 item--slider">
                 <div class="w-full h-44 overflow-hidden">
-                    <img src="../../assets/img/s_limestone_6272.jpg" class="w-full rounded-t-xl" alt="">
+                    <v-lazy-image class="w-full rounded-t-xl"
+                    :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                    :src="require('../../assets/img/s_limestone_6272.jpg')" alt="Image blog"/> 
                 </div>
                 
                 <div class="py-3 px-1">
@@ -66,6 +72,7 @@
 <script setup>
 import { onMounted } from '@vue/runtime-core'
 import {clickScroll} from '../../scroll.js'
+import VLazyImage from "v-lazy-image";
 
 onMounted(()=>{
     clickScroll('.items--slider')
