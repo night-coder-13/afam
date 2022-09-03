@@ -19,7 +19,7 @@
 
 @layer base {
    h3 {
-    @apply text-2xl lg:text-3xl;
+    @apply text-lg sm:text-2xl lg:text-3xl;
    }
    
     /* ... */
