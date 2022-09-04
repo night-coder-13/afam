@@ -35,8 +35,14 @@
         </li>
         
         <li class="text-gray-800 ">
+            <router-link :to="{name : 'Quarries'}">Quarries</router-link>
+        </li>
+        <li class="text-gray-800 ">
+            <router-link :to="{name : 'Catalog'}">Catalog</router-link>
+        </li>
+        <li class="text-gray-800 ">
           <Popper arrow>
-            <button class="text-lg flex items-center"> Product </button>
+            <button class=" flex items-center"> Product </button>
             <template #content="{}" >
               <div class="px-4 py-2"> 
                 <p v-for="cat in category" :key="cat.id" class="text-gray-500 text-start capitalize ">
@@ -48,9 +54,6 @@
         </li>
         <li class="text-gray-800 ">
             <router-link :to="{name : 'About'}">About us</router-link>
-        </li>
-        <li class="text-gray-800 ">
-            <router-link :to="{name : 'Quarries'}">Quarries</router-link>
         </li>
         <li class="text-gray-800 ">
             <router-link  @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }">Contact Us</router-link>
@@ -103,8 +106,14 @@
         </li>
         
         <li class="text-gray-800 ">
+            <router-link :to="{name : 'Quarries'}">Quarries</router-link>
+        </li>
+        <li class="text-gray-800 ">
+            <router-link :to="{name : 'Catalog'}">Catalog</router-link>
+        </li>
+        <li class="text-gray-800 ">
           <Popper arrow>
-              <button class="text-lg flex items-center"> Product </button>
+              <button class=" flex items-center"> Product </button>
               <template #content="{}" >
                 <div class="px-4 py-2">
                   <p v-for="cat in category" :key="cat.id" class="text-gray-500 text-start capitalize ">
@@ -119,9 +128,6 @@
         </li>
         <li class="text-gray-800 ">
             <router-link  @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }">Contact Us</router-link>
-        </li>
-        <li class="text-gray-800 ">
-            <router-link :to="{name : 'Quarries'}">Quarries</router-link>
         </li>
         <li id="flag">
           <Popper arrow>

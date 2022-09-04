@@ -17,6 +17,9 @@ import store from './store/index.js'
       {
         path: '/quarries', name: 'Quarries', component: () => import('./components/quarries/index.vue')
       },
+      {
+        path: '/catalog', name: 'Catalog', component: () => import('./components/catalog/index.vue')
+      },
       
     ]
     const router = createRouter({

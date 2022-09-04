@@ -5,7 +5,13 @@
 
             <h3 class="font-bold mb-2 Acme" id="title">Building new visions</h3>
             <p class="text-lg ml-4 max-h-56 overflow-hidden">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque.
+                Barsi Marmi's mission is to provide materials and high
+                end quality services to customers around the world, but
+                also to developa new language on design and
+                communication in the world of marble. That's why we
+                participate in exhibitions, design objects and site-specific
+                installations to extend the boundaries of this unique
+                material.
             </p>
         </div>
         <div class="w-12/12 lg:w-9/12 h-80 sm:h-96 md:h-128 sm:order-2 mb-8 sm:mb-0 bg--image">

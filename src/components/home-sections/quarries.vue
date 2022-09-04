@@ -19,7 +19,7 @@
                     Two coupes
                     The dimensions of the double cup stone are smaller than the single cup stone. In fact, two stones and two cups are equal to one single cup. Du Kop stones are usually in the shape of a rectangular cube, but they may not have a special shape. Two stones can be loaded on a trailer.
                 </p> 
-                <button class="px-4 py-1 border rounded-md border-gray-100 mt-4 ml-10 hover:bg-gray-100 hover:text-black">Read more</button>
+                <router-link :to="{name:'Quarries'}" class="px-4 py-1 border rounded-md border-gray-100 mt-4 ml-10 hover:bg-gray-100 hover:text-black">Read more</router-link>
             </div>
             <div class="w-full lg:w-5/12">
                 <v-lazy-image  class="w-11/12 rounded-xl shadow m-auto mt-5 bg-gray-100 lg:mt-0"
