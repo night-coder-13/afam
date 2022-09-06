@@ -4,7 +4,7 @@
             <!-- <img src="../../assets/arrow.png" class="pl-8" alt=""> -->
 
             <h3 class="font-bold mb-2 Acme" id="title">Building new visions</h3>
-            <p class="text-lg ml-4 max-h-56 overflow-hidden">
+            <p class="text-sm sm:text-lg ml-4 max-h-56 overflow-hidden">
                 Barsi Marmi's mission is to provide materials and high
                 end quality services to customers around the world, but
                 also to developa new language on design and

@@ -5,7 +5,7 @@
         <div class="md:p-4 pt-4 w-full lg:w-7/12 sm:w-6/12 order-2">
             <small class="text-sm sm:text-base -mb-1 text-gray-500">AFAM TRADE</small>
             <h1 class="text-xl sm:text-4xl font-bold ml-2 Acme">NATURE's ETERNAL STONE</h1>
-            <h3 class="text-base sm:text-lg ml-6 w-full sm:w-10/12">We supply and transform Travertine stone and Marbel to meet the needs of our customers globally.
+            <h3 class="text-sm sm:text-lg ml-6 w-full sm:w-10/12">We supply and transform Travertine stone and Marbel to meet the needs of our customers globally.
                 We use our centennial leadership in excavation and fabrication of stone to promote Esfahan, Iran and the Made in Iran brand worldwide.</h3>
             <div class="flex mt-9">
                 <router-link :to="{name : 'Catalog'}" class="ml-4 md:ml-16 w-32 h-10 cursor-pointer rounded-lg text-base md:text-lg flex justify-center items-center text-white bg-blue-500 

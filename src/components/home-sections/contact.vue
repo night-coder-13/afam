@@ -4,7 +4,7 @@
         <div class="flex lg:flex-row flex-col justify-center w-11/12 m-auto">
             <div class="w-full lg:w-7/12 mt-4 order-2 lg:order-none">
                 <h3 class="font-bold Acme">Contact us</h3>
-                <p class="text-base mt-1 ml-5">
+                <p class="text-sm sm:text-lg mt-1 ml-5">
                     Welcome to AFAM Trade. Please send your request for information and assistance by filling in the below information or by contacting us on one of our email addresses enlisted below. We will get back to you in the shortest time possible.
                 </p>
                 <p class="text-center mt-8 text-xl ">
