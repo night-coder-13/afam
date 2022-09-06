@@ -12,7 +12,7 @@
                             <img src="../../assets/svg/tree.svg" class="img " alt="">
                         </div>
                     </div>
-                    <p class="mt-3 md:text-lg text-sm">Lorem ipsum dolor</p>
+                    <p class="mt-3 md:text-lg text-sm">Natural</p>
                 </div>
                 
             </div>           
@@ -26,7 +26,7 @@
                             <img src="../../assets/svg/1.svg" class="img " alt="">
                         </div>
                     </div>
-                    <p class="mt-3 md:text-lg text-sm">Lorem ipsum dolor</p>
+                    <p class="mt-3 md:text-lg text-sm">Services</p>
                 </div>
                 
             </div>           
@@ -40,7 +40,7 @@
                             <img src="../../assets/svg/earth-africa-solid.svg" class="img " alt="">
                         </div>
                     </div>
-                    <p class="mt-3 md:text-lg text-sm">Lorem ipsum dolor</p>
+                    <p class="mt-3 md:text-lg text-sm">International</p>
                 </div>
                 
             </div>           
@@ -54,7 +54,7 @@
                             <img src="../../assets/svg/user.svg" class="img " alt="">
                         </div>
                     </div>
-                   <p class="mt-3 md:text-lg text-sm">Lorem ipsum dolor</p>
+                   <p class="mt-3 md:text-lg text-sm">Online consultation</p>
                 </div>
                 
             </div>           
@@ -68,7 +68,7 @@
                             <img src="../../assets/svg/thumbs-up-regular.svg" class="img " alt="">
                         </div>
                     </div>
-                    <p class="mt-3 md:text-lg text-sm">Lorem ipsum dolor</p>
+                    <p class="mt-3 md:text-lg text-sm">Product authenticity</p>
                 </div>
                 
             </div>           
@@ -85,7 +85,7 @@
                             <img src="../../assets/svg/thumbs-up-regular.svg" class="img " alt="">
                         </div>
                     </div>
-                    <p class="mt-3 md:text-lg text-sm">Lorem ipsum dolor</p>
+                    <p class="mt-3 md:text-lg text-sm">Product authenticity</p>
                 </div>
                 
             </div>  

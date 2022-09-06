@@ -88,6 +88,9 @@ export default {
     bottom: 30px;
     left: 4%;
   }
+  .mySwiper{
+  height: 65vh;
+}
 }
 </style>
 

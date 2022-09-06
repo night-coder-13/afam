@@ -14,7 +14,7 @@
                 material.
             </p>
         </div>
-        <div class="w-12/12 lg:w-9/12 h-80 sm:h-96 md:h-128 sm:order-2 mb-8 sm:mb-0 bg--image">
+        <div class="w-full lg:w-9/12 h-80 sm:h-96 md:h-128 sm:order-2 mb-8 sm:mb-0 bg--image">
             <!-- <img src="../../assets/img/q1.jpg" class="sm:pl-8" alt=""> -->
         </div>
     </div>
@@ -55,7 +55,7 @@
     left: 200px;
     width: 550px;
     background: #ffffff;
-    padding: 30px 40px;
+    padding: 30px 0 40px;
     border-radius: 10px;
     /* backdrop-filter: blur(1px); */
 }
@@ -74,9 +74,12 @@
     width: auto;
     background: transparent;
     margin: 0 15px;
-    padding: 30px 40px;
     border-radius: 10px;
     /* backdrop-filter: blur(1px); */
+}
+#title::before{
+    content: '';
+    
 }
 }
 </style>

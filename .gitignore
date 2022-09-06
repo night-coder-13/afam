@@ -6,6 +6,7 @@ afam.rar
 /src/components/test.vue
 /dist
 dist.zip
+afam.zip
 
 # local env files
 .env.local

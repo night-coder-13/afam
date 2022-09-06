@@ -25,7 +25,8 @@
             <div class="flex justify-start items-center">
                <img src="../../assets/logo_.png" class="w-44 mb-2" alt="">
             </div>
-            <p class="text-base text-gray-600 ml-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum atque similique, reiciendis labore placeat accusamus doloribus corrupti earum quis, maxime facere nam temporibus voluptatem unde commodi aliquid sed, eius dolorum.\</p>
+            <p class="text-base text-gray-600 ml-8">We supply and transform Travertine stone and Marbel to meet the needs of our customers globally.
+                We use our centennial leadership in excavation and fabrication of stone to promote Esfahan, Iran and the Made in Iran brand worldwide.</p>
          </div>
          <div class="pl-10 pt-4 mt-4">
             <p class="text-xl ">Access</p>

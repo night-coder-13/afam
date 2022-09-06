@@ -4,9 +4,8 @@
         <div class="flex lg:flex-row flex-col justify-center w-11/12 m-auto">
             <div class="w-full lg:w-7/12 mt-4 order-2 lg:order-none">
                 <h3 class="font-bold Acme">Contact us</h3>
-                <p class="text-base ml-5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quasi, id tempore aperiam est odio dignissimos voluptatum esse dolore dolor natus error, vitae ipsam animi eligendi necessitatibus atque dicta sunt.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quasi, id tempore aperiam est odio dignissimos voluptatum esse dolore dolor natus error, vitae ipsam animi eligendi necessitatibus atque dicta sunt.
+                <p class="text-base mt-1 ml-5">
+                    Welcome to AFAM Trade. Please send your request for information and assistance by filling in the below information or by contacting us on one of our email addresses enlisted below. We will get back to you in the shortest time possible.
                 </p>
                 <p class="text-center mt-8 text-xl ">
                     031-45461111 | 031-45462222 | 09902774517 <i class="text-xl ti-mobile"></i>
