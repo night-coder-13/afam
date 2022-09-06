@@ -40,4 +40,9 @@ onBeforeRouteLeave((to, from) =>{
         padding-bottom: 40%;
     }
 }
+@media only screen and (max-width: 521px){
+    #header{
+        height: 55vh;
+    }
+}
 </style>

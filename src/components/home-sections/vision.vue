@@ -55,7 +55,7 @@
     left: 200px;
     width: 550px;
     background: #ffffff;
-    padding: 30px 0 40px;
+    padding: 30px 10px 30px 40px;
     border-radius: 10px;
     /* backdrop-filter: blur(1px); */
 }

@@ -2,8 +2,8 @@
     <Header />
         <div class="w-full" data-aos="fade-up" id="product">
             <div class="w-full h-52 overflow-hidden">
-                <div class="mt-8 sm:mt-0 img-hed">
-                    <img src="../../assets/img/21.jpg" class="w-full -mt-80" alt="">
+                <div class="mt-8 sm:mt-0 img-hed relative">
+                    <img src="../../assets/img/1-29.jpg" id="img-head" class="w-full -mt-80" alt="">
                 </div>
             </div>
             <div class="flex md:flex-row flex-col">
@@ -11,7 +11,7 @@
                     <div>
                         <v-lazy-image class="w-10/12 m-auto rounded-xl shadow-md -mt-32"
                             :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                            :src="require('../../assets/img/21.jpg')" alt="Image blog"/> 
+                            :src="require('../../assets/img/1-29.jpg')" alt="Image blog"/> 
                     </div>
                     
                 </div>
@@ -58,51 +58,17 @@
                     <div class="grid grid-cols-3 justify-items-center text-center">
                         <div>
                             <img src="../../assets/svg/p1.svg" class="w-14 h-14 m-auto" alt="">
-                            <p class="text-base text-gray-500 font-bold mt-2">Lorme ipsum site</p>
+                            <p class="text-base text-gray-500 font-bold mt-2">Bathroom and toilet</p>
                         </div>
                         <div>
                             <img src="../../assets/svg/p2.svg" class="w-14 h-14 m-auto" alt="">
-                            <p class="text-base text-gray-500 font-bold mt-2">Lorme ipsum site</p>
+                            <p class="text-base text-gray-500 font-bold mt-2">Offices</p>
                         </div>
                         <div>
                             <img src="../../assets/svg/p3.svg" class="w-14 h-14 m-auto" alt="">
-                            <p class="text-base text-gray-500 font-bold mt-2">Lorme ipsum site</p>
+                            <p class="text-base text-gray-500 font-bold mt-2">Buildings</p>
                         </div>
                     </div>
-                </div>
-                <div class="w-full px-2 mt-6 md:mt-0 md:w-8/12 lg:w-7/12 md:w-9/12 m-auto ">
-                    <p class="text-xl font-bold mb-2">Stone Analysis :</p>
-                    <table class="ml-3 mt-8">
-                        <thead>
-                            <tr class="bg-gray-200 p-1 first-row-analysis ">
-                            <th class="rounded-tl-lg">Optimal Rate	</th>
-                            <th>Porosity</th>
-                            <th>Density</th>
-                            <th>Abrasion Resistance	</th>
-                            <th>Pushing Resistance	</th>
-                            <th class="rounded-tr-lg">Water Absorption</th>
-                            </tr>
-                        </thead>
-                        <tbody >
-                            <tr class="">
-                            <td class="px-3 py-2">Min</td>
-                            <td class="px-3 py-2">Petty</td>
-                            <td class="px-3 py-2">2.16</td>
-                            <td class="px-3 py-2">2</td>
-                            <td class="px-3 py-2">500</td>
-                            <td class="px-3 py-2">0.3</td>
-                            </tr>
-                            <tr class="">
-                            <td class="px-3 py-2">Max</td>
-                            <td class="px-3 py-2">2.5</td>
-                            <td class="px-3 py-2">6.16</td>
-                            <td class="px-3 py-2">2</td>
-                            <td class="px-3 py-2">1500</td>
-                            <td class="px-3 py-2">7.5</td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
                 </div>
             </div>
             <div class="w-full px-4 lg:w-8/12 m-auto mt-10 relative lg:order-none">
@@ -149,6 +115,11 @@ import VLazyImage from "v-lazy-image";
 </script>
 
 <style scoped>
+#img-head{
+    filter: grayscale(.9) blur(1px);
+    position: absolute;
+    z-index: -99;
+}
 .first-row-analysis th{
     padding: 0 10px;
 }
