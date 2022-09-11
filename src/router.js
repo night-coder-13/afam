@@ -6,7 +6,7 @@ import store from './store/index.js'
         path: '/', name: 'Home', component: () => import('./components/home.vue')
       },
       {
-        path: '/product', name: 'Product', component: () => import('./components/product/index.vue')
+        path: '/product/:id', name: 'Product', component: () => import('./components/product/index.vue')
       },
       {
         path: '/archive/:id', name: 'Archive', component: () => import('./components/archive/index.vue')

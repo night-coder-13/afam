@@ -46,7 +46,7 @@
             <template #content="{}" >
               <div class="px-4 py-2"> 
                 <p v-for="cat in category" :key="cat.id" class="text-gray-500 text-start capitalize ">
-                  <router-link :to="{name:'Archive',params:{id:cat.id}}" v-text="cat.title"></router-link>
+                  <router-link :to="{name:'Archive',params:{id:cat.id}}" @click="changeArchive" v-text="cat.name"></router-link>
                 </p>
               </div>
             </template>
@@ -117,7 +117,7 @@
               <template #content="{}" >
                 <div class="px-4 py-2">
                   <p v-for="cat in category" :key="cat.id" class="text-gray-500 text-start capitalize ">
-                    <router-link :to="{name:'Archive',params:{id:cat.id}}" v-text="cat.title"></router-link>
+                    <router-link :to="{name:'Archive',params:{id:cat.id}}" @click="changeArchive" v-text="cat.name"></router-link>
                   </p>
                 </div>
               </template>
@@ -149,9 +149,24 @@ import {smoothScroll } from '../../scroll'
 import Popper from "vue3-popper";
 import { useStore } from 'vuex';
 import { computed } from '@vue/runtime-core';
+import { useRoute } from 'vue-router';
 
+const route=useRoute();
 const store=useStore();
 const category=computed(()=>store.state.category);
+const slod=computed(()=>store.getters.getLoader)
+async function get(){
+   await store.dispatch('GetCategory')
+}
+get()
+async function changeArchive(){
+  if(!slod.value)
+        store.commit('ChangeLoader')
+    await store.dispatch('GetArchive',route.params.id)
+    await store.dispatch('GetContentArchive',route.params.id)
+    if(slod.value)
+        store.commit('ChangeLoader')
+}
 
 function Scroll(id){
     smoothScroll(id);

@@ -6,6 +6,7 @@ const store = createStore({
     state:{
         statusLoader:false,
         category:[],
+        product:[],
         archive:[],
         contentArchive:[],
         header:{title:'title' , description:'description',image:{a:'',b:'' ,c:''}},
@@ -46,6 +47,9 @@ const store = createStore({
        },
        GetContentArchive(state,archive){
          state.contentArchive = archive;
+       },
+       GetProduct(state,product){
+         state.product = product;
        },
        ChangeLoader(state){
          state.statusLoader = !state.statusLoader
@@ -90,6 +94,23 @@ const store = createStore({
          try{
              const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product_cat/'+id)
              commit('GetContentArchive',response.data)
+            //   console.log(response.data)
+         }catch(error){
+             Swal.fire({
+                 icon: 'warning',
+                 title: error,
+                 timerProgressBar: true,
+                 showConfirmButton: false,
+                 timer: '3000',
+                 toast: true,
+                 position : 'top'
+             })
+         }
+     },
+      async GetProduct({commit},id){
+         try{
+             const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product/'+id)
+             commit('GetProduct',response.data)
             //   console.log(response.data)
          }catch(error){
              Swal.fire({

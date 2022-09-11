@@ -24,33 +24,39 @@
                 </div>
             </div><!---->
             <div class="flex mt-16" data-aos="fade-up">
-                <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 w-10/12 md:w-11/12 lg:w-10/12 m-auto items--slider">
+                <Waypoint @change="onChange" class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 w-10/12 md:w-11/12 lg:w-10/12 m-auto items--slider">
                     
-                    <div v-for="item in archive" :key="item.id" class="item--slider">
-                    <router-link :to="{name:'Product'}">
-                        <div class="mx-4 mt-3 mb-5 h-60 relative archive">
-                            <div class="w-full bg-name rounded-b-xl h-full"></div>
-                            <v-lazy-image v-if="item.image1" class="img h-full w-full rounded-xl"
-                                :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                                :src="item.image1[0]" :alt="item.name"/> 
-                            <v-lazy-image v-else class="img h-full w-full rounded-xl"
-                                :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                                :src="require('../../assets/img/340719-200.png')" :alt="item.name"/> 
-                            <div>
-                                <v-lazy-image v-if="item.image2" class="box-img img rounded-lg absolute -right-4 shadow-md -bottom-4 w-5/12 h-24"
-                                    :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                                    :src="item.image2[0]" :alt="item.name"/> 
-                                <v-lazy-image v-else class="box-img img rounded-lg absolute -right-4 shadow-md -bottom-4 w-5/12 h-24"
-                                    :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                                    :src="require('../../assets/img/340719-200.png')" :alt="item.name"/> 
-                                <div class="absolute text-white bottom-0 p-2 pl-3 w-7/12">
-                                    <p class="text-base" v-text="item.title"></p>
-                                </div>
+                        <div v-for="item in archive" :key="item.id" class="item--slider">
+                            <div v-if="loader" class="center-center">
+                                <img :src="require('../../assets/gif/loader-img.gif')" alt="">
+                            </div>      
+                            <div v-else>
+                                <router-link :to="{name:'Product',params:{id:item.id}}">
+                                    <div class="mx-4 mt-3 mb-5 h-60 relative archive">
+                                        <div class="w-full bg-name rounded-b-xl h-full"></div>
+                                        <v-lazy-image v-if="item.image1" class="img h-full w-full rounded-xl"
+                                            :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                                            :src="item.image1[0]" :alt="item.name"/> 
+                                        <v-lazy-image v-else class="img h-full w-full rounded-xl"
+                                            :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                                            :src="require('../../assets/img/340719-200.png')" :alt="item.name"/> 
+                                        <div>
+                                            <v-lazy-image v-if="item.image2" class="box-img img rounded-lg absolute -right-4 shadow-md -bottom-4 w-5/12 h-24"
+                                                :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                                                :src="item.image2[0]" :alt="item.name"/> 
+                                            <v-lazy-image v-else class="box-img img rounded-lg absolute -right-4 shadow-md -bottom-4 w-5/12 h-24"
+                                                :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                                                :src="require('../../assets/img/340719-200.png')" :alt="item.name"/> 
+                                            <div class="absolute text-white bottom-0 p-2 pl-3 w-7/12">
+                                                <p class="text-base" v-text="item.title"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </router-link>
                             </div>
-                        </div>
-                    </router-link>
-                    </div> 
-                </div>
+                        </div> 
+                    
+                </Waypoint>
             </div>
            
         </div>
@@ -67,23 +73,35 @@ import {clickScroll} from '../../scroll'
 import VLazyImage from 'v-lazy-image'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'
+import { Waypoint } from "vue-waypoint";
 
 
 const route=useRoute();
 const store=useStore();
 const slod=computed(()=>store.getters.getLoader)
+const loader=ref(true)
 const archive=computed(()=>store.state.archive)
 const contentArchive=computed(()=>store.state.contentArchive)
 async function getArchive(){
     if(!slod.value)
         store.commit('ChangeLoader')
-    await store.dispatch('GetArchive',route.params.id)
+    
     await store.dispatch('GetContentArchive',route.params.id)
     if(slod.value)
         store.commit('ChangeLoader')
 
 }
 getArchive();
+
+async function onChange(waypointState) {
+    if(waypointState.going === 'IN'||waypointState.going === 'OUT'||waypointState.direction === 'UP'){
+        if(!loader.value)
+            loader.value = !loader.value
+        await store.dispatch('GetArchive',route.params.id)
+        if(loader.value)
+            loader.value = !loader.value 
+    }
+}
 
 onMounted(()=>{
     clickScroll('.items--slider')
