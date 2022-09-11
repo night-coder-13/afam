@@ -3,7 +3,8 @@
         <div class="w-full" data-aos="fade-up">
             <div class="w-full h-52 overflow-hidden">
                 <div class="mt-10 sm:mt-0 img-hed relative">
-                    <img src="../../assets/img/21.jpg" id="img-head" class="w-full -mt-80" alt="">
+                    <img v-if="contentArchive.img_bg" :src="contentArchive.img_bg[0]" id="img-head" class="w-full -mt-80" alt="">
+                    <img v-else :src="contentArchive.img[0]" id="img-head" class="w-full -mt-80" alt="">
                 </div>
             </div>
             <div class="flex md:flex-row flex-col">
@@ -11,33 +12,39 @@
                     <div>
                         <v-lazy-image class="w-9/12 md:w-10/12 m-auto rounded-xl shadow-md -mt-32"
                             :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                            :src="require('../../assets/img/1-1.jpg')" alt="Image blog"/> 
+                            :src="contentArchive.img[0]" alt="Image blog"/> 
                     </div>
                     
                 </div>
                 <div class="w-full md:w-7/12 px-6 md:px-0">
-                    <h4 class="text-2xl font-bold Acme mt-5 mb-2">Trevanter</h4>
+                    <h4 class="text-2xl font-bold Acme mt-5 mb-2 capitalize" v-text="contentArchive.name"></h4>
                     <div class="text-base ml-4 text-gray-600">
-                        <p class="mb-2 ">The subtle elegance of travertine tile and slabs add rustic warmth to any room. Created by natural forces and subterranean springs and rivers, this attractive natural stone represents the mid-stage of limestone’s transformation into marble. Travertine possesses its own unique beauty with small, random pits and markings that give it depth and Old-World charm (fun fact: it was used by the Romans to build the Coliseum). Perfect for kitchens, bathrooms and many other living spaces, Arizona Tile offers travertine from a variety of sources to ensure you can find the tone, pattern and color ideal for your project.</p>
+                        <p class="mb-2 " v-text="contentArchive.description"></p>
                     </div>
                 </div>
             </div><!---->
             <div class="flex mt-16" data-aos="fade-up">
                 <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 w-10/12 md:w-11/12 lg:w-10/12 m-auto items--slider">
                     
-                    <div v-for="img in imgs" :key="img.a" class="item--slider">
+                    <div v-for="item in archive" :key="item.id" class="item--slider">
                     <router-link :to="{name:'Product'}">
                         <div class="mx-4 mt-3 mb-5 h-60 relative archive">
                             <div class="w-full bg-name rounded-b-xl h-full"></div>
-                            <v-lazy-image class="img h-full w-full rounded-xl"
+                            <v-lazy-image v-if="item.image1" class="img h-full w-full rounded-xl"
                                 :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                                :src="require('../../assets/img/'+img.a)" :alt="img.a"/> 
+                                :src="item.image1[0]" :alt="item.name"/> 
+                            <v-lazy-image v-else class="img h-full w-full rounded-xl"
+                                :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                                :src="require('../../assets/img/340719-200.png')" :alt="item.name"/> 
                             <div>
-                                <v-lazy-image class="box-img img rounded-lg absolute -right-4 shadow-md -bottom-4 w-5/12 h-24"
+                                <v-lazy-image v-if="item.image2" class="box-img img rounded-lg absolute -right-4 shadow-md -bottom-4 w-5/12 h-24"
                                     :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                                    :src="require('../../assets/img/'+img.b)" :alt="img.b"/> 
+                                    :src="item.image2[0]" :alt="item.name"/> 
+                                <v-lazy-image v-else class="box-img img rounded-lg absolute -right-4 shadow-md -bottom-4 w-5/12 h-24"
+                                    :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                                    :src="require('../../assets/img/340719-200.png')" :alt="item.name"/> 
                                 <div class="absolute text-white bottom-0 p-2 pl-3 w-7/12">
-                                    <p class="text-base">TORREON STONE</p>
+                                    <p class="text-base" v-text="item.title"></p>
                                 </div>
                             </div>
                         </div>
@@ -55,39 +62,32 @@
 import Header from '../home-sections/hed.vue'
 import Footer from '../home-sections/footer.vue'
 import { ref } from '@vue/reactivity'
-import { onMounted } from '@vue/runtime-core'
+import { computed, onMounted } from '@vue/runtime-core'
 import {clickScroll} from '../../scroll'
 import VLazyImage from 'v-lazy-image'
+import { useRoute } from 'vue-router'
+import { useStore } from 'vuex'
+
+
+const route=useRoute();
+const store=useStore();
+const slod=computed(()=>store.getters.getLoader)
+const archive=computed(()=>store.state.archive)
+const contentArchive=computed(()=>store.state.contentArchive)
+async function getArchive(){
+    if(!slod.value)
+        store.commit('ChangeLoader')
+    await store.dispatch('GetArchive',route.params.id)
+    await store.dispatch('GetContentArchive',route.params.id)
+    if(slod.value)
+        store.commit('ChangeLoader')
+
+}
+getArchive();
 
 onMounted(()=>{
     clickScroll('.items--slider')
 })
-const imgs = ref([
-    {
-        a:'1-29.jpg',
-        b:'1-1.jpg'
-    },
-    {
-        a:'slider-stone-house-1.jpg',
-        b:'Cloud-Onyx-Marble.jpg'
-    },
-    {
-        a:'TRAVERTINE-MARBLE-12.jpg',
-        b:'travertine-stone-7.jpg'
-    },
-    {
-        a:'a-3.jpg',
-        b:'340719-200.png'
-    },
-    {
-        a:'21.jpg',
-        b:'Classic-Cream-Travertine-Tile.jpg'
-    },
-    {
-        a:'a-2.jpg',
-        b:'granite-wall_1122-1299.jpg'
-    },
-]);
 </script>
 
 <style scoped>

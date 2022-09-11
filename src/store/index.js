@@ -5,9 +5,9 @@ import { createStore } from "vuex";
 const store = createStore({
     state:{
         statusLoader:false,
-        category:[
-        
-     ],
+        category:[],
+        archive:[],
+        contentArchive:[],
         header:{title:'title' , description:'description',image:{a:'',b:'' ,c:''}},
         customer:[
             {img : [
@@ -40,8 +40,16 @@ const store = createStore({
     mutations:{
       GetCategory(state,category){
          state.category = category;
-         // console.log( state.category)
        },
+       GetArchive(state,archive){
+         state.archive = archive;
+       },
+       GetContentArchive(state,archive){
+         state.contentArchive = archive;
+       },
+       ChangeLoader(state){
+         state.statusLoader = !state.statusLoader
+     },
     },
     actions:{
       async GetCategory({commit}){
@@ -49,6 +57,40 @@ const store = createStore({
              const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product_cat')
              commit('GetCategory',response.data)
             //  console.log(response.data)
+         }catch(error){
+             Swal.fire({
+                 icon: 'warning',
+                 title: error,
+                 timerProgressBar: true,
+                 showConfirmButton: false,
+                 timer: '3000',
+                 toast: true,
+                 position : 'top'
+             })
+         }
+     },
+      async GetArchive({commit},id){
+         try{
+             const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/archive/'+id)
+             commit('GetArchive',response.data)
+            //  console.log(response.data)
+         }catch(error){
+             Swal.fire({
+                 icon: 'warning',
+                 title: error,
+                 timerProgressBar: true,
+                 showConfirmButton: false,
+                 timer: '3000',
+                 toast: true,
+                 position : 'top'
+             })
+         }
+     },
+      async GetContentArchive({commit},id){
+         try{
+             const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product_cat/'+id)
+             commit('GetContentArchive',response.data)
+            //   console.log(response.data)
          }catch(error){
              Swal.fire({
                  icon: 'warning',
