@@ -10,11 +10,11 @@
                ">
                   <i class="ti-bookmark font-bold text-xl"></i>
                </div>
-               <div class="w-full absolute h-full flex justify-center items-center title"><p class="text-lg text-white" v-text="item.title"></p></div>
+               <div class="w-full absolute h-full flex justify-center items-center title"><p class="text-lg text-white" v-text="item.name"></p></div>
               
                <v-lazy-image
                :src-placeholder="require('../../assets/gif/loader-img.gif')"
-               :src="require('../../assets/img/'+item.img)" class="h-full w-full" :alt="item.title"/>                  
+               :src="item.img[0]" class="h-full w-full" :alt="item.name"/>                  
             </div>
          </router-link>
       </div>
@@ -32,7 +32,10 @@ import VLazyImage from "v-lazy-image";
 
 const store=useStore();
 const items=computed(()=>store.state.category)
-
+async function get(){
+   await store.dispatch('GetCategory')
+}
+get()
 onMounted(()=>{
     clickScroll('.items')
 })
