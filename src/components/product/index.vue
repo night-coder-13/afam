@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class="w-full md:w-7/12 px-6 md:px-0">
-                    <h4 class="text-2xl font-bold Acme mt-5 mb-2 capitalize" v-text="product.title"></h4>
+                    <h4 class="text-2xl font-bold Acme mt-5 mb-2 capitalize notranslate" v-text="product.title"></h4>
                     <div class="mt-3 ml-1">
                         <div class="text-base ml-4 text-gray-600">
                             <p class=" " v-text="product._description"></p>

@@ -17,7 +17,7 @@
                     
                 </div>
                 <div class="w-full md:w-7/12 px-6 md:px-0">
-                    <h4 class="text-2xl font-bold Acme mt-5 mb-2 capitalize" v-text="contentArchive.name"></h4>
+                    <h4 class="text-2xl font-bold Acme mt-5 mb-2 capitalize notranslate" v-text="contentArchive.name"></h4>
                     <div class="text-base ml-4 text-gray-600">
                         <p class="mb-2 " v-text="contentArchive.description"></p>
                     </div>

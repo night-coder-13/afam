@@ -11,8 +11,16 @@
           <Popper arrow>
             <button class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
             <template #content="{}">
-              <button class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
-              <button class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/fa.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> fa </button>
+              <a href="https://company.mehid-abasian.ir"
+                 class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=fa&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/fa.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> fa </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=it&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/it.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> it </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=ar&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/ar.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> ar </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=tr&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/tr.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> tr </a>
             </template>
           </Popper>
           <button @click="toggleNav" type="button" class=" text-gray-800 hover:text-gray-700 focus:outline-none focus:text-gray-700">
@@ -62,8 +70,16 @@
           <Popper arrow>
               <button class="text-lg mx-3 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
               <template #content="{}">
-                <button class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
-                <button class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/fa.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> fa </button>
+                <a href="https://company.mehid-abasian.ir"
+                 class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=fa&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/fa.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> fa </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=it&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/it.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> it </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=ar&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/ar.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> ar </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=tr&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/tr.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> tr </a>
               </template>
             </Popper>
         </li>
@@ -82,8 +98,16 @@
             <Popper arrow>
               <button class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
               <template #content="{}">
-                <button class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
-                <button class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/fa.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> fa </button>
+                <a href="https://company.mehid-abasian.ir"
+                 class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=fa&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/fa.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> fa </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=it&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/it.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> it </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=ar&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/ar.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> ar </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=tr&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/tr.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> tr </a>
               </template>
             </Popper>
           <button @click="toggleNav" type="button" class=" text-gray-800 hover:text-gray-700 focus:outline-none focus:text-gray-700">
@@ -133,8 +157,16 @@
           <Popper arrow>
               <button class="text-lg mx-3 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
               <template #content="{}">
-                <button class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
-                <button class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/fa.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> fa </button>
+                <a href="https://company.mehid-abasian.ir"
+                 class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=fa&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/fa.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> fa </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=it&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/it.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> it </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=ar&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/ar.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> ar </a>
+                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=tr&u=https://company.mehdi-abasian.ir"
+                class="text-lg mx-5 mt-2 flex items-center"><img src="../../assets/flag/tr.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> tr </a>
               </template>
             </Popper>
         </li>
