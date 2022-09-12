@@ -51,22 +51,25 @@ function scrollTop(id){
   scrollbar-width: thin !important;          /* "auto" or "thin" */
   scrollbar-color: rgb(101, 101, 101) rgb(217, 217, 217) !important;   /* scroll thumb and track */ 
 }
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Rokkitt:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=Amatic+SC&family=Courgette&family=Crete+Round:ital@1&family=Heebo&family=Roboto+Slab&family=Ropa+Sans&family=Source+Sans+Pro&family=Volkhov:ital@0;1&display=swap');
+@font-face {
+  font-family: 'iransans';
+  src: url('./assets/font/iranSans/IRANSansWeb.woff2') format('woff2'),
+         url('./assets/font/iranSans/IRANSansWeb.woff') format('woff'),
+         url('./assets/font/iranSans/IRANSansWeb.ttf') format('truetype');
+}
 body{
-  font-family: Source Sans Pro !important;
+  font-family: iransans !important;
   background-color: rgb(245, 245, 245);
- 
+  direction: rtl;
 }
 .loader{
   background: linear-gradient(179deg, #0b1726, #0c1a2b);
 }
 .Anton{
-  font-family: 'Anton', sans-serif !important;
+  font-family: iransans, sans-serif !important;
 }
 .Acme{
-  font-family: Volkhov !important;
+  font-family: iransans !important;
   /* font-style: italic; */
 }
 .upBtn{
