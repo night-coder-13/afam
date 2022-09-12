@@ -1,17 +1,12 @@
 <template>
-    <div class="w-full m-auto mb-8 sm:mb-0 relative py-8 pb-24 flex flex-col lg:flex-row pl-1 lg:pl-0 justify-end content-center">
+    <div class="w-full m-auto mb-8 sm:mb-0 relative py-8 pb-24 flex flex-col lg:flex-row pr-1 lg:pr-0 justify-end content-center">
         <div class="grid content-center sm:order-1 sm:shadow-lg box-vision">
             <!-- <img src="../../assets/arrow.png" class="pl-8" alt=""> -->
 
-            <h3 class="font-bold mb-2 Acme" id="title">Building new visions</h3>
-            <p class="text-sm sm:text-lg ml-4 max-h-56 overflow-hidden">
-                Barsi Marmi's mission is to provide materials and high
-                end quality services to customers around the world, but
-                also to developa new language on design and
-                communication in the world of marble. That's why we
-                participate in exhibitions, design objects and site-specific
-                installations to extend the boundaries of this unique
-                material.
+            <h3 class="font-bold mb-2 Acme" id="title">ساختن دیدگاه های جدید</h3>
+            <p class="text-sm sm:text-lg mr-4 max-h-56 overflow-hidden">
+                ماموریت ما برسی کیفیت و تامین مصالح مرغوب است
+پایان خدمات بی کیفیت به مشتریان در سراسر جهان، اما همچنین برای توسعه مکانی جدید در طراحی و ارتباطات در دنیای سنگ ماربل و تراورتن به اعتماد شما نیازمندیم
             </p>
         </div>
         <div class="w-full lg:w-9/12 h-80 sm:h-96 md:h-128 sm:order-2 mb-8 sm:mb-0 bg--image">
@@ -35,10 +30,9 @@
     background-size:cover; */
     position:absolute;
     top: -10px;
-    left: -55px;
+    right: -113px;
     height: 50px;
     width: 50px;
-    transform: rotateY(200deg);
 }
 .grayscale{
 -webkit-filter: grayscale(1);
@@ -52,10 +46,10 @@
 .box-vision{
     position: absolute;
     top: 220px;
-    left: 200px;
+    right: 200px;
     width: 550px;
     background: #ffffff;
-    padding: 30px 10px 30px 40px;
+    padding: 30px 40px 30px 10px;
     border-radius: 10px;
     /* backdrop-filter: blur(1px); */
 }
@@ -70,7 +64,7 @@
     position: unset;
     top: unset;
     bottom: 0px;
-    left: 0;
+    right: 0;
     width: auto;
     background: transparent;
     margin: 0 15px;

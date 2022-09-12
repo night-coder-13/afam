@@ -15,21 +15,22 @@
             <div class="sm:w-11/12 rounded-xl shadow-md bg-gray-50 px-3 py-5">
                <p></p>
                <div class="grid my-4 mx-2">
-                  <label for="">Subscribe to our newsletter</label>
-                  <input type="email" placeholder="Email" required class="rounded-lg w-full px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
+                  <label for="">در خبرنامه ما عضو شوید</label>
+                  <input type="email" placeholder="ایمیل" required class="rounded-lg w-full px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
                </div>
-               <button class="ml-10 px-5 py-1 text-lg rounded-lg bg-blue-400 text-white">Send</button>
+               <button class="ml-10 px-5 py-1 text-base rounded-lg bg-blue-400 text-white">ارسال</button>
             </div>
          </div>
          <div class="mt-4">
             <div class="flex justify-start items-center">
                <img src="../../assets/logo_.png" class="w-44 mb-2" alt="">
             </div>
-            <p class="text-base text-gray-600 ml-8">We supply and transform Travertine stone and Marbel to meet the needs of our customers globally.
-                We use our centennial leadership in excavation and fabrication of stone to promote Esfahan, Iran and the Made in Iran brand worldwide.</p>
+            <p class="text-base text-gray-600 ml-8">ما سنگ تراورتن و ماربل را برای پاسخگویی به نیازهای مشتریان خود در سطح جهانی عرضه می کنیم.
+
+ما از تاریخچه خود در حفاری و ساخت سنگ برای معرفی اصفهان، ایران و برند های ایرانی در سراسر جهان استفاده می کنیم.</p>
          </div>
          <div class="pl-10 pt-4 mt-4">
-            <p class="text-xl ">Access</p>
+            <p class="text-xl ">دسترسی سریع</p>
             <ul class="text-sm mt-4 ml-5 text-gray-600">
                <li>lorme</li>
                <li>lorme ipsum</li>

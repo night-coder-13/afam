@@ -1,6 +1,6 @@
 <template>
     <div id="bg" class="w-11/12 sm:w-10/12 rounded-2xl bg-gray-400 m-auto sm:p-0">
-        <h3 class="font-bold text-center mb-6 text-white -mb-8 Acme">Our characteristics</h3>
+        <h3 class="font-bold text-center mb-6 text-white -mb-8 Acme">ویژگی ما</h3>
         <div class="grid grid-cols-2 lg:grid-cols-5 justify-items-center my-10 mx-0 md:mx-4">
             <div class="w-32 h-32 md:w-40 md:h-40 m-4 bg-white z-10 relative rounded-lg grid justify-items-center content-center">
                 <div class="blur-box "></div>
@@ -12,7 +12,7 @@
                             <img src="../../assets/svg/tree.svg" class="img " alt="">
                         </div>
                     </div>
-                    <p class="mt-3 md:text-lg text-sm">Natural</p>
+                    <p class="mt-3 md:text-lg text-sm">حفظ محیط زیست</p>
                 </div>
                 
             </div>           
@@ -26,7 +26,7 @@
                             <img src="../../assets/svg/1.svg" class="img " alt="">
                         </div>
                     </div>
-                    <p class="mt-3 md:text-lg text-sm">Services</p>
+                    <p class="mt-3 md:text-lg text-sm">خدمات الکترونیک</p>
                 </div>
                 
             </div>           
@@ -40,7 +40,7 @@
                             <img src="../../assets/svg/earth-africa-solid.svg" class="img " alt="">
                         </div>
                     </div>
-                    <p class="mt-3 md:text-lg text-sm">International</p>
+                    <p class="mt-3 md:text-lg text-sm">بین المللی</p>
                 </div>
                 
             </div>           
@@ -54,7 +54,7 @@
                             <img src="../../assets/svg/user.svg" class="img " alt="">
                         </div>
                     </div>
-                   <p class="mt-3 md:text-lg text-sm">Online consultation</p>
+                   <p class="mt-3 md:text-lg text-sm">مشاوره آنلاین</p>
                 </div>
                 
             </div>           
@@ -68,7 +68,7 @@
                             <img src="../../assets/svg/thumbs-up-regular.svg" class="img " alt="">
                         </div>
                     </div>
-                    <p class="mt-3 md:text-lg text-sm">Product authenticity</p>
+                    <p class="mt-3 md:text-lg text-sm">محصولی بااصالت</p>
                 </div>
                 
             </div>           
@@ -85,7 +85,7 @@
                             <img src="../../assets/svg/thumbs-up-regular.svg" class="img " alt="">
                         </div>
                     </div>
-                    <p class="mt-3 md:text-lg text-sm">Product authenticity</p>
+                    <p class="mt-3 md:text-lg text-sm">محصولی بااصالت</p>
                 </div>
                 
             </div>  

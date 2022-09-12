@@ -9,17 +9,11 @@
         </video>
         <div class="flex flex-col lg:flex-row items-center relative">
             <div class="w-full lg:w-7/12 text-white">
-                <h3 class="font-bold Acme">Quarries</h3>
-                <p class="text-base ml-3 mt-1 mb-6 h-60 sm:h-auto px-2 overflow-hidden">Another name is Coop stone, block stone. Cope stone does not have a specific type in terms of gender, and all types of stones that are extracted from the mine are initially in the form of cope.
-                    Therefore, coupe stones can be made of granite, marble and travertine. But the classification of all kinds of Kop stones is done based on its size and quality. In this category, there are a total of three types of Kop stones:
-
-                    One coupe
-                    Kop Tek Kop stone is of high quality because it has no cracks or scratches and its color harmony is high. The dimensions of the single cup stone are large and its shape is cut in a hexagonal shape. The weight of a single cup stone is 25 to 27 tons. Due to its dimensions and high weight, each single piece of rock is transported on a trailer.
-
-                    Two coupes
-                    The dimensions of the double cup stone are smaller than the single cup stone. In fact, two stones and two cups are equal to one single cup. Du Kop stones are usually in the shape of a rectangular cube, but they may not have a special shape. Two stones can be loaded on a trailer.
+                <h3 class="font-bold Acme">معادن</h3>
+                <p class="text-base ml-3 mt-1 mb-6 h-60 sm:h-auto px-2 overflow-hidden">
+                    کشور ایران از لحاظ سنگ‌های معدنی، منطقۀ ثروتمندی به شمار می‌آید. پراکندگی معادن سنگ بین استان‌های کشور اختلاف مشهودی دارد. طبق آمار استان‌های اصفهان، خراسان، فارس، کردستان و آذربایجان شرقی در مجموع حدود ۶۹% این معادن را به خود اختصاص . برای آشنایی با تاریخچه استخراج سنگ در ایران مطلبی نوشته‌ایم که درصورت تمایل می‌توانید مطالعه فرمایید.
                 </p> 
-                <router-link :to="{name:'Quarries'}" class="px-4 py-1 border rounded-md border-gray-100 ml-10 hover:bg-gray-100 hover:text-black">Read more</router-link>
+                <router-link :to="{name:'Quarries'}" class="px-4 py-1 border rounded-md border-gray-100 ml-10 hover:bg-gray-100 hover:text-black">مشاهده</router-link>
             </div>
             <div class="w-full lg:w-5/12">
                 <v-lazy-image  class="w-11/12 rounded-xl shadow m-auto mt-5 bg-gray-100 lg:mt-0"

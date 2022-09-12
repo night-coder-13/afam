@@ -3,13 +3,13 @@
     <div class="w-full">
         <div id="header"></div>
         <section class="w-11/12 md:w-9/12 lg:w-7/12 m-auto py-8">
-            <h3>Our Travertine & Marble Quarries</h3>
-            <p class="mt-2 ml-2 md:ml-4 text-gray-600 text-sm md:text-lg">Esfahan Travertine materials have been extracted from our quarries since 1993. From the same quarry basin the ancient Iranians extracted Travertine to build the most important Iranian cultural monuments. Today, our company continues to produce, extract, process and market Travertine & Marble and Made in Iran stone all over the world. Currently we operate throughout 24 hectares of land with three active quarries.</p>
+            <h3>معادن سنگ تراورتن و مرمر ما</h3>
+            <p class="mt-2 mr-2 md:mr-4 text-gray-600 text-sm md:text-lg">تراورتن اصفهان از سال 1993 از معادن ما استخراج می شود. ایرانیان باستان از همان حوضه معدن سنگ تراورتن را برای ساخت مهمترین آثار فرهنگی ایران استخراج می کردند. امروزه شرکت ما به تولید، استخراج، فرآوری و بازاریابی سنگ تراورتن و مرمریت و ساخت ایران در سراسر جهان ادامه می دهد. در حال حاضر ما در سراسر 24 هکتار زمین با سه معدن فعال کار می کنیم.</p>
             <Slider class="my-4" />
-            <p class="mt-2 ml-2 md:ml-4 text-gray-600 text-sm md:text-lg">Our company pursues the entire production process from the extraction to the transformation of products. We extract over 30,000 m³ of travertine & marble products per year and through the employment of block cutters and gang-saws we reach a total output of 20,000 m² of finished products per month. The highly specialized team of workers allows to meet the design needs of the greatest architects, engineers and designers in the worlds market.</p>
+            <p class="mt-2 mr-2 md:mr-4 text-gray-600 text-sm md:text-lg">شرکت ما کل فرآیند تولید را از استخراج تا تبدیل محصولات دنبال می کند. ما سالانه بیش از 30000 متر مربع محصولات تراورتن و سنگ مرمر استخراج می کنیم و از طریق استفاده از دستگاه های برش بلوک و اره های باند به مجموع 20000 متر مربع محصول نهایی در ماه می رسیم. تیم بسیار متخصص از کارگران اجازه می دهد تا نیازهای طراحی بزرگترین معماران، مهندسان و طراحان در بازار جهان را برآورده سازند.</p>
             
             <img src="../../assets/img/map.jpg" class="w-full mt-20 mb-4" alt="">
-            <p class="mt-2 ml-2 md:ml-4 text-gray-600 text-sm md:text-lg">Throughout this century of operations, our company has entered important partnership agreements with other leading quarries in the marble and granite field both in Iran and across the Globe. We offer on top of Roman Travertine materials additional natural stones seeking to be a reference point in qualitative stone supply leveraging on our Made in Iran brand.</p>
+            <p class="mt-2 mr-2 md:mr-4 text-gray-600 text-sm md:text-lg">در طول این قرن فعالیت، شرکت ما قراردادهای مشارکت مهمی را با سایر معادن پیشرو در زمینه سنگ مرمر و گرانیت هم در ایران و هم در سراسر جهان منعقد کرده است. ما علاوه بر مواد تراورتن رومی، سنگ‌های طبیعی اضافی را ارائه می‌کنیم که به دنبال آن هستیم تا نقطه مرجعی در عرضه کیفی سنگ در برند ساخت ایران خود باشیم.</p>
         </section>
     </div>
     <Footer />

@@ -5,9 +5,9 @@
         <div class="w-full md:w-6/12 lg:w-4/12">
             <div class="blog-title flex justify-center items-center">
                 <div class="w-9/12 sm:w-6/12 m-auto relative">
-                    <h3 class="font-bold Acme">Blog</h3>
-                    <p class="text-base text-gray-500 ml-3 mt-1">Discover AFAM Trade (marble and Travertine) latest News.
-Click on your preferred article or choose a news category.</p>
+                    <h3 class="font-bold Acme">وبلاگ</h3>
+                    <p class="text-base text-gray-500 ml-3 mt-1">آخرین اخبار تجارت AFAM (مرمر و تراورتن) را مرور کنید.
+روی مقاله دلخواه خود کلیک کنید یا دسته بندی اخبار را انتخاب کنید.</p>
                     <a class="absolute right-8 -bottom-10 text-blue-500" href="#">Show all <i class="ti-arrow-circle-right text-sm"></i></a>
 
                 </div>
@@ -23,10 +23,10 @@ Click on your preferred article or choose a news category.</p>
                 
                 <div class="py-3 px-1">
                     <p class="text-sm text-gray-400"> <i class="ti-time"></i> 2022-11-25 </p>
-                    <h2 class="text-lg ml-3 mt-2">Lorem ipsum, dolor sit amet consectetur</h2>
+                    <h2 class="text-lg ml-3 mt-2">لورم ایپسوم متن ساختگی </h2>
                     <div class="flex items-center justify-around  mt-6">
                         <button class=" "><i class="ti-heart"></i> +158</button>
-                        <button class="px-7 py-2 text-sm bg-blue-200 rounded-lg text-gray-600">Read more</button>
+                        <button class="px-7 py-2 text-sm bg-blue-200 rounded-lg text-gray-600">مشاهده</button>
                     </div>
                 </div>
             </div>
@@ -40,10 +40,10 @@ Click on your preferred article or choose a news category.</p>
                 
                 <div class="py-3 px-1">
                     <p class="text-sm text-gray-400"> <i class="ti-time"></i> 2022-11-25 </p>
-                    <h2 class="text-lg ml-3 mt-2">Lorem ipsum, dolor sit amet consectetur</h2>
+                    <h2 class="text-lg ml-3 mt-2">لورم ایپسوم متن ساختگی </h2>
                     <div class="flex items-center justify-around  mt-6">
                         <button class=" "><i class="ti-heart"></i> +20</button>
-                        <button class="px-7 py-2 text-sm bg-blue-200 rounded-lg text-gray-600">Read more</button>
+                        <button class="px-7 py-2 text-sm bg-blue-200 rounded-lg text-gray-600">مشاهده</button>
                     </div>
                 </div>
             </div>
@@ -57,10 +57,10 @@ Click on your preferred article or choose a news category.</p>
                 
                 <div class="py-3 px-1">
                     <p class="text-sm text-gray-400"> <i class="ti-time"></i> 2022-11-25 </p>
-                    <h2 class="text-lg ml-3 mt-2">Lorem ipsum, dolor sit amet consectetur</h2>
+                    <h2 class="text-lg ml-3 mt-2">لورم ایپسوم متن ساختگی </h2>
                     <div class="flex items-center justify-around  mt-6">
                         <button class=" "><i class="ti-heart"></i> +36</button>
-                        <button class="px-7 py-2 text-sm bg-blue-200 rounded-lg text-gray-600">Read more</button>
+                        <button class="px-7 py-2 text-sm bg-blue-200 rounded-lg text-gray-600">مشاهده</button>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@
     <div class="w-full rounded-lg shadow-lg overflow-hidden box-alert animate__animated animate__zoomIn">
         <img src="../../assets/img/email-messages-network.jpg" class="w-full" alt="">
         <div class="p-4">
-            <h3 class="font-bold mb-2 Acme" id="title">Subscribe to AFMA newsletter</h3>
+            <h3 class="font-bold mb-2 Acme" id="title">در خبرنامه ما عضو شوید</h3>
             <div class="mt-8 text-center">
                 <input type="text" placeholder="Email" class="rounded-lg px-3 w-9/12 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
                 <button class="ml-2 px-6 py-1 text-lg rounded-lg bg-blue-400 text-white">Send</button>
