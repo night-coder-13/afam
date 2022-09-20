@@ -62,15 +62,15 @@ const store = createStore({
              commit('GetCategory',response.data)
             //  console.log(response.data)
          }catch(error){
-             Swal.fire({
-                 icon: 'warning',
-                 title: error,
-                 timerProgressBar: true,
-                 showConfirmButton: false,
-                 timer: '3000',
-                 toast: true,
-                 position : 'top'
-             })
+            Swal.fire({
+                icon: 'warning',
+                title: error,
+                timerProgressBar: true,
+                showConfirmButton: false,
+                timer: '3000',
+                toast: true,
+                position : 'top'
+            })
          }
      },
       async GetArchive({commit},id){

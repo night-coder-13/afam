@@ -3,22 +3,22 @@ import store from './store/index.js'
     // const store=useStore();
     const routes = [
       {
-        path: '/', name: 'Home', component: () => import('./components/home.vue')
+        path: '/', name: 'Home', component: () => import('./components/home.vue'),meta :{title:'AFAM Trading | HOME'}
       },
       {
-        path: '/product/:id', name: 'Product', component: () => import('./components/product/index.vue')
+        path: '/product/:id', name: 'Product', component: () => import('./components/product/index.vue'),meta :{title:'AFAM Trading | Product'}
       },
       {
-        path: '/archive/:id', name: 'Archive', component: () => import('./components/archive/index.vue')
+        path: '/archive/:id', name: 'Archive', component: () => import('./components/archive/index.vue'),meta :{title:'AFAM Trading | Archive Product'}
       },
       {
-        path: '/about', name: 'About', component: () => import('./components/about/index.vue')
+        path: '/about', name: 'About', component: () => import('./components/about/index.vue'),meta :{title:'AFAM Trading | About us'}
       },
       {
-        path: '/quarries', name: 'Quarries', component: () => import('./components/quarries/index.vue')
+        path: '/quarries', name: 'Quarries', component: () => import('./components/quarries/index.vue'),meta :{title:'AFAM Trading | Quarries'}
       },
       {
-        path: '/catalog', name: 'Catalog', component: () => import('./components/catalog/index.vue')
+        path: '/catalog', name: 'Catalog', component: () => import('./components/catalog/index.vue'),meta :{title:'AFAM Trading | Catalog'}
       },
       
     ]
@@ -37,6 +37,7 @@ import store from './store/index.js'
         }
     })
     router.beforeEach((to, from, next) => {
+      document.title = `${to.meta.title}`;
       if(to.fullPath !== from.fullPath)
         store.getters.changeLoader;
       
