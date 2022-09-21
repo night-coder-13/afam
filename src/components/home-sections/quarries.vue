@@ -5,7 +5,7 @@
     <div class="py-16 sm:py-24 px-2 sm:px-16 my-10 w-full section-coop overflow-hidden">
         
         <video autoplay muted loop id="myVideo">
-            <source :src="'../../assets/video/stone_.mp4'" type="video/mp4">
+            <source :src="'../../assets/video/stone.mp4'" type="video/mp4">
         </video>
         <div class="flex flex-col lg:flex-row items-center relative">
             <div class="w-full lg:w-7/12 text-white">
