@@ -1,15 +1,15 @@
 <template>
 
-  <div class="">
+  <div class="bg-gray-100 shadow">
     <nav id="hed" class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
       <div class="flex items-center justify-between">
-        <router-link to="/" class="text-xl font-bold text-gray-800 md:text-2xl">
-            <img src="../../assets/logo_.png" class="w-40" alt="">
+        <router-link to="/" class="text-xl ml-8 font-bold text-gray-800 md:text-2xl">
+            <img src="../../assets/logoname.png" class="w-40" alt="">
         </router-link>
         <!-- Mobile menu button -->
         <div class="flex md:hidden">
           <Popper arrow>
-            <button class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
+            <button class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> En </button>
             <template #content="{}">
               <a href="https://company.mehid-abasian.ir"
                  class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </a>
@@ -38,19 +38,19 @@
       <ul
         :class="showMenu ? 'flex animate__animated animate__fadeInLeft' : 'hidden'"
         class=" flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 z-50">
-        <li class="text-gray-800 ">
+        <li class="text-gray-900 font-bold">
             <router-link :to="{name : 'Home'}">Home</router-link>
         </li>
         
-        <li class="text-gray-800 ">
+        <li class="text-gray-800 font-bold">
             <router-link :to="{name : 'Quarries'}">Quarries</router-link>
         </li>
-        <li class="text-gray-800 ">
+        <li class="text-gray-800 font-bold">
             <router-link :to="{name : 'Catalog'}">Catalog</router-link>
         </li>
-        <li class="text-gray-800 ">
+        <li class="text-gray-800 font-bold">
           <Popper arrow>
-            <button class=" flex items-center"> Product </button>
+            <button class="font-bold flex items-center"> Product </button>
             <template #content="{}" >
               <div class="px-4 py-2"> 
                 <p v-for="cat in category" :key="cat.id" class="text-gray-500 text-start capitalize ">
@@ -60,15 +60,15 @@
             </template>
           </Popper>
         </li>
-        <li class="text-gray-800 ">
+        <li class="text-gray-800 font-bold">
             <router-link :to="{name : 'About'}">About us</router-link>
         </li>
-        <li class="text-gray-800 ">
+        <li class="text-gray-800 font-bold">
             <router-link  @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }">Contact Us</router-link>
         </li>
         <li id="flag">
           <Popper arrow>
-              <button class="text-lg mx-3 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
+              <button class="text-lg mx-3 flex items-center bg-blue-400 text-white py-1 px-4 rounded-full"><img src="../../assets/flag/en.jpg" class="mx-1 mr-2 w-6 h-4 rounded-full border-1 border-white" alt=""> En </button>
               <template #content="{}">
                 <a href="https://company.mehid-abasian.ir"
                  class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </a>
@@ -91,12 +91,12 @@
     <nav id="hed" class="container px-6 mx-auto md:flex md:justify-between md:items-center">
       <div class="flex items-center justify-between">
         <router-link to="/" class="text-xl font-bold text-gray-800 md:text-2xl">
-            <img src="../../assets/logo_.png" class="w-40" alt="">
+            <img src="../../assets/logoname.png" class="w-40" alt="">
         </router-link>
         <!-- Mobile menu button -->
         <div class="flex md:hidden">
             <Popper arrow>
-              <button class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
+              <button class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> En </button>
               <template #content="{}">
                 <a href="https://company.mehid-abasian.ir"
                  class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </a>
@@ -121,23 +121,23 @@
         </div>
       </div>
 
-      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+      <!-- nav stiky ******** -->
       <ul
         :class="showMenu ? 'flex animate__animated animate__fadeInLeft' : 'hidden'"
         class=" flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 z-50">
-        <li class="text-gray-800 ">
+        <li class="text-gray-900 font-bold">
             <router-link :to="{name : 'Home'}">Home</router-link>
         </li>
         
-        <li class="text-gray-800 ">
+        <li class="text-gray-800 font-bold">
             <router-link :to="{name : 'Quarries'}">Quarries</router-link>
         </li>
-        <li class="text-gray-800 ">
+        <li class="text-gray-800 font-bold">
             <router-link :to="{name : 'Catalog'}">Catalog</router-link>
         </li>
-        <li class="text-gray-800 ">
+        <li class="text-gray-800 font-bold">
           <Popper arrow>
-              <button class=" flex items-center"> Product </button>
+              <button class=" flex items-center font-bold"> Product </button>
               <template #content="{}" >
                 <div class="px-4 py-2">
                   <p v-for="cat in category" :key="cat.id" class="text-gray-500 text-start capitalize ">
@@ -147,15 +147,15 @@
               </template>
             </Popper>
         </li>
-        <li class="text-gray-800 ">
+        <li class="text-gray-800 font-bold">
             <router-link :to="{name : 'About'}">About us</router-link>
         </li>
-        <li class="text-gray-800 ">
+        <li class="text-gray-800 font-bold">
             <router-link  @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }">Contact Us</router-link>
         </li>
         <li id="flag">
           <Popper arrow>
-              <button class="text-lg mx-3 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </button>
+              <button class="text-lg mx-3 flex items-center bg-blue-400 text-white py-1 px-4 rounded-full"><img src="../../assets/flag/en.jpg" class="mx-1 w-6 h-4 rounded-full border-1 border-white" alt=""> En </button>
               <template #content="{}">
                 <a href="https://company.mehid-abasian.ir"
                  class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </a>
