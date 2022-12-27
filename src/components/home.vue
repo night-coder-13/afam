@@ -6,7 +6,7 @@
     <Newsletter data-aos="fade-up" />
     <Feature data-aos="fade-up" />
     <Product data-aos="fade-up" />
-    <Quarries data-aos="fade-up" />
+    <!-- <Quarries data-aos="fade-up" /> -->
     <Blog data-aos="fade-up" />
     <Contact data-aos="fade-up" />
     <Footer />
@@ -19,7 +19,7 @@ import Customer from './home-sections/customer.vue'
 import Vision from './home-sections/vision.vue'
 import Feature from './home-sections/feature.vue'
 import Product from './home-sections/product.vue'
-import Quarries from './home-sections/quarries.vue'
+// import Quarries from './home-sections/quarries.vue'
 import Blog from './home-sections/blog.vue'
 import Contact from './home-sections/contact.vue'
 import Footer from './home-sections/footer.vue'

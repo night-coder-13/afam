@@ -1,34 +1,53 @@
 <template>
 <Waypoint @change="onchange"></Waypoint>
-<div @click="close" class="bg hidden">
-    <div class="w-full rounded-lg shadow-lg overflow-hidden box-alert animate__animated animate__zoomIn">
+<div @click="close" class="bg hidden newsletter-desc">
+    <div class="w-full rounded-lg shadow-lg overflow-hidden box-alert animate__animated animate__zoomIn center--center">
         <img src="../../assets/img/email-messages-network.jpg" class="w-full" alt="">
-        <div class="p-4">
-            <h3 class="font-bold mb-2 Acme" id="title">Subscribe to AFMA newsletter</h3>
-            <div class="mt-8 text-center">
+        <div class="p-4 absolute top-14 rounded-md box-mail">
+            <h4 class="font-bold Acme text-lg text-white text-center" id="">Subscribe to AFMA newsletter</h4>
+            <div class="mt-4 text-center">
                 <input type="text" placeholder="Email" class="rounded-lg px-3 w-9/12 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
                 <button class="ml-2 px-6 py-1 text-lg rounded-lg bg-blue-400 text-white">Send</button>
             </div>
         </div>
     </div>
 </div>
+<div class="newsletter-mob hidden">
+    <div @click="close" class="bg-box-alert-mobail animate__animated animate__fadeIn"> </div>
+    <div class="box-alert-mobail animate__animated animate__fadeInUp pt-3">
+        <i @click="close" class="absolute top-4 right-4 ti-close text-red-500 font-bold"></i>
+        <div class="p-5 top-14 rounded-md">
+            <h4 class="font-bold Acme text-lg" id="">Subscribe to AFMA newsletter</h4>
+            <div class="mt-3 mb-4 text-center relative">
+                <input type="text" placeholder="Email" class="rounded-full h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                <button class="absolute right-2 ml-2 px-6 py-1 text-lg rounded-full bg-blue-400 text-white shadow">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 </template>
 
 <script setup>
 import { Waypoint } from "vue-waypoint";
 
-
 function onchange(waypointState){
     if(waypointState.going === 'IN'){
         if(sessionStorage.getItem('newsletter') !== 'true'){
-            sessionStorage.setItem('newsletter', 'true');
-            document.querySelector('.bg').style.display='block'
+            // sessionStorage.setItem('newsletter', 'true');
+            if(window.innerWidth > 500)
+                document.querySelector('.newsletter-desc').style.display='block'
+            else
+                document.querySelector('.newsletter-mob').style.display='block'
         }
     }
 }
 function close(){
-    document.querySelector('.bg').style.display='none'
+    sessionStorage.setItem('newsletter', 'true');
+    document.querySelector('.newsletter-desc').style.display='none'
+    document.querySelector('.newsletter-mob').style.display='none'
 }
 
 </script>
@@ -40,16 +59,39 @@ function close(){
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.37);
+    /* background: rgba(0, 0, 0, 0.37); */
     z-index: 999;
+}
+.bg-box-alert-mobail{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.13);
+}
+.box-alert-mobail button{
+    top: 7px;
+}
+.box-alert-mobail{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999999;
+    background: #fff;
 }
 .box-alert{
     position: absolute;
-    top: 100px;
+    top: 150px;
     left: 33%;
     width: 38%;
     z-index: 9999;
     background: #fff;
+}
+.box-alert .box-mail{
+    background: rgba(255, 255, 255, 0.109);
+    backdrop-filter: blur(3px);
+    position: absolute;
 }
 @media only screen and (max-width: 920px){
     .box-alert{
@@ -57,11 +99,11 @@ function close(){
         width: 47%;
     }
 }
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 500px){
     .box-alert{
-        left: 2%;
-        width: 96%;
+        display: none;
     }
+
 }
 </style>
 

@@ -3,19 +3,22 @@
     <h3 class="font-bold text-center mb-6 Acme">Product</h3>
     <div class="sm:grid sm:grid-cols-2 lg:grid-cols-4 items product--slider">
       <div v-for="item in items" :key="item.id" class="item--slider">
-         <router-link :to="{name:'Archive',params:{id:item.id}}">
-            <div class="box-productimg mx-2 my-3 rounded-xl relative overflow-hidden">
-               <div class="w-9 h-9 bg-gray-50 center--center absolute z-30 rounded-full top-4 right-3 text-blue-500
-               hover:text-white hover:bg-blue-500 
-               ">
-                  <i class="ti-bookmark font-bold text-xl"></i>
+         <router-link :to="{name:'Archive',params:{id:item.id}}" class="">
+            <div class="h-full pb-5">
+               <div class="box-productimg mx-2 my-3 rounded-xl relative overflow-hidden h-full">
+                  <div class="w-9 h-9 bg-gray-50 center--center absolute z-30 rounded-full top-4 right-3 text-blue-500
+                  hover:text-white hover:bg-blue-500 
+                  ">
+                     <i class="ti-bookmark font-bold text-xl"></i>
+                  </div>
+                  <div class="w-full absolute h-full flex justify-center items-center title"><p class="text-lg text-white" v-text="item.name"></p></div>
+               
+                  <v-lazy-image
+                  :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                  :src="item.img[0]" class="h-full " :alt="item.name"/>                  
                </div>
-               <div class="w-full absolute h-full flex justify-center items-center title"><p class="text-lg text-white" v-text="item.name"></p></div>
-              
-               <v-lazy-image
-               :src-placeholder="require('../../assets/gif/loader-img.gif')"
-               :src="item.img[0]" class="h-full w-full" :alt="item.name"/>                  
             </div>
+            
          </router-link>
       </div>
         
