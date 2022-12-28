@@ -14,13 +14,13 @@
 </div>
 <div class="newsletter-mob hidden">
     <div @click="close" class="bg-box-alert-mobail animate__animated animate__fadeIn"> </div>
-    <div class="box-alert-mobail animate__animated animate__fadeInUp pt-3">
-        <i @click="close" class="absolute top-4 right-4 ti-close text-red-500 font-bold"></i>
-        <div class="p-5 top-14 rounded-md">
-            <h4 class="font-bold Acme text-lg" id="">Subscribe to AFMA newsletter</h4>
-            <div class="mt-3 mb-4 text-center relative">
+    <div class="box-alert-mobail animate__animated animate__fadeInUp pt-3 pb-4">
+        <i @click="close" class="absolute btn-close right-2 ti-close text-white font-bold mr-1"></i>
+        <div class="p-5 mt-5 ">
+            <h4 class="font-bold Acme text-lg" id="">Subscribe to AFMA Newsletter</h4>
+            <div class="mt-4 mb-4 text-center relative">
                 <input type="text" placeholder="Email" class="rounded-full h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
-                <button class="absolute right-2 ml-2 px-6 py-1 text-lg rounded-full bg-blue-400 text-white shadow">Send</button>
+                <button class="btn-in-input absolute right-2 ml-2 px-6 py-1 text-lg rounded-full bg-gray-200 shadow text-blue-400 font-bold">Send</button>
             </div>
         </div>
     </div>
@@ -70,7 +70,12 @@ function close(){
     z-index: 9999;
     background: rgba(0, 0, 0, 0.13);
 }
-.box-alert-mobail button{
+.box-alert-mobail .btn-close{
+    border-radius: 50%;
+    padding: 5px;
+    background-color: rgb(235, 99, 99);
+}
+.box-alert-mobail .btn-in-input{
     top: 7px;
 }
 .box-alert-mobail{
@@ -78,7 +83,9 @@ function close(){
     bottom: 0;
     width: 100%;
     z-index: 999999;
-    background: #fff;
+    background: rgb(255, 253, 253);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 .box-alert{
     position: absolute;

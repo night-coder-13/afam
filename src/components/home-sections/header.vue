@@ -1,7 +1,7 @@
 <template>
 
 <header class="w-full">
-    <div data-aos="fade-up" class="flex flex-col sm:flex-row w-full md:py-9 px-8 sm:px-16 justify-between items-center">
+    <div data-aos="fade-up" class="flex flex-col sm:flex-row w-full mt-3 sm:mt-0 md:py-9 px-8 sm:px-16 justify-between items-center">
         <div class="md:p-4 pt-4 w-full lg:w-7/12 sm:w-6/12 order-2">
             <small class="text-sm sm:text-base -mb-1 text-gray-500">AFAM TRADE</small>
             <h1 class="text-xl sm:text-4xl font-bold ml-2 Acme">NATURE's ETERNAL STONE</h1>

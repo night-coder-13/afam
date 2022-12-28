@@ -47,7 +47,7 @@
 }
 @media only screen and (max-width: 450px){
 .header-contact{
-    background-size: 170% 100%;
+    background-size: 220% 100%;
 }
 }
 </style>
