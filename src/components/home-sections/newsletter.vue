@@ -1,20 +1,29 @@
 <template>
 <Waypoint @change="onchange"></Waypoint>
-<div @click="close" class="bg hidden newsletter-desc">
-    <div class="w-full rounded-lg shadow-lg overflow-hidden box-alert animate__animated animate__zoomIn center--center">
-        <img src="../../assets/img/email-messages-network.jpg" class="w-full" alt="">
-        <div class="p-4 absolute top-14 rounded-md box-mail">
-            <h4 class="font-bold Acme text-lg text-white text-center" id="">Subscribe to AFMA newsletter</h4>
-            <div class="mt-4 text-center">
-                <input type="text" placeholder="Email" class="rounded-lg px-3 w-9/12 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
-                <button class="ml-2 px-6 py-1 text-lg rounded-lg bg-blue-400 text-white">Send</button>
+<div class="bg hidden newsletter-desc center--center">
+    <div @click="close" class="w-full h-full absolute"></div>
+    <div class="relative body-newsletter-desc">
+        <div id="image-newsletter" class="relative left-4 top-10 animate__animated animate__fadeInRight ">
+            <img src="../../assets/img/email-messages-network.jpg" class="w-96 rounded-lg shadow h-48" alt="">
+        </div>
+        <div id="forme-newsletter" class="relative -top-14 -left-10 animate__animated animate__fadeInLeft">
+            <div class="bg-white rounded-lg shadow-md w-96 h-44 center--center relative">
+                <i @click="close" class="absolute btn-close right-2 ti-close text-gray-400 hover:text-gray-600 cursor-pointer font-bold mr-1 top-2 hover:border-red-400 border border-gray-400 p-1 rounded-full"></i>
+                <div class="p-5 mt-5 w-11/12">
+                    <h4 class="font-bold Acme text-lg" id="">Subscribe to AFMA Newsletter</h4>
+                    <div class="mt-4 mb-4 text-center relative">
+                        <input type="text" placeholder="Email" class="rounded-full h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                        <button class="btn-in-input absolute right-2 ml-2 px-6 py-1 text-lg rounded-full bg-gray-200 shadow text-blue-400 font-bold">Send</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    
 </div>
 <div class="newsletter-mob hidden">
     <div @click="close" class="bg-box-alert-mobail animate__animated animate__fadeIn"> </div>
-    <div class="box-alert-mobail animate__animated animate__fadeInUp pt-3 pb-4">
+    <div id="forme-mobile-newsletter" class="box-alert-mobail animate__animated animate__fadeInUp pt-3 pb-4">
         <i @click="close" class="absolute btn-close right-2 ti-close text-white font-bold mr-1"></i>
         <div class="p-5 mt-5 ">
             <h4 class="font-bold Acme text-lg" id="">Subscribe to AFMA Newsletter</h4>
@@ -37,17 +46,27 @@ function onchange(waypointState){
     if(waypointState.going === 'IN'){
         if(sessionStorage.getItem('newsletter') !== 'true'){
             // sessionStorage.setItem('newsletter', 'true');
-            if(window.innerWidth > 500)
-                document.querySelector('.newsletter-desc').style.display='block'
-            else
+            if(window.innerWidth > 500){
+                document.querySelector('.newsletter-desc').style.display='flex'
+                document.querySelector('.newsletter-desc #image-newsletter').classList.remove('animate__fadeOutRight')
+                document.querySelector('.newsletter-desc #forme-newsletter').classList.remove('animate__fadeOutLeft')
+            }
+            else{
                 document.querySelector('.newsletter-mob').style.display='block'
+                document.querySelector('.newsletter-desc #forme-mobile-newsletter').classList.remove('animate__fadeOutDown')
+            }
         }
     }
 }
 function close(){
-    sessionStorage.setItem('newsletter', 'true');
-    document.querySelector('.newsletter-desc').style.display='none'
-    document.querySelector('.newsletter-mob').style.display='none'
+    // sessionStorage.setItem('newsletter', 'true');
+    setTimeout(()=>{
+        document.querySelector('.newsletter-desc').style.display='none'
+        document.querySelector('.newsletter-mob').style.display='none'
+    },800)
+    document.querySelector('.newsletter-desc #image-newsletter').classList.add('animate__fadeOutRight')
+    document.querySelector('.newsletter-desc #forme-newsletter').classList.add('animate__fadeOutLeft')
+    document.querySelector('.newsletter-mob #forme-mobile-newsletter').classList.add('animate__fadeOutDown')
 }
 
 </script>
@@ -59,9 +78,10 @@ function close(){
     top: 0;
     width: 100%;
     height: 100%;
-    /* background: rgba(0, 0, 0, 0.37); */
+    background: rgba(0, 0, 0, 0.37);
     z-index: 999;
 }
+
 .bg-box-alert-mobail{
     position: fixed;
     bottom: 0;
@@ -75,8 +95,8 @@ function close(){
     padding: 5px;
     background-color: rgb(235, 99, 99);
 }
-.box-alert-mobail .btn-in-input{
-    top: 7px;
+.btn-in-input{
+    top: 6px;
 }
 .box-alert-mobail{
     position: fixed;

@@ -1,8 +1,9 @@
 <template>
+    <!-- <div id="develop"></div> -->
    <div class="w-full px-8 lg:px-12 my-10 sm:my-28 md:my-32">
     <!-- <p class="text-2xl font-bold text-center mb-6">Blog</p> -->
     <div class="flex flex-col lg:flex-row items-center">
-        <div class="w-full md:w-6/12 lg:w-4/12">
+        <div class="w-full hidden sm:block md:w-6/12 lg:w-4/12">
             <div class="blog-title flex justify-center items-center">
                 <div class="w-9/12 sm:w-6/12 m-auto relative">
                     <h3 class="font-bold Acme">Blog</h3>
@@ -13,8 +14,11 @@ Click on your preferred article or choose a news category.</p>
                 </div>
             </div>
         </div>
+        <div class="sm:hidden block">
+            <h3 class="font-bold Acme">Blog</h3>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 md:w-8/12 m-auto items--slider">
-            <div class="rounded-xl shadow-md mx-2 mt-4 item--slider">
+            <div class="rounded-xl shadow-md mx-2 mt-4 bg-gray-100 item--slider">
                 <div class="w-full h-44 overflow-hidden">
                     <v-lazy-image class="w-full rounded-t-xl"
                     :src-placeholder="require('../../assets/gif/loader-img.gif')"
@@ -25,8 +29,8 @@ Click on your preferred article or choose a news category.</p>
                     <p class="text-sm text-gray-400"> <i class="ti-time"></i> 2022-11-25 </p>
                     <h2 class="text-lg ml-3 mt-2">Lorem ipsum, dolor sit amet consectetur</h2>
                     <div class="flex items-center justify-around  mt-6">
-                        <button class=" "><i class="ti-heart"></i> +158</button>
-                        <button class="px-7 py-2 text-sm bg-blue-200 rounded-lg text-gray-600">Read more</button>
+                        <button class=" "><i class="ti-heart text-red-400"></i> +158</button>
+                        <button class="px-6 py-2 text-sm bg-gray-200 rounded-lg text-blue-400 shadow text-bold">Read more</button>
                     </div>
                 </div>
             </div>
@@ -43,7 +47,7 @@ Click on your preferred article or choose a news category.</p>
                     <h2 class="text-lg ml-3 mt-2">Lorem ipsum, dolor sit amet consectetur</h2>
                     <div class="flex items-center justify-around  mt-6">
                         <button class=" "><i class="ti-heart"></i> +20</button>
-                        <button class="px-7 py-2 text-sm bg-blue-200 rounded-lg text-gray-600">Read more</button>
+                        <button class="px-6 py-2 text-sm bg-gray-200 rounded-lg text-blue-500 shadow text-bold">Read more</button>
                     </div>
                 </div>
             </div>
@@ -82,6 +86,7 @@ onMounted(()=>{
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .blog-title{
     width: 100%;
     height: 350px;

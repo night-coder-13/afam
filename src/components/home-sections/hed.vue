@@ -3,7 +3,7 @@
   <div class="bg-gray-100 shadow">
     <nav id="hed" class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
       <div class="flex items-center justify-between">
-        <router-link to="/" class="text-xl ml-8 font-bold text-gray-800 md:text-2xl">
+        <router-link to="/" class="text-xl ml-1 sm:ml-8 font-bold text-gray-800 md:text-2xl">
             <img src="../../assets/logoname.png" class="w-40" alt="">
         </router-link>
         <!-- Mobile menu button -->
@@ -42,9 +42,9 @@
             <router-link :to="{name : 'Home'}">Home</router-link>
         </li>
         
-        <li class="text-gray-800 font-bold">
+        <!-- <li class="text-gray-800 font-bold">
             <router-link :to="{name : 'Quarries'}">Quarries</router-link>
-        </li>
+        </li> -->
         <li class="text-gray-800 font-bold">
             <router-link :to="{name : 'Catalog'}">Catalog</router-link>
         </li>
@@ -129,9 +129,9 @@
             <router-link :to="{name : 'Home'}">Home</router-link>
         </li>
         
-        <li class="text-gray-800 font-bold">
+        <!-- <li class="text-gray-800 font-bold">
             <router-link :to="{name : 'Quarries'}">Quarries</router-link>
-        </li>
+        </li> -->
         <li class="text-gray-800 font-bold">
             <router-link :to="{name : 'Catalog'}">Catalog</router-link>
         </li>

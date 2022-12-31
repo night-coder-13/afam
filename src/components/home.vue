@@ -27,6 +27,15 @@ import Newsletter from './home-sections/newsletter.vue'
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style >
+#develop{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: 9;
+    background-color: #e5e5f7;
+    opacity: 0.7;
+    background: repeating-linear-gradient( 45deg, #f78a45, #f78a45 3.5px, #e5e5f7 3.5px, #e5e5f7 17.5px );
+}
 </style>

@@ -75,6 +75,8 @@
     background: transparent;
     margin: 0 15px;
     border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 40px;
     /* backdrop-filter: blur(1px); */
 }
 #title::before{

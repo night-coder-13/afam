@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="79.908" viewBox="0 0 80 79.908">
   <defs>
     <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fff"/>
-      <stop offset="1" stop-color="#f2f2f2"/>
+      <stop offset="0" stop-color="#2074e2"/>
+      <stop offset="1" stop-color="#47a8fe"/>
     </linearGradient>
   </defs>
   <path id="linkedin-in-brands" d="M17.935,79.918H1.368V26.567H17.935ZM9.643,19.289a9.64,9.64,0,1,1,9.593-9.684,9.64,9.64,0,0,1-9.593,9.684Zm70.3,60.628H63.407V53.947c0-6.189-.124-14.127-8.622-14.127-8.622,0-9.934,6.729-9.934,13.681V79.918H28.3V26.567H44.208v7.278h.231a17.408,17.408,0,0,1,15.669-8.622c16.766,0,19.849,11.046,19.849,25.388V79.918Z" transform="translate(0.043 -0.01)" fill="url(#linear-gradient)"/>

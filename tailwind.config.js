@@ -1,5 +1,7 @@
 module.exports = {
-  purge:["./src/**/*.vue"],
+  mode: 'jit',  // update this line
+  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  // purge:["./src/**/*.vue"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
