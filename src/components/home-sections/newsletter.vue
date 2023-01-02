@@ -59,7 +59,7 @@ function onchange(waypointState){
     }
 }
 function close(){
-    // sessionStorage.setItem('newsletter', 'true');
+    sessionStorage.setItem('newsletter', 'true');
     setTimeout(()=>{
         document.querySelector('.newsletter-desc').style.display='none'
         document.querySelector('.newsletter-mob').style.display='none'

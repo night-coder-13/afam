@@ -60,12 +60,12 @@
     
 }
 #line{
-   width: 45%;
+   width: 55%;
    height: 5px;
    display: block;
    margin: auto;
    border-radius: 15px;
-   background: radial-gradient(#ffffff, #ffffff45);
+   background: radial-gradient(#f4f4f4f2 30%, #ffffff05 65%);
 }
 @media only screen and (max-width: 650px){
 #line{

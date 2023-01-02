@@ -13,7 +13,7 @@
             <p class="mt-3 font-bold uppercase text-center">Work samples</p>
         </div>
         <div class="mt-4 lg:mt-0 ">
-            <div class="w-full sm:bg-blue-900 px-4 py-8 rounded-lg  sm:text-gray-100 font-bold grid grid-cols-1 justify-items-center items-center ">
+            <div class="w-full sm:bg-blue-900 px-4 py-8 rounded-xl  sm:text-gray-100 font-bold grid grid-cols-1 justify-items-center items-center ">
                 <Waypoint @change="onChangeImg" class="flex mr-4 img-wapper">
                     <img src="../../assets/img/img(10).webp" class="img-profile w-10 h-10 grayscale rounded-full -mr-4 " alt="">
                     <img src="../../assets/img/img(10).webp" class="img-profile w-10 h-10 grayscale rounded-full -mr-4 " alt="">

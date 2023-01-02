@@ -30,7 +30,7 @@ Click on your preferred article or choose a news category.</p>
                     <h2 class="text-lg ml-3 mt-2">Lorem ipsum, dolor sit amet consectetur</h2>
                     <div class="flex items-center justify-around  mt-6">
                         <button class=" "><i class="ti-heart text-red-400"></i> +158</button>
-                        <button class="px-6 py-2 text-sm bg-gray-200 rounded-lg text-blue-400 shadow text-bold">Read more</button>
+                        <button class="px-6 py-2 text-sm bg-gray-150 rounded-lg text-blue-400 shadow text-bold">Read more</button>
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@ Click on your preferred article or choose a news category.</p>
                     <h2 class="text-lg ml-3 mt-2">Lorem ipsum, dolor sit amet consectetur</h2>
                     <div class="flex items-center justify-around  mt-6">
                         <button class=" "><i class="ti-heart"></i> +20</button>
-                        <button class="px-6 py-2 text-sm bg-gray-200 rounded-lg text-blue-500 shadow text-bold">Read more</button>
+                        <button class="px-6 py-2 text-sm bg-gray-150 rounded-lg text-blue-400 shadow text-bold">Read more</button>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@ Click on your preferred article or choose a news category.</p>
                     <h2 class="text-lg ml-3 mt-2">Lorem ipsum, dolor sit amet consectetur</h2>
                     <div class="flex items-center justify-around  mt-6">
                         <button class=" "><i class="ti-heart"></i> +36</button>
-                        <button class="px-7 py-2 text-sm bg-blue-200 rounded-lg text-gray-600">Read more</button>
+                        <button class="px-6 py-2 text-sm bg-gray-150 rounded-lg text-blue-400 shadow text-bold">Read more</button>
                     </div>
                 </div>
             </div>

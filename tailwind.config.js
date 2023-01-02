@@ -21,7 +21,7 @@ module.exports = {
           900: '#06283D',
         }, 
         'gray': {
-          150: '#f3f4f6',
+          150: '#e8eaef',
         }, 
         sky: {
           50: '#f0f9ff',

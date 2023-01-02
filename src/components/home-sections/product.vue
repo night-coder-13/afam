@@ -1,6 +1,6 @@
 <template>
-   <!-- <div id="develop"></div> -->
-   <div class="w-full lg:w-10/12 m-auto px-4 md:px-12 mt-10 mb-24 sm:my-32">
+   <div class="py-8 w-full lg:w-10/12 m-auto px-4 md:px-12 mt-10 mb-24 sm:my-32">
+      <div id="develop"></div>
     <h3 class="font-bold text-center mb-6 Acme">Product</h3>
     <div class="sm:grid sm:grid-cols-2 lg:grid-cols-4 items product--slider">
       <div v-for="item in items" :key="item.id" class="item--slider">

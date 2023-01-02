@@ -58,7 +58,8 @@ const store = createStore({
     actions:{
       async GetCategory({commit}){
          try{
-            //  const response = await axios.get('https//mehdi-abasian.ir/wp-json/wl/v1/product_cat')
+            //  const response = await axios.get('http://192.168.1.102/afam-wp/wp-json/wl/v1/product_cat')
+            //  const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product_cat')
              const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/product_cat')
              commit('GetCategory',response.data)
             //  console.log(response.data)

@@ -29,13 +29,14 @@ import Newsletter from './home-sections/newsletter.vue'
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style >
 #develop{
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: block;
     position: absolute;
-    z-index: 9;
+    z-index: 99;
     background-color: #e5e5f7;
     opacity: 0.7;
+    border-radius: 5px;
     background: repeating-linear-gradient( 45deg, #f78a45, #f78a45 3.5px, #e5e5f7 3.5px, #e5e5f7 17.5px );
 }
 </style>
