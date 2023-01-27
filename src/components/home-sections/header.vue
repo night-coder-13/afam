@@ -8,14 +8,28 @@
             <h3 class="text-sm sm:text-lg ml-6 w-full sm:w-10/12">We supply and transform Travertine stone and Marbel to meet the needs of our customers globally.
                 We use our centennial leadership in excavation and fabrication of stone to promote Esfahan, Iran and the Made in Iran brand worldwide.</h3>
             <div class="flex mt-9">
-                <router-link :to="{name : 'Catalog'}" class="ml-2 w-40 h-11 cursor-pointer rounded-full text-base md:text-lg flex justify-start items-center text-white bg-blue-400 
+                <router-link :to="{name : 'Catalog'}" class="mr-2 w-40 h-11 cursor-pointer rounded-full text-base md:text-lg flex justify-start items-center text-white bg-blue-400 
                 hover:bg-transparent border-2 border-blue-400 hover:text-gray-900
-                "> <div class="w-9 h-9 bg-white rounded-full ml-2 center--center"><img src="../../assets/map.png" class="w-6" alt=""></div> <span class="ml-8">Catalog</span></router-link>
+                "> <span class="ml-4 mr-8">Catalog</span> <div class="w-9 h-9 bg-white rounded-full ml-2 center--center"><img src="../../assets/map.png" class="w-6" alt=""></div></router-link>
                 <router-link  @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }"
                 class="ml-4 w-40 h-10 cursor-pointer rounded-full text-base md:text-lg flex justify-center items-center border-blue-400 border-2
                 hover:bg-blue-400 hover:text-white
                 "
                 >Contact us</router-link>
+            </div>
+            <div class="grid grid-cols-3 w-11/12 mt-5">
+                <div class="mt-4 lg:mt-0 flex grid grid-cols-1 justify-items-center items-center px-4 py-8">
+                    <p class="text-4xl flex Anton"><span class="font-bold">+</span> <count-up :end-val="number.product > 0 ? number.product : 0"></count-up></p>
+                    <p class="mt-3 font-bold uppercase text-center">Product</p>
+                </div>
+                <div class="mt-4 lg:mt-0 flex grid grid-cols-1 justify-items-center items-center px-4 py-8">
+                    <p class="text-4xl flex Anton"><span class="font-bold">+</span> <count-up :end-val="number.years > 0 ? number.years : 0"></count-up></p>
+                    <p class="mt-3 font-bold uppercase text-center">years of experience</p>
+                </div>
+                <div class="mt-4 lg:mt-0 grid grid-cols-1 justify-items-center items-center px-4 py-8">
+                    <p class="text-4xl flex Anton"><span class="font-bold">+</span> <count-up :end-val="number.work > 0 ? number.work : 0"></count-up></p>
+                    <p class="mt-3 font-bold uppercase text-center">Work samples</p>
+                </div>
             </div>
         </div>
         <div class="flex flex-col sm:flex-row w-full md:w-5/12 lg:w-5/12 lg:mr-10 mr-0 order-1"> 
@@ -31,6 +45,19 @@
 </template>
 
 <script setup>
+import { ref } from '@vue/reactivity'
+import CountUp from 'vue-countup-v3'
+
+let number=ref({})
+
+setTimeout(()=>{
+            number.value={
+                product:125,
+                years:80,
+                work:700,
+            }
+        },200)
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

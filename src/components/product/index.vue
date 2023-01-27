@@ -1,4 +1,5 @@
 <template>
+    
     <Header />
         <div class="w-full" data-aos="fade-up" id="product">
             <div class="w-full h-52 overflow-hidden">
@@ -9,9 +10,12 @@
             <div class="flex md:flex-row flex-col">
                 <div class="w-full md:w-5/12 p-5">
                     <div>
-                        <v-lazy-image class="w-10/12 m-auto rounded-xl shadow-md -mt-32"
+                        <v-lazy-image v-if="product.image2 !== undefined" class="w-10/12 m-auto rounded-xl shadow-md -mt-32"
                             :src-placeholder="require('../../assets/gif/loader-img.gif')"
                             :src="product.image2[0]" alt="Image blog"/> 
+                        <v-lazy-image v-else class="w-10/12 m-auto rounded-xl shadow-md -mt-32"
+                            :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                            :src="product.image1[0]" alt="Image blog"/> 
                     </div>
                 </div>
                 <div class="w-full md:w-7/12 px-6 md:px-0">

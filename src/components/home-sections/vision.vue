@@ -1,10 +1,10 @@
 <template>
-    <div class="w-full m-auto mb-8 sm:mb-0 relative py-8 pb-24 flex flex-col lg:flex-row pl-1 lg:pl-0 justify-end content-center">
-        <div class="grid z-10 content-center sm:order-1 sm:shadow-lg box-vision">
+    <div class="w-full m-auto relative py-8 pb-24 flex flex-col lg:flex-row pl-1 lg:pl-0 justify-end content-center">
+        <div class="grid pt-5 pb-16 px-4 md:bg-blue-900 md:text-white z-10 content-center sm:order-1 sm:shadow-lg box-vision">
             <!-- <img src="../../assets/arrow.png" class="pl-8" alt=""> -->
 
-            <h3 class="font-bold mb-2 Acme" id="title">Building new visions</h3>
-            <p class="text-sm sm:text-lg ml-4 max-h-56 overflow-hidden">
+            <h3 class="text-2xl font-bold mb-2 Acme" >Building new visions</h3>
+            <p class="text-sm sm:text-base ml-4 max-h-56 overflow-hidden">
                 Barsi Marmi's mission is to provide materials and high
                 end quality services to customers around the world, but
                 also to developa new language on design and
@@ -15,6 +15,7 @@
             </p>
         </div>
         <div id="bg--image" class="w-full center--center lg:w-9/12 h-80 sm:h-96 md:h-128 sm:order-2 mb-8 sm:mb-0 overflow-hidden rounded ">
+           
             <div v-for="(img , i) in list_image" :key="i" :style="' background: url('+require('../../assets/img/'+img)+');'" class="bg--image block w-full h-full animate__animated " :id="i == showimg ? 'active' : ''">
             </div>
             <!-- <div v-for="(img , i) in list_image" :key="i" >
@@ -61,7 +62,7 @@ setInterval(()=>{
     },1000)
     
 
-},3000)
+},8000)
 
 
 </script>
@@ -102,16 +103,22 @@ setInterval(()=>{
     top: 220px;
     left: 200px;
     width: 550px;
-    background: #ffffff;
-    padding: 30px 10px 30px 40px;
+    /* background: #ffffff; */
+    /* padding: 30px 10px 30px 40px; */
     border-radius: 10px;
     /* backdrop-filter: blur(1px); */
 }
 .bg--image{
-    background-size: auto !important;
+    background-size: 100% auto !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     display: none;
+}
+.bg-buler{
+    position: absolute;
+    background-size: cover !important;
+    backdrop-filter: blur(10px);
+    filter: blur(5px);
 }
 .bg--image#active{
     display: inline-block;

@@ -3,17 +3,30 @@
 <div class="bg hidden newsletter-desc center--center">
     <div @click="close" class="w-full h-full absolute"></div>
     <div class="relative body-newsletter-desc">
-        <div id="image-newsletter" class="relative left-4 top-10 animate__animated animate__fadeInRight ">
-            <img src="../../assets/img/email-messages-network.jpg" class="w-96 rounded-lg shadow h-48" alt="">
+        <div id="image-newsletter" class="relative left-4 top-20 animate__animated animate__fadeInRight ">
+            <img src="../../assets/img/email-messages-network.jpg" class="ww- rounded-lg shadow h-64" alt="">
         </div>
-        <div id="forme-newsletter" class="relative -top-14 -left-10 animate__animated animate__fadeInLeft">
-            <div class="bg-white rounded-lg shadow-md w-96 h-44 center--center relative">
+        <div id="forme-newsletter" class="relative ww- -top-14 -left-10 animate__animated animate__fadeInLeft">
+            <div class="bg-white rounded-lg shadow-md center--center relative">
                 <i @click="close" class="absolute btn-close right-2 ti-close text-gray-400 hover:text-gray-600 cursor-pointer font-bold mr-1 top-2 hover:border-red-400 border border-gray-400 p-1 rounded-full"></i>
-                <div class="p-5 mt-5 w-11/12">
+                <div class="p-3 mt-5 w-11/12">
                     <h4 class="font-bold Acme text-lg" id="">Subscribe to AFMA Newsletter</h4>
                     <div class="mt-4 mb-4 text-center relative">
-                        <input type="text" placeholder="Email" class="rounded-full h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
-                        <button class="btn-in-input absolute right-2 ml-2 px-6 py-1 text-lg rounded-full bg-gray-200 shadow text-blue-400 font-bold">Send</button>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <input type="text" placeholder="Name" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Email" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Phone" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Country" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                            </div>
+                        </div>
+                        <button class="mt-6 right-2 ml-2 px-10 py-1 text-lg rounded-lg bg-blue-500 shadow text-gray-100">Send</button>
                     </div>
                 </div>
             </div>
@@ -25,11 +38,14 @@
     <div @click="close" class="bg-box-alert-mobail animate__animated animate__fadeIn"> </div>
     <div id="forme-mobile-newsletter" class="box-alert-mobail animate__animated animate__fadeInUp pt-3 pb-4">
         <i @click="close" class="absolute btn-close right-2 ti-close text-white font-bold mr-1"></i>
-        <div class="p-5 mt-5 ">
+        <div class="p-5 pb-1 mt-5 ">
             <h4 class="font-bold Acme text-lg" id="">Subscribe to AFMA Newsletter</h4>
             <div class="mt-4 mb-4 text-center relative">
-                <input type="text" placeholder="Email" class="rounded-full h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
-                <button class="btn-in-input absolute right-2 ml-2 px-6 py-1 text-lg rounded-full bg-gray-200 shadow text-blue-400 font-bold">Send</button>
+                <input type="text" placeholder="Name" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                <input type="text" placeholder="Email" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                <input type="text" placeholder="Phone" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                <input type="text" placeholder="Country" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                <button class="mt-5 right-2 ml-2 px-8 py-1 text-lg rounded-lg bg-blue-500 shadow text-gray-100 ">Send</button>
             </div>
         </div>
     </div>
@@ -59,7 +75,7 @@ function onchange(waypointState){
     }
 }
 function close(){
-    sessionStorage.setItem('newsletter', 'true');
+    // sessionStorage.setItem('newsletter', 'true');
     setTimeout(()=>{
         document.querySelector('.newsletter-desc').style.display='none'
         document.querySelector('.newsletter-mob').style.display='none'
@@ -73,6 +89,9 @@ function close(){
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.ww-{
+    width: 600px;
+}
 .bg{
     position: fixed;
     top: 0;

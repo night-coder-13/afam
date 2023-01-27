@@ -6,29 +6,24 @@
     :modules="modules"
     class="mySwiper"
   >
-  <swiper-slide class="m-auto rounded-lg shadow-lg text-white bg-gray-400 h-96 px-3 sm:px-5 py-2 sm:py-8 w-11/12 md:w-7/12">
+  <swiper-slide class="m-auto rounded-lg shadow-lg text-white bg-gray-400 overflow-hidden w-11/12 md:w-7/12">
     <div >
-      slide1
+      <img src="../../assets/catalog/page-product-limestone.jpg" class="w-full" alt="">
     </div>
   </swiper-slide>
-  <swiper-slide class="m-auto rounded-lg shadow-lg text-white bg-red-400 h-96 px-3 sm:px-5 py-2 sm:py-8 w-11/12 md:w-7/12">
+  <swiper-slide class="m-auto rounded-lg shadow-lg text-white bg-gray-400 overflow-hidden w-11/12 md:w-7/12">
     <div >
-      slide2
+      <img src="../../assets/catalog/page-product-granite.jpg" class="w-full" alt="">
     </div>
   </swiper-slide>
-  <swiper-slide class="m-auto rounded-lg shadow-lg text-white bg-blue-400 h-96 px-3 sm:px-5 py-2 sm:py-8 w-11/12 md:w-7/12">
+  <swiper-slide class="m-auto rounded-lg shadow-lg text-white bg-gray-400 overflow-hidden w-11/12 md:w-7/12">
     <div >
-      slide3
+      <img src="../../assets/catalog/page-product-marble1.jpg" class="w-full" alt="">
     </div>
   </swiper-slide>
-  <swiper-slide class="m-auto rounded-lg shadow-lg text-white bg-green-400 h-96 px-3 sm:px-5 py-2 sm:py-8 w-11/12 md:w-7/12">
+  <swiper-slide class="m-auto rounded-lg shadow-lg text-white bg-gray-400 overflow-hidden w-11/12 md:w-7/12">
     <div >
-      slide4
-    </div>
-  </swiper-slide>
-  <swiper-slide class="m-auto rounded-lg shadow-lg text-white bg-yellow-400 h-96 px-3 sm:px-5 py-2 sm:py-8 w-11/12 md:w-7/12">
-    <div >
-      slide5
+      <img src="../../assets/catalog/page-product-travertine.jpg" class="w-full" alt="">
     </div>
   </swiper-slide>
   
@@ -63,7 +58,7 @@ export default {
 .mySwiper{
   width: 350px;
   padding: 20px 40px;
-  height: 90vh;
+  /* height: 90vh; */
   overflow: visible;
 }
 .box--slider{
