@@ -59,10 +59,10 @@ const store = createStore({
       async GetCategory({commit}){
          try{
             //  const response = await axios.get('http://192.168.1.102/afam-wp/wp-json/wl/v1/product_cat')
-             const response = await axios.get('http://192.168.1.100/afam-wp/wp-json/wl/v1/product_cat')
-            //  const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/product_cat')
+            //  const response = await axios.get('http://192.168.1.100/afam-wp/wp-json/wl/v1/product_cat')
+             const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/product_cat')
              commit('GetCategory',response.data)
-             console.log(response.data)
+            //  console.log(response.data)
          }catch(error){
             Swal.fire({
                 icon: 'warning',
@@ -78,8 +78,8 @@ const store = createStore({
       async GetArchive({commit},id){
          try{
             //  const response = await axios.get('https//mehdi-abasian.ir/wp-json/wl/v1/archive/'+id)
-             const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/archive/'+id)
-            //  const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/archive/'+id)
+            //  const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/archive/'+id)
+             const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/archive/'+id)
              commit('GetArchive',response.data)
             //  console.log(response.data);
          }catch(error){
@@ -97,8 +97,8 @@ const store = createStore({
       async GetContentArchive({commit},id){
          try{
             //  const response = await axios.get('https//mehdi-abasian.ir/wp-json/wl/v1/product_cat/'+id)
-             const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product_cat/'+id)
-            //  const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/product_cat/'+id)
+            //  const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product_cat/'+id)
+             const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/product_cat/'+id)
              commit('GetContentArchive',response.data)
             //   console.log(response.data)
          }catch(error){
@@ -116,10 +116,10 @@ const store = createStore({
       async GetProduct({commit},id){
          try{
             //  const response = await axios.get('https//mehdi-abasian.ir/wp-json/wl/v1/product/'+id)
-             const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product/'+id)
-            //  const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/product/'+id)
+            //  const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product/'+id)
+             const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/product/'+id)
              commit('GetProduct',response.data)
-              console.log(response.data)
+            //   console.log(response.data)
          }catch(error){
              Swal.fire({
                  icon: 'warning',

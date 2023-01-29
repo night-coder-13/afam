@@ -25,6 +25,9 @@
                             <div>
                                 <input type="text" placeholder="Country" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
                             </div>
+                            <div>
+                                <input type="text" placeholder="Company name" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                            </div>
                         </div>
                         <button class="mt-6 right-2 ml-2 px-10 py-1 text-lg rounded-lg bg-blue-500 shadow text-gray-100">Send</button>
                     </div>
@@ -43,6 +46,7 @@
             <div class="mt-4 mb-4 text-center relative">
                 <input type="text" placeholder="Name" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
                 <input type="text" placeholder="Email" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                <input type="text" placeholder="Company name" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
                 <input type="text" placeholder="Phone" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
                 <input type="text" placeholder="Country" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
                 <button class="mt-5 right-2 ml-2 px-8 py-1 text-lg rounded-lg bg-blue-500 shadow text-gray-100 ">Send</button>
@@ -75,7 +79,7 @@ function onchange(waypointState){
     }
 }
 function close(){
-    // sessionStorage.setItem('newsletter', 'true');
+    sessionStorage.setItem('newsletter', 'true');
     setTimeout(()=>{
         document.querySelector('.newsletter-desc').style.display='none'
         document.querySelector('.newsletter-mob').style.display='none'
