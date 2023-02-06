@@ -7,12 +7,13 @@
                 </div>
             </div>
             <div class="w-10/12 m-auto">
-                <p class="text-center font-bold text-3xl Acme mb-6 mt-8">About us</p>
+                <p class="font-bold text-3xl Acme mb-6 mt-8">About us</p>
                 <div class="flex md:flex-row flex-col">
                     <div class="w-full md:w-8/12 md:ml-4">
-                        <p class="mb-3">As the best source of natural stones, we can supply carefully chosen stones, with a variety of colors, for both indoor and outdoor purposes and in tailored sizes, for different types of businesses for example architectures and building contractors.</p>
+                        <p class="mb-3">We are group of specialists in field of stones and mining and also have many business partners in Europe and    Asia.  </p>
 
-                        <p>AFAM stones company is well known for being accessible, providing customized products and being trustworthy. Currently company has many business partners in Europe, Asia , italya and Turkish.</p>
+                        <p>AFAM Stone company is well known for being accessible, providing customized products and being trustworthy. 
+                            As the best source of natural stones, we can supply carefully chosen stones, with a variety of colors, for both indoor and outdoor purposes and in tailored sizes.</p>
                     </div>
                     <div class="pl-10 hidden md:block w-10/12 md:w-4/12 pt-6 md:pt-0">
                         <p class="text-lg Acme ">Quick access</p>
@@ -31,7 +32,7 @@
                 </div>
                 <div class="w-full md:w-7/12 sm:pl-8">
                     <h2 class="text-start text-2xl Acme mb-3 mt-8">Our Vision</h2>
-                    <p class="text-gray-600 text-base w-11/12 ml-4 h-56 overflow-scroll">We aim to continue to supply building stones for new projects around the world because we have been conducting construction projects for many years. We hope to be one of the top exporters of building stones in this regard. In all of our markets, AFAM Stone will be the distributor of choice for hand-selected unique blocks, tiles, and slabs. To fulfill the demands of the construction and remodeling industries, we will extend our product portfolio as well as our regional footprint. Our vision is to be the industry leader in premium quality and to fulfill orders precisely according to customer specifications.</p>
+                    <p class="text-gray-600 text-base w-11/12 ml-4 h-56 overflow-scroll">We aim to continue to supply natural stones for new projects around the world because we have been conducting construction projects for many years. We hope to be one of the top exporters of building stones in this regard. In all of our markets, AFAM Stone will be the distributor of choice for hand-selected unique blocks, tiles and slabs. To fulfill the demands of the construction and remodeling industries, we will extend our product portfolio as well as our regional footprint. Our vision is to be the industry leader in premium quality and to fulfill orders precisely according to customer specifications.</p>
                 </div>
             </div>
             <div id="Why-choose-us" ></div>
@@ -43,10 +44,10 @@
                     <h2 class="text-start text-2xl Acme mb-1 mt-8 mb-3 font-bold">Why choose us</h2>
                     <div class="text-gray-600 text-base pl-5 w-11/12 ml-4">
                         <ol start="1">
-                            <li>We have gathered a wide range of natural stones in the shapes of blocks, slabs, tailorable sized tiles available on different finished surfaces like polished, honed, tumble, bush hammered, sandblast and chiseled to meet the variety of customer needs.</li>
-                            <li>We provide the needs and demands of our customers as in form, finishing, colors, and sorting, supplying them with fair price and high-quality natural stones.</li>
-                            <li>We carefully monitor the whole process of supplying the stones; Including block mining, crude stone processing, packaging, and transportation.</li>
-                            <li>We also Have specialists, available for customer consulting to help them find their optimal product, with absolutely no cost.</li>
+                            <li>We have gathered a wide range of natural stones in the shapes of blocks, slabs and tiles available on different finished surfaces like polished, honed, tumble, bush hammered, sandblast and chiseled to meet the variety of customer needs.</li>
+                            <li>We carefully monitor the whole process of supplying the stones; Including block mining, crude stone processing, packaging, and transportation with fair price.</li>
+                            <li>We also Have specialists, available for consulting to help our customers finding their optimal product, with absolutely no cost.</li>
+                            <!-- <li>We also Have specialists, available for customer consulting to help them find their optimal product, with absolutely no cost.</li> -->
                         </ol>
                     </div>
                     

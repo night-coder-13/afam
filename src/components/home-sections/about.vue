@@ -4,7 +4,8 @@
             <div class="w-full sm:w-5/12 py-6 pr-5 grid content-between">
                 <div>
                     <h3 class="Acme">About us</h3>
-                    <p class="text-base ml-4">As the best source of natural stones, we can supply carefully chosen stones, with a variety of colors, for both indoor and outdoor purposes and in tailored sizes, for different types of businesses for example architectures and building contractors.</p>
+                    <p class="text-base ml-4">We are group of specialists in field of stones and mining and also have many business partners in Europe and Asia. AFAM Stone company is well known for being accessible, providing customized products and being trustworthy. 
+                    As the best source of natural stones, we can supply carefully chosen stones, with a variety of colors, for both indoor and outdoor purposes and in tailored sizes. </p>
                 </div>
                 
                 <div class="mt-10 sm:mt-0 mb-14 sm:mb-0">
@@ -33,7 +34,7 @@
                     </div>
                     <div>
                         <h4 class="text-lg Acme">Wide range of products</h4>
-                        <p class="text-sm ml-2 mt-2 ">We have gathered a wide range of natural stones in the shapes of blocks, slabs, tailorable sized tiles available on different finished surfaces like polished, honed, tumble, bush hammered, sandblast and chiseled to meet the variety of customer needs.</p>
+                        <p class="text-sm ml-2 mt-2 ">We have gathered a wide range of natural stones in the shapes of blocks, slabs and tiles available on different finished surfaces like polished, honed, tumble, bush hammered, sandblast and chiseled to meet the variety of customer needs.</p>
                     </div>
                 </div>
                 <div class="box flex">
@@ -45,8 +46,8 @@
                         <img src="../../assets/png/rating.png" class="image-box" width="300px" alt="">
                     </div>
                     <div>
-                        <h4 class="text-lg Acme">Customer satisfaction</h4>
-                        <p class="text-sm ml-2 mt-2">We provide the needs and demands of our customers as in form, finishing, colors, and sorting, supplying them with fair price and high-quality natural stones.</p>
+                        <h4 class="text-lg Acme">Monitor product quality</h4>
+                        <p class="text-sm ml-2 mt-2">We carefully monitor the whole process of supplying the stones; Including block mining, crude stone processing, packaging, and transportation with fair price.</p>
                     </div>
                 </div>
                 <div class="box flex">
@@ -58,23 +59,11 @@
                         <img src="../../assets/png/control-system.png" class="image-box" width="300px" alt="">
                     </div>
                     <div>
-                        <h4 class="text-lg Acme">Monitor product quality</h4> <!--- Preparation process -->
-                        <p class="text-sm ml-2 mt-2">We carefully monitor the whole process of supplying the stones; Including block mining, crude stone processing, packaging, and transportation.</p>
+                        <h4 class="text-lg Acme">Advice for customers</h4> <!--- Preparation process -->
+                        <p class="text-sm ml-2 mt-2">We also Have specialists, available for consulting to help our customers finding their optimal product, with absolutely no cost.</p>
                     </div>
                 </div>
-                <div class="box flex">
-                    <div>
-                        <span></span>
-                        <!-- <img src="" alt=""> -->
-                    </div>
-                    <div class="p-2">
-                        <img src="../../assets/png/advice.png" class="image-box" width="300px" alt="">
-                    </div>
-                    <div>
-                        <h4 class="text-lg Acme">Advice for customers</h4>
-                        <p class="text-sm ml-2 mt-2">We also Have specialists, available for customer consulting to help them find their optimal product, with absolutely no cost.</p>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>

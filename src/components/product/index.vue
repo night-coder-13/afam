@@ -3,7 +3,7 @@
         <div @click="close" class="absolute z-10 bg-gray-700 opacity-20 w-full h-full "></div>
 
         <div class="relative w-full h-full center--center px-3 py-5">
-            <div @click="close" class="z-999 absolute right-4 top-4 w-8 h-8 bg-gray-100 rounded-full center--center"><i class="ti-close"></i></div>
+            <div @click="close" class="z-999 absolute right-4 top-4 w-8 h-8 bg-gray-100 rounded-full center--center cursor-pointer"><i class="ti-close"></i></div>
             <img :src="product.image1[0]" id="image" class="max-h-100 m-3 z-20 rounded-lg " alt="">
         </div>
     </div>

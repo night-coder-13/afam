@@ -56,7 +56,7 @@ export default {
 </script>
 <style scoped>
 .mySwiper{
-  width: 350px;
+  width: 500px;
   padding: 20px 40px;
   /* height: 90vh; */
   overflow: visible;
@@ -73,6 +73,9 @@ export default {
     bottom: 30px;
     left: 4%;
   }
+  .mySwiper{
+  width: 350px;
+}
 }
 </style>
 
