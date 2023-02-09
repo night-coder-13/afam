@@ -1,68 +1,78 @@
 
 <template>
-  <button type="button" id="dynamic-gallery-demo">Open Gallery</button>
+  <button @click="viewgallery">viwe gallery</button>
+<div :class="view == true ? 'block' : 'hidden'" id="inline-gallery-container" class="inline-gallery-container " ></div>
 	
 </template>
 
 <script setup>
-// import 'https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js'
-// // import 'https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-zoom.min.css'
-// import 'https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/zoom/lg-zoom.min.js'
-// import 'https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/thumbnail/lg-thumbnail.min.js'
 
-import Lightgallery from 'lightgallery/vue';
+import { onMounted, ref } from '@vue/runtime-core';
+import lightGallery from '../../../node_modules/lightgallery/lightgallery.min.js'
+import lgZoom from '../../../node_modules/lightgallery/plugins/zoom/lg-zoom.min.js'
+import lgThumbnail from '../../../node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js'
 
-const lightGallery =Lightgallery;
-const $dynamicGallery = document.getElementById("dynamic-gallery-demo");
-const dynamicGallery = window.lightGallery($dynamicGallery, {
-  dynamic: true,
-  plugins: [lgZoom, lgThumbnail],
-  dynamicEl: [
-    {
-      src:
-        "https://images.unsplash.com/photo-1609342122563-a43ac8917a3a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1400&q=80",
-      responsive:
-        "https://images.unsplash.com/photo-1609342122563-a43ac8917a3a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=480&q=80 480, https://images.unsplash.com/photo-1609342122563-a43ac8917a3a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80 800",
-      thumb:
-        "https://images.unsplash.com/photo-1609342122563-a43ac8917a3a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=240&q=80",
-      subHtml: `<div class="lightGallery-captions">
-                <h4>Photo by <a href="https://unsplash.com/@brookecagle">Brooke Cagle</a></h4>
+const view = ref(false);
+
+onMounted(()=>{
+  
+  const lgContainer = document.getElementById('inline-gallery-container');
+const inlineGallery = lightGallery(lgContainer, {
+    container: lgContainer,
+    dynamic: true,
+    // Turn off hash plugin in case if you are using it
+    // as we don't want to change the url on slide change
+    hash: false,
+    // Do not allow users to close the gallery
+    closable: false,
+    // Add maximize icon to enlarge the gallery
+    showMaximizeIcon: true,
+    // Append caption inside the slide item
+    // to apply some animation for the captions (Optional)
+    appendSubHtmlTo: '.lg-item',
+    // Delay slide transition to complete captions animations
+    // before navigating to different slides (Optional)
+    // You can find caption animation demo on the captions demo page
+    slideDelay: 400,
+    plugins: [lgZoom, lgThumbnail],
+    dynamicEl: [
+        {
+            src: 'http://localhost:8080/img/page-product-limestone.5874fcef.jpg',
+            thumb: 'http://localhost:8080/img/page-product-limestone.5874fcef.jpg',
+            subHtml: `<div class="lightGallery-captions">
+                <h4>Caption 1</h4>
                 <p>Description of the slide 1</p>
-            </div>`
-    },
-    {
-      video: {"source": [{"src":"https://www.lightgalleryjs.com//videos/video1.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}},
-      thumb:
-        "https://www.lightgalleryjs.com//images/demo/html5-video-poster.jpg",
-      subHtml: `<div class="lightGallery-captions">
-                <h4>Photo by <a href="https://unsplash.com/@brookecagle">Brooke Cagle</a></h4>
+            </div>`,
+        },
+        {
+            src: 'http://localhost/afam/src/assets/catalog/page-product-granite.jpg',
+            thumb: 'http://localhost/afam/src/assets/catalog/page-product-granite.jpg',
+            subHtml: `<div class="lightGallery-captions">
+                <h4>Caption 2</h4>
                 <p>Description of the slide 2</p>
-            </div>`
-    },
-    {
-      src:
-        "https://images.unsplash.com/photo-1477322524744-0eece9e79640?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80",
-      responsive:
-        "https://images.unsplash.com/photo-1477322524744-0eece9e79640?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=480&q=80 480, https://images.unsplash.com/photo-1477322524744-0eece9e79640?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80 800",
-      thumb:
-        "https://images.unsplash.com/photo-1477322524744-0eece9e79640?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80"
-    },
-    {
-      src: "//www.youtube.com/watch?v=egyIeygdS_E",
-      poster: "https://img.youtube.com/vi/egyIeygdS_E/maxresdefault.jpg",
-      thumb: "https://img.youtube.com/vi/egyIeygdS_E/maxresdefault.jpg"
-    }
-  ]
+            </div>`,
+        },
+    ],
 });
-$dynamicGallery.addEventListener("click", () => {
-  dynamicGallery.openGallery(0);
+
+// Since we are using dynamic mode, we need to programmatically open lightGallery
+inlineGallery.openGallery();
+
+
 });
+function viewgallery(){
+ view.value = !view.value;
+}
 
 </script>
 <style scoped>
  @import 'lightgallery/css/lightgallery.css';
   @import 'lightgallery/css/lg-thumbnail.css';
   @import 'lightgallery/css/lg-zoom.css';
-
+  .inline-gallery-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 65%;
+}
 </style>
 

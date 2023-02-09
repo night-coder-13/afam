@@ -3,7 +3,7 @@ import store from './store/index.js'
     // const store=useStore();
     const routes = [
       {
-        path: '/', name: 'Home', component: () => import('./components/home.vue'),meta :{title:'AFAM Trading | HOME'}
+        path: '/', name: 'Home', component: () => import('./components/home.vue'),meta :{title:'AFAM Trading | HOME',description: "This is the home page",}
       },
       {
         path: '/product/:id', name: 'Product', component: () => import('./components/product/index.vue'),meta :{title:'AFAM Trading | Product'}

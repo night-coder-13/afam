@@ -1,6 +1,5 @@
 
 <template>
-  <p @click="click">ddddddd</p>
   <Lightgallery
         :settings="{ speed: 500 , plugins: [lgThumbnail,lgZoom] , }"
         :onInit="onInit"
@@ -8,7 +7,7 @@
         
       > 
       <a class="hidden" href="http://localhost:8080/img/page-product-marble1.643c6044.jpg">
-            <img alt="img2" src="../../assets/catalog/page-product-marble1.jpg" />
+          <img alt="img2" src="../../assets/catalog/page-product-marble1.jpg" />
         </a>
         <a class="hidden" href="http://localhost:8080/img/page-product-limestone.5874fcef.jpg">
           <img alt="img1" src="../../assets/catalog/page-product-limestone.jpg" />
@@ -36,21 +35,9 @@
         <img src="../../assets/catalog/page-product-granite.jpg" class="w-full" alt="">
       </div>
     </swiper-slide>
-    <!-- <swiper-slide class="m-auto rounded-lg shadow-lg text-white bg-gray-400 overflow-hidden w-11/12 md:w-7/12">
-      <div >
-        <img src="../../assets/catalog/page-product-marble1.jpg" class="w-full" alt="">
-      </div>
-    </swiper-slide>
-    <swiper-slide class="m-auto rounded-lg shadow-lg text-white bg-gray-400 overflow-hidden w-11/12 md:w-7/12">
-      <div >
-        <img src="../../assets/catalog/page-product-travertine.jpg" class="w-full" alt="">
-      </div>
-    </swiper-slide>
-     -->
-    
     
   </swiper>
-  
+  <a href="http://localhost:8080/img/page-product-limestone.5874fcef.jpg">Viwe All</a>
 </Lightgallery>
 	
 </template>
