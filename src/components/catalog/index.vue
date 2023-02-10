@@ -30,7 +30,7 @@
 <script setup>
 import Header from '../home-sections/hed.vue'
 // import Footer from '../home-sections/footer.vue'
-import Slider from './slider5.vue'
+import Slider from './slider.vue'
 import { onBeforeRouteLeave } from 'vue-router';
 onBeforeRouteLeave((to, from) =>{
     console.log(to, from)
