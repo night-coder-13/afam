@@ -10,10 +10,9 @@
                 <p class="font-bold text-3xl Acme mb-6 mt-8">About us</p>
                 <div class="flex md:flex-row flex-col">
                     <div class="w-full md:w-8/12 md:ml-4">
-                        <p class="mb-3">We are group of specialists in field of stones and mining and also have many business partners in Europe and    Asia.  </p>
+                        <p>We are group of specialists in field of stones and mining and also have many business partners in Europe and Asia. AFAM Stone company is well known for being accessible, providing customized products and being trustworthy. </p>
+                        <p>As the best source of natural stones, we can supply carefully chosen stones, with a variety of colors, for both indoor and outdoor purposes and in tailored sizes. </p>
 
-                        <p>AFAM Stone company is well known for being accessible, providing customized products and being trustworthy. 
-                            As the best source of natural stones, we can supply carefully chosen stones, with a variety of colors, for both indoor and outdoor purposes and in tailored sizes.</p>
                     </div>
                     <div class="pl-10 hidden md:block w-10/12 md:w-4/12 pt-6 md:pt-0">
                         <p class="text-lg Acme ">Quick access</p>
