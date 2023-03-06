@@ -4,8 +4,8 @@
             <div class="w-full sm:w-5/12 py-6 pr-5 grid content-between">
                 <div>
                     <h3 class="Acme">About us</h3>
-                    <p class="text-base ml-4">We are group of specialists in field of stones and mining and also have many business partners in Europe and Asia. AFAM Stone company is well known for being accessible, providing customized products and being trustworthy. 
-                    As the best source of natural stones, we can supply carefully chosen stones, with a variety of colors, for both indoor and outdoor purposes and in tailored sizes. </p>
+                    <p class="text-base ml-4">We are group of specialists in field of stones and mining and besides we have many business partners in Europe and Asia which made communication easier with customers for us. AFAM Stone company is well known for being accessible, providing customized products with accuracy and being trustworthy.  </p>
+                    <p class="text-base ml-4 mt-2">As the best source of natural stones, we can supply carefully chosen stones, with a variety of colors, for both indoor and outdoor purposes and in tailored sizes.</p>
                 </div>
                 
                 <div class="mt-10 sm:mt-0 mb-14 sm:mb-0">
@@ -34,7 +34,7 @@
                     </div>
                     <div>
                         <h4 class="text-lg Acme">Wide range of products</h4>
-                        <p class="text-sm ml-2 mt-2 ">We have gathered a wide range of natural stones in the shapes of blocks, slabs and tiles available on different finished surfaces like polished, honed, tumble, bush hammered, sandblast and chiseled to meet the variety of customer needs.</p>
+                        <p class="text-sm ml-2 mt-2 ">We have gathered a wide range of natural stones in the shapes of blocks, tiles and slabs available on different finished surfaces like polished, honed, tumble, bush hammered, sandblast chiseled and etc., to meet the variety of customer needs.</p>
                     </div>
                 </div>
                 <div class="box flex">
@@ -47,7 +47,7 @@
                     </div>
                     <div>
                         <h4 class="text-lg Acme">Monitor product quality</h4>
-                        <p class="text-sm ml-2 mt-2">We carefully monitor the whole process of supplying the stones; Including block mining, crude stone processing, packaging, and transportation with fair price.</p>
+                        <p class="text-sm ml-2 mt-2">We carefully monitor and control the whole process of supplying the stones; Including block mining, crude stone processing, packaging, and transportation with fair price and in the shortest time.</p>
                     </div>
                 </div>
                 <div class="box flex">

@@ -4,7 +4,7 @@
     <nav id="hed" class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
       <div class="flex items-center justify-between">
         <router-link to="/" class="text-xl ml-1 sm:ml-8 font-bold text-gray-800 md:text-2xl">
-            <img src="../../assets/logoname.png" class="w-40" alt="">
+            <img src="../../assets/logoname.png" class="w-44" alt="">
         </router-link>
         <!-- Mobile menu button -->
         <div class="flex md:hidden">

@@ -13,7 +13,7 @@
       <div class="w-full bg-blue-900 md:w-10/12 m-auto sm:pl-12 mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
          <div class="mt-4 mb-10">
             <div class="sm:w-11/12 rounded-xl shadow-md bg-gray-50 px-3 py-5">
-               <h4 class="font-bold Acme text-lg" id="">Subscribe to AFMA Newsletter</h4>
+               <h4 class="font-bold Acme text-lg" id="">Subscribe to afam stone to inform tips and discounts</h4>
             <div class="mt-4 mb-4 text-center relative">
                 <input type="text" placeholder="Email" class="rounded-full h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
                 <button class="btn-in-input absolute right-2 ml-2 px-6 py-1 text-lg rounded-full bg-gray-200 shadow text-blue-400 font-bold btn-send">Send</button>

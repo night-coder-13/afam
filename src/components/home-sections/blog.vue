@@ -7,8 +7,9 @@
             <div class="blog-title flex justify-center items-center">
                 <div class="w-9/12 sm:w-6/12 m-auto relative">
                     <h3 class="font-bold Acme">Blog</h3>
-                    <p class="text-base text-gray-500 ml-3 mt-1">Discover AFAM Trade (marble and Travertine) latest News.
-Click on your preferred article or choose a news category.</p>
+                    <p class="text-base text-gray-500 ml-3 mt-1">
+                        Read and subscribe to AFAM Stone company latest News, updates and products surrounding natural stones, quarries, transportation and us.
+                    </p>
                     <a class="absolute right-8 -bottom-10 text-blue-500" href="#">Show all <i class="ti-arrow-circle-right text-sm"></i></a>
 
                 </div>

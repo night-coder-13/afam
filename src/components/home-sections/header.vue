@@ -5,7 +5,7 @@
         <div class="md:p-4 pt-4 w-full lg:w-7/12 sm:w-6/12 order-2">
             <small class="text-sm sm:text-base -mb-1 text-gray-500">AFAM TRADE</small>
             <h1 class="text-xl sm:text-4xl font-bold ml-2 Acme">NATURE's ETERNAL STONE</h1>
-            <h3 class="text-sm sm:text-lg ml-6 w-full sm:w-10/12">We supply and transport all kinds of stone to meet the needs of our customers globally. we use our centennial leadership in extraction and production of stone to promote Esfahan, Iran and our brand worldwide.</h3>
+            <h3 class="text-sm sm:text-lg ml-6 w-full sm:w-10/12">We supply and transport all kinds of stone to meet the needs of our customers globally. we use our skills and expertise in extraction and production of stone to promote Esfahan, Iran and our brand worldwide.</h3>
             <div class="flex mt-9">
                 <router-link :to="{name : 'Catalog'}" class="mr-2 w-40 h-11 cursor-pointer rounded-full text-base md:text-lg flex justify-start items-center text-white bg-blue-400 
                 hover:bg-transparent border-2 border-blue-400 hover:text-gray-900

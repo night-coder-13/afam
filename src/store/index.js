@@ -49,6 +49,11 @@ const store = createStore({
          state.contentArchive = archive;
        },
        GetProduct(state,product){
+        if(product.image2 !== undefined)
+        {
+            product.image2 = product.image2[0];
+        }
+        product.image1 = product.image1[0];
          state.product = product;
        },
        ChangeLoader(state){
