@@ -20,6 +20,9 @@ import store from './store/index.js'
       {
         path: '/catalog', name: 'Catalog', component: () => import('./components/catalog/index.vue'),meta :{title:'AFAM Trading | Catalog'}
       },
+      {
+        path: '/single-blog/:id', name: 'Blog', component: () => import('./components/blog/Single-Blog.vue'),meta :{title:'AFAM Trading | Blog'}
+      },
       
     ]
     const router = createRouter({
