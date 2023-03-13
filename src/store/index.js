@@ -7,6 +7,8 @@ const store = createStore({
         statusLoader:false,
         category:[],
         product:[],
+        blog:[],
+        singleBlog:[],
         archive:[],
         contentArchive:[],
         header:{title:'title' , description:'description',image:{a:'',b:'' ,c:''}},
@@ -55,6 +57,12 @@ const store = createStore({
         }
         product.image1 = product.image1[0];
          state.product = product;
+       },
+       GetBlog(state,blog){
+         state.blog = blog;
+       },
+       GetSingleBlog(state,blog){
+         state.singleBlog = blog;
        },
        ChangeLoader(state){
          state.statusLoader = !state.statusLoader
@@ -125,6 +133,44 @@ const store = createStore({
              const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/product/'+id)
              commit('GetProduct',response.data)
             //   console.log(response.data)
+         }catch(error){
+             Swal.fire({
+                 icon: 'warning',
+                 title: error,
+                 timerProgressBar: true,
+                 showConfirmButton: false,
+                 timer: '3000',
+                 toast: true,
+                 position : 'top'
+             })
+         }
+     },
+      async GetBlog({commit}){
+         try{
+            //  const response = await axios.get('https//mehdi-abasian.ir/wp-json/wl/v1/product/'+id)
+            //  const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product/'+id)
+             const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/blog')
+             commit('GetBlog',response.data)
+            //   console.log(response.data)
+         }catch(error){
+             Swal.fire({
+                 icon: 'warning',
+                 title: error,
+                 timerProgressBar: true,
+                 showConfirmButton: false,
+                 timer: '3000',
+                 toast: true,
+                 position : 'top'
+             })
+         }
+     },
+      async GetSingleBlog({commit},id){
+         try{
+            //  const response = await axios.get('https//mehdi-abasian.ir/wp-json/wl/v1/product/'+id)
+            //  const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product/'+id)
+             const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/blog/'+id)
+             commit('GetSingleBlog',response.data)
+              console.log(response.data)
          }catch(error){
              Swal.fire({
                  icon: 'warning',
