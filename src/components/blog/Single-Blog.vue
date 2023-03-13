@@ -10,8 +10,8 @@
                     </p>
                 </div>
                 <div class="mt-8 sm:mt-0 img-hed relative">
-
-                    <img src="../../assets/img/1-26.jpg" id="img-head" class="w-full -mt-80" alt="">
+                    <div class="cover-head-singleblog"></div>
+                    <img :src="singleBlog.image" id="img-head" class="w-full -mt-80" alt="">
                 </div>
             </div>
             <div class="flex md:flex-row flex-col">
@@ -20,7 +20,7 @@
                     <!-- <h4 class="text-2xl font-bold Acme mt-5 mb-2 capitalize notranslate" >hi</h4> -->
                     <div class="mt-3 ml-1">
                         <div class="text-base ml-4 text-gray-600">
-                            
+                            <img :src="singleBlog.image" class="m-4 rounded-lg" alt="">
                             <div v-html="singleBlog.content">
                             </div>
                         </div>
@@ -33,7 +33,7 @@
            
         </div>
         
-        <hr>
+        <hr class="my-4">
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 md:w-8/12 m-auto items--slider">
             <div class="rounded-xl shadow-md mx-2 mt-4 bg-gray-100 item--slider">
@@ -113,6 +113,13 @@ console.log(singleBlog.value);
     getBlog()
 </script>
 <style >
+.cover-head-singleblog{
+    position: absolute;
+    background: #0000005c;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+}
 img{
     border-radius: 10px;
 }
