@@ -170,7 +170,7 @@ const store = createStore({
             //  const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product/'+id)
              const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/blog/'+id)
              commit('GetSingleBlog',response.data)
-              console.log(response.data)
+            //   console.log(response.data)
          }catch(error){
              Swal.fire({
                  icon: 'warning',

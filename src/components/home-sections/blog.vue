@@ -19,22 +19,22 @@
             <h3 class="font-bold Acme">Blog</h3>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 md:w-8/12 m-auto items--slider">
-            <div v-for="(b,index) in blog" :key="index" class="rounded-xl shadow-md mx-2 mt-4 bg-gray-100 item--slider">
+            <router-link :to="{name:'Blog' , params:{id: b.id } }" v-for="(b,index) in blog" :key="index" class="rounded-xl shadow-md mx-2 mt-4 bg-gray-100 item--slider">
                 <div class="w-full h-44 overflow-hidden">
-                    <v-lazy-image class="w-full rounded-t-xl"
+                    <v-lazy-image class="h-full w-full rounded-t-xl"
                     :src-placeholder="require('../../assets/gif/loader-img.gif')"
                     :src="b.image" alt="Image blog"/> 
                 </div>
                 
                 <div class="py-3 px-1">
-                    <p class="text-sm text-gray-400"> <i class="ti-time"></i> 2022-11-25 </p>
+                    <p class="text-sm text-gray-400"> <i class="ti-time"></i> {{ b.date }} </p>
                     <h2 class="text-lg ml-3 mt-2" v-text="b.title"></h2>
                     <div class="flex items-center justify-around  mt-6">
-                        <button class=" "><i class="ti-heart text-red-400"></i> +158</button>
+                        <!-- <button class=" "><i class="ti-heart text-red-400"></i> +158</button> -->
                         <router-link :to="{name:'Blog' , params:{id: b.id } }" class="px-6 py-2 text-sm bg-gray-150 rounded-lg text-blue-400 shadow text-bold">Read more</router-link>
                     </div>
                 </div>
-            </div>
+            </router-link>
             
         </div>
     </div>
@@ -56,10 +56,7 @@ onMounted(()=>{
     const slod=computed(()=>store.getters.getLoader)
     const blog=computed(()=>store.state.blog)
     async function getBlog(){
-       
         await store.dispatch('GetBlog')
-       
-        console.log(blog.value);
     }
     getBlog()
 </script>
