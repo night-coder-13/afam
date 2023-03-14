@@ -3,7 +3,7 @@
   <div class="bg-gray-100 shadow">
     <nav id="hed" class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
       <div class="flex items-center justify-between">
-        <router-link to="/" class="text-xl ml-1 sm:ml-8 font-bold text-gray-800 md:text-2xl">
+        <router-link to="/" class="text-xl ml-1 sm:ml-8 font-bold nav-item md:text-2xl">
             <img src="../../assets/logoname.png" class="w-44" alt="">
         </router-link>
         <!-- Mobile menu button -->
@@ -16,7 +16,7 @@
                 
             </template>
           </Popper>
-          <button @click="toggleNav" type="button" class=" text-gray-800 hover:text-gray-700 focus:outline-none focus:text-gray-700">
+          <button @click="toggleNav" type="button" class=" nav-item hover:text-gray-700 focus:outline-none focus:text-gray-700">
             <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
               <path
                 fill-rule="evenodd"
@@ -30,18 +30,18 @@
       <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
       <ul
         :class="showMenu ? 'flex animate__animated animate__fadeInLeft' : 'hidden'"
-        class=" flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 z-50">
-        <li class="text-gray-900 font-bold">
+        class=" flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 z-20">
+        <li class="nav-item font-bold">
             <router-link :to="{name : 'Home'}">Home</router-link>
         </li>
         
-        <!-- <li class="text-gray-800 font-bold">
+        <!-- <li class="nav-item font-bold">
             <router-link :to="{name : 'Quarries'}">Quarries</router-link>
         </li> -->
-        <li class="text-gray-800 font-bold">
+        <li class="nav-item font-bold">
             <router-link :to="{name : 'Catalog'}">Catalog</router-link>
         </li>
-        <li class="text-gray-800 font-bold">
+        <li class="nav-item font-bold">
           <Popper arrow>
             <button class="font-bold flex items-center"> Product </button>
             <template #content="{}" >
@@ -53,10 +53,10 @@
             </template>
           </Popper>
         </li>
-        <li class="text-gray-800 font-bold">
+        <li class="nav-item font-bold">
             <router-link :to="{name : 'About'}">About us</router-link>
         </li>
-        <li class="text-gray-800 font-bold">
+        <li class="nav-item font-bold">
             <router-link  @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }">Contact Us</router-link>
         </li>
         <li id="flag">
@@ -76,7 +76,7 @@
   <div class="nav--sticky animate__animated animate__slideInDown" id="nav--sticky">
     <nav id="hed" class="container px-6 mx-auto md:flex md:justify-between md:items-center">
       <div class="flex items-center justify-between">
-        <router-link to="/" class="text-xl font-bold text-gray-800 md:text-2xl">
+        <router-link to="/" class="text-xl font-bold nav-item md:text-2xl">
             <img src="../../assets/logoname.png" class="w-40" alt="">
         </router-link>
         <!-- Mobile menu button -->
@@ -89,7 +89,7 @@
                 
               </template>
             </Popper>
-          <button @click="toggleNav" type="button" class=" text-gray-800 hover:text-gray-700 focus:outline-none focus:text-gray-700">
+          <button @click="toggleNav" type="button" class=" nav-item hover:text-gray-700 focus:outline-none focus:text-gray-700">
             <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
               <path
                 fill-rule="evenodd"
@@ -103,18 +103,18 @@
       <!-- nav stiky ******** -->
       <ul
         :class="showMenu ? 'flex animate__animated animate__fadeInLeft' : 'hidden'"
-        class=" flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 z-50">
-        <li class="text-gray-900 font-bold">
+        class=" flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 z-20">
+        <li class="nav-item font-bold">
             <router-link :to="{name : 'Home'}">Home</router-link>
         </li>
         
-        <!-- <li class="text-gray-800 font-bold">
+        <!-- <li class="nav-item font-bold">
             <router-link :to="{name : 'Quarries'}">Quarries</router-link>
         </li> -->
-        <li class="text-gray-800 font-bold">
+        <li class="nav-item font-bold">
             <router-link :to="{name : 'Catalog'}">Catalog</router-link>
         </li>
-        <li class="text-gray-800 font-bold">
+        <li class="nav-item font-bold">
           <Popper arrow>
               <button class=" flex items-center font-bold"> Product </button>
               <template #content="{}" >
@@ -126,10 +126,10 @@
               </template>
             </Popper>
         </li>
-        <li class="text-gray-800 font-bold">
+        <li class="nav-item font-bold">
             <router-link :to="{name : 'About'}">About us</router-link>
         </li>
-        <li class="text-gray-800 font-bold">
+        <li class="nav-item font-bold">
             <router-link  @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }">Contact Us</router-link>
         </li>
         <li id="flag">
@@ -190,6 +190,14 @@ const toggleNav = () => (showMenu.value = !showMenu.value);
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.nav-item{
+  color: rgb(112, 112, 112);
+}
+.nav-item .router-link-active {
+  color: #333;
+  font-weight: 800;
+  margin-top: 5px;
+}
 .nav--sticky{
     display: none;
     position: fixed;

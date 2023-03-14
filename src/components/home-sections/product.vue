@@ -7,7 +7,7 @@
          <router-link :to="{name:'Archive',params:{id:item.id}}" class="">
             <div class="h-full pb-5">
                <div class="box-productimg mx-2 my-3 rounded-xl relative overflow-hidden h-full">
-                  <div class="w-9 h-9 bg-gray-50 center--center absolute z-30 rounded-full top-4 right-3 text-blue-500
+                  <div class="w-9 h-9 bg-gray-50 center--center absolute z-20 rounded-full top-4 right-3 text-blue-500
                   hover:text-white hover:bg-blue-500 
                   ">
                      <i class="ti-bookmark font-bold text-xl"></i>

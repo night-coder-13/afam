@@ -40,7 +40,7 @@
 <div class="newsletter-mob hidden">
     <div @click="close" class="bg-box-alert-mobail animate__animated animate__fadeIn"> </div>
     <div id="forme-mobile-newsletter" class="box-alert-mobail animate__animated animate__fadeInUp pt-3 pb-4">
-        <i @click="close" class="absolute btn-close right-2 ti-close text-white font-bold mr-1"></i>
+        <i @click="close" class="absolute btn-close right-2 ti-close text-white font-bold mr-1 cursor-pointer"></i>
         <div class="p-5 pb-1 mt-5 ">
             <h4 class="font-bold Acme text-lg" id="">Subscribe to afam stone to inform tips and discounts</h4>
             <div class="mt-4 mb-4 text-center relative">

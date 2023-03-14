@@ -2,6 +2,7 @@
     <Hed />
     <Header data-aos="fade-up" />
     <About  data-aos="fade-up" />
+    <Whatsapp />
     <Product data-aos="fade-up" />
     <Newsletter data-aos="fade-up" />
     <!-- <Feature data-aos="fade-up" /> -->
@@ -13,6 +14,7 @@
 </template>
 
 <script setup>
+import Whatsapp from './whatsapp.vue'
 import Hed from './home-sections/hed.vue'
 import Header from './home-sections/header.vue'
 import About from './home-sections/about.vue'

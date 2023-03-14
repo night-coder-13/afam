@@ -3,7 +3,7 @@
 <header class="w-full">
     <div data-aos="fade-up" class="flex flex-col sm:flex-row w-full mt-3 sm:mt-0 md:py-9 px-8 sm:px-16 justify-between items-center">
         <div class="md:p-4 pt-4 w-full lg:w-7/12 sm:w-6/12 order-2">
-            <small class="text-sm sm:text-base -mb-1 text-gray-500">AFAM TRADE</small>
+            <small class="text-sm sm:text-base -mb-1 text-gray-500">AFAM STONE</small>
             <h1 class="text-xl sm:text-4xl font-bold ml-2 Acme">NATURE's ETERNAL STONE</h1>
             <h3 class="text-sm sm:text-lg ml-6 w-full sm:w-10/12">We supply and transport all kinds of stone to meet the needs of our customers globally. we use our skills and expertise in extraction and production of stone to promote Esfahan, Iran and our brand worldwide.</h3>
             <div class="flex mt-9">
@@ -45,14 +45,17 @@
 
 <script setup>
 import { ref } from '@vue/reactivity'
+import axios from 'axios';
 import CountUp from 'vue-countup-v3'
 
 let number=ref({})
 
-setTimeout(()=>{
+setTimeout(async ()=>{
+    const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/product')
+
             number.value={
-                product:125,
-                years:80,
+                product:response.data.length,
+                years:2,
                 work:700,
             }
         },200)
