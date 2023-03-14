@@ -7,6 +7,7 @@ const store = createStore({
         statusLoader:false,
         category:[],
         product:[],
+        catalog:[],
         blog:[],
         singleBlog:[],
         archive:[],
@@ -57,6 +58,9 @@ const store = createStore({
         }
         product.image1 = product.image1[0];
          state.product = product;
+       },
+       GetCatalog(state,catalog){
+         state.catalog = catalog;
        },
        GetBlog(state,blog){
          state.blog = blog;
@@ -132,6 +136,25 @@ const store = createStore({
             //  const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product/'+id)
              const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/product/'+id)
              commit('GetProduct',response.data)
+            //   console.log(response.data)
+         }catch(error){
+             Swal.fire({
+                 icon: 'warning',
+                 title: error,
+                 timerProgressBar: true,
+                 showConfirmButton: false,
+                 timer: '3000',
+                 toast: true,
+                 position : 'top'
+             })
+         }
+     },
+      async GetCatalog({commit}){
+         try{
+            //  const response = await axios.get('https//mehdi-abasian.ir/wp-json/wl/v1/product/'+id)
+            //  const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product/'+id)
+             const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/catalog')
+             commit('GetCatalog',response.data)
             //   console.log(response.data)
          }catch(error){
              Swal.fire({
