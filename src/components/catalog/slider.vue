@@ -7,24 +7,9 @@
     class="mySwiper"
     :class="view == true ? 'hidden' : 'block'"
     > 
-    <swiper-slide class="m-auto rounded-lg shadow-lg text-white bg-gray-400 overflow-hidden w-11/12 md:w-7/12">
+    <swiper-slide v-for="(c , index) in catalog" :key="index" class="m-auto rounded-lg shadow-lg text-white bg-gray-400 overflow-hidden w-11/12 md:w-7/12">
       <div @click="viewgallery">
-        <img src="../../assets/catalog/page-product-marble1.jpg" class="w-full" alt="">
-      </div>
-    </swiper-slide>
-    <swiper-slide class="m-auto rounded-lg shadow-lg text-white bg-gray-400 overflow-hidden w-11/12 md:w-7/12">
-      <div @click="viewgallery">
-        <img src="../../assets/catalog/page-product-granite.jpg" class="w-full" alt="">
-      </div>
-    </swiper-slide>
-    <swiper-slide class="m-auto rounded-lg shadow-lg text-white bg-gray-400 overflow-hidden w-11/12 md:w-7/12">
-      <div @click="viewgallery">
-        <img src="../../assets/catalog/page-product-limestone.jpg" class="w-full" alt="">
-      </div>
-    </swiper-slide>
-    <swiper-slide class="m-auto rounded-lg shadow-lg text-white bg-gray-400 overflow-hidden w-11/12 md:w-7/12">
-      <div @click="viewgallery">
-        <img src="../../assets/catalog/page-product-travertine.jpg" class="w-full" alt="">
+        <img :src="c.src" class="w-full" :alt="c.title">
       </div>
     </swiper-slide>
     
@@ -39,6 +24,7 @@
 
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import { useStore } from 'vuex'
 
 import "../../../node_modules/swiper/swiper.min.css";
   // Import Swiper styles
@@ -46,15 +32,20 @@ import "../../../node_modules/swiper/swiper.min.css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCards } from "swiper";
-import { onMounted, ref } from '@vue/runtime-core';
+import { onMounted, ref , computed } from '@vue/runtime-core';
 import lightGallery from '../../../node_modules/lightgallery/lightgallery.min.js'
 import lgZoom from '../../../node_modules/lightgallery/plugins/zoom/lg-zoom.min.js'
 import lgThumbnail from '../../../node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js'
+import { val } from 'dom7';
 
 const view = ref(false);
+const ElCatalog = ref({});
+const store=useStore();
+const catalog=computed(()=>store.state.catalog)
 
-onMounted(()=>{
-
+onMounted(async ()=>{
+  await store.dispatch('GetCatalog')
+  
   const lgContainer = document.getElementById('inline-gallery-container');
 const inlineGallery = lightGallery(lgContainer, {
     container: lgContainer,
@@ -65,37 +56,7 @@ const inlineGallery = lightGallery(lgContainer, {
     appendSubHtmlTo: '.lg-item',
     slideDelay: 400,
     plugins: [lgZoom, lgThumbnail],
-    dynamicEl: [
-        {
-            src: 'http://mehdi-abasian.ir/page-product-marble1.jpg',
-            thumb: 'http://mehdi-abasian.ir/page-product-marble1.jpg',
-            subHtml: `<div class="lightGallery-captions">
-                <h4>marble</h4>
-            </div>`,
-        },
-        {
-            src: 'http://mehdi-abasian.ir/page-product-granite.jpg',
-            thumb: 'http://mehdi-abasian.ir/page-product-granite.jpg',
-            subHtml: `<div class="lightGallery-captions">
-                <h4>granite</h4>
-            </div>`,
-        },
-        {
-            src: 'http://mehdi-abasian.ir/page-product-limestone.jpg',
-            thumb: 'http://mehdi-abasian.ir/page-product-limestone.jpg',
-            subHtml: `<div class="lightGallery-captions">
-                <h4>limestone</h4>
-            </div>`,
-        },
-        {
-            src: 'http://mehdi-abasian.ir/page-product-travertine.jpg',
-            thumb: 'http://mehdi-abasian.ir/page-product-travertine.jpg',
-            subHtml: `<div class="lightGallery-captions">
-                <h4>travertine</h4>
-            </div>`,
-        },
-       
-    ],
+    dynamicEl: catalog.value,
 });
 
 // Since we are using dynamic mode, we need to programmatically open lightGallery
