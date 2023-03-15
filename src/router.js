@@ -21,7 +21,10 @@ import store from './store/index.js'
         path: '/catalog', name: 'Catalog', component: () => import('./components/catalog/index.vue'),meta :{title:'AFAM Trading | Catalog'}
       },
       {
-        path: '/single-blog/:id', name: 'Blog', component: () => import('./components/blog/Single-Blog.vue'),meta :{title:'AFAM Trading | Blog'}
+        path: '/single-blog/:id', name: 'SingleBlog', component: () => import('./components/blog/Single-Blog.vue'),meta :{title:'AFAM Trading | Blog'}
+      },
+      {
+        path: '/blog', name: 'Blog', component: () => import('./components/blog/index.vue'),meta :{title:'AFAM Trading | All Blog'}
       },
       
     ]
