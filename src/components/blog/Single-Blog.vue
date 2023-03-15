@@ -1,11 +1,12 @@
 <template>
     <Header />
-        <div class="w-full" data-aos="fade-up" id="product">
+        <div class="hidden">{{ hasItems }}</div>
+        <div v-if="loader" class="w-full" data-aos="fade-up" id="product">
             <div class="w-full h-52 overflow-hidden">
                 <div class="absolute mt-20 z-10 text-center w-full ">
                     <p class="text-white font-bold text-2xl md:text-3xl" v-text="singleBlog.title"></p>
                     <hr class="w-48 mx-auto opacity-70 mt-1 bg-gray-100">
-                    <p class="text-gray-100 text-small md:text-lg">
+                    <p class="text-gray-100 text-sm md:text-lg">
                         <span class="mr-3" v-text="singleBlog.date"></span><span class="mr-3">By : {{ singleBlog.author }}</span>
                     </p>
                 </div>
@@ -31,13 +32,16 @@
            
            
         </div>
+        <div v-else class="h-96 center--center">
+            <img src="../../assets/gif/loader-img.gif" alt="">
+        </div>
         
         <hr class="my-4">
         <div class="w-11/12 md:w-8/12 m-auto mt-2 mb-1">
             <h3 class="font-bold Acme">Suggested</h3>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 md:w-8/12 m-auto items--slider">
-            <router-link :to="{name:'Blog' , params:{id: b.id } }" v-for="(b,index) in blog" :key="index" class="rounded-xl shadow-md mx-2 mt-4 bg-gray-100 item--slider">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-11/12 md:w-8/12 m-auto items--slider">
+            <router-link :to="{name:'SingleBlog' , params:{id: b.id } }" v-for="(b,index) in blog" :key="index" class="rounded-xl shadow-md mx-2 mt-4 bg-gray-100 item--slider">
                 <div class="w-full h-44 overflow-hidden">
                     <v-lazy-image class="h-full w-full rounded-t-xl"
                     :src-placeholder="require('../../assets/gif/loader-img.gif')"
@@ -49,7 +53,7 @@
                     <h2 class="text-lg ml-3 mt-2" v-text="b.title"></h2>
                     <div class="flex items-center justify-around  mt-6">
                         <!-- <button class=" "><i class="ti-heart text-red-400"></i> +158</button> -->
-                        <router-link :to="{name:'Blog' , params:{id: b.id } }" class="px-6 py-2 text-sm bg-gray-150 rounded-lg text-blue-400 shadow text-bold">Read more</router-link>
+                        <router-link :to="{name:'SingleBlog' , params:{id: b.id } }" class="px-6 py-2 text-sm bg-gray-150 rounded-lg text-blue-400 shadow text-bold">Read more</router-link>
                     </div>
                 </div>
             </router-link>
@@ -59,34 +63,48 @@
 </template>
    
 <script setup>
-import Footer from '../home-sections/footer.vue'
-import Header from '../home-sections/hed.vue'
-import VLazyImage from "v-lazy-image";
-import { useRoute } from 'vue-router'
-import { useStore } from 'vuex'
-import { onMounted , computed } from '@vue/runtime-core';
-import {clickScroll} from '../../scroll'
-
-
-onMounted(()=>{
-    clickScroll('.items--slider')
-})
+    import Footer from '../home-sections/footer.vue'
+    import Header from '../home-sections/hed.vue'
+    import VLazyImage from "v-lazy-image";
+    import { useRoute } from 'vue-router'
+    import { useStore } from 'vuex'
+    import { onMounted , computed } from '@vue/runtime-core';
+    import {clickScroll} from '../../scroll'
+import { ref } from 'vue';
 
     const route=useRoute();
     const store=useStore();
     const slod=computed(()=>store.getters.getLoader)
     const singleBlog=computed(()=>store.state.singleBlog)
     const blog=computed(()=>store.state.blog)
+    const loader = ref(true);
 
+    // watchEffect(() => {
+    // })
+
+    
+
+    const hasItems = computed( async () => {
+        loader.value = false
+        await store.dispatch('GetSingleBlog',route.params.id)
+        loader.value = true
+    })
     async function getBlog(){
         if(!slod.value)
-            store.commit('ChangeLoader')
+        store.commit('ChangeLoader')
         await store.dispatch('GetSingleBlog',route.params.id)
         await store.dispatch('GetBlog')
         if(slod.value)
-            store.commit('ChangeLoader')
+        store.commit('ChangeLoader')
     }
-    getBlog()
+    
+    console.log(route.params.id)
+    onMounted(()=>{
+        clickScroll('.items--slider')
+        getBlog()
+    })
+    
+    
 </script>
 <style >
 .cover-head-singleblog{
@@ -101,7 +119,7 @@ img{
     margin: auto;
 }
 #img-head{
-    filter: blur(2px) grayscale(.8);
+    filter: blur(1px) grayscale(.5);
     background-color: rgba(0, 0, 0, .5);
 }
 .title{

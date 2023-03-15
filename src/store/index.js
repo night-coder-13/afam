@@ -1,5 +1,6 @@
 import axios from "axios";
 import Swal from "sweetalert2";
+import { ref } from "vue";
 import { createStore } from "vuex";
 
 const store = createStore({
@@ -151,8 +152,7 @@ const store = createStore({
      },
       async GetCatalog({commit}){
          try{
-            //  const response = await axios.get('https//mehdi-abasian.ir/wp-json/wl/v1/product/'+id)
-            //  const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product/'+id)
+            
              const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/catalog')
              commit('GetCatalog',response.data)
             //   console.log(response.data)
@@ -168,12 +168,15 @@ const store = createStore({
              })
          }
      },
-      async GetBlog({commit}){
-         try{
-            //  const response = await axios.get('https//mehdi-abasian.ir/wp-json/wl/v1/product/'+id)
-            //  const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product/'+id)
-             const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/blog')
-             commit('GetBlog',response.data)
+      async GetBlog({commit} , number = null){
+        try{
+            let response = {};
+            if(number === null)
+                response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/blog')
+            else
+                response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/blog/'+number)
+
+            commit('GetBlog',response.data)
             //   console.log(response.data)
          }catch(error){
              Swal.fire({
@@ -189,9 +192,8 @@ const store = createStore({
      },
       async GetSingleBlog({commit},id){
          try{
-            //  const response = await axios.get('https//mehdi-abasian.ir/wp-json/wl/v1/product/'+id)
-            //  const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product/'+id)
-             const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/blog/'+id)
+            
+             const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/single_blog/'+id)
              commit('GetSingleBlog',response.data)
             //   console.log(response.data)
          }catch(error){

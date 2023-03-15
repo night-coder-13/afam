@@ -42,6 +42,9 @@
             <router-link :to="{name : 'Catalog'}">Catalog</router-link>
         </li>
         <li class="nav-item font-bold">
+            <router-link :to="{name : 'Blog'}">Blog</router-link>
+        </li>
+        <li class="nav-item font-bold">
           <Popper arrow>
             <button class="font-bold flex items-center"> Product </button>
             <template #content="{}" >
@@ -113,6 +116,9 @@
         </li> -->
         <li class="nav-item font-bold">
             <router-link :to="{name : 'Catalog'}">Catalog</router-link>
+        </li>
+        <li class="nav-item font-bold">
+            <router-link :to="{name : 'Blog'}">Blog</router-link>
         </li>
         <li class="nav-item font-bold">
           <Popper arrow>

@@ -46,19 +46,18 @@
 <script setup>
 import { ref } from '@vue/reactivity'
 import axios from 'axios';
+import { onMounted } from 'vue';
 import CountUp from 'vue-countup-v3'
 
 let number=ref({})
-
-setTimeout(async ()=>{
+onMounted(async()=>{
     const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/product')
-
-            number.value={
-                product:response.data.length,
-                years:2,
-                work:700,
-            }
-        },200)
+    number.value={
+        product:response.data.length,
+        years:2,
+        work:700,
+    }
+})
 
 </script>
 
