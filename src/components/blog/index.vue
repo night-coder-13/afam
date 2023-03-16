@@ -11,7 +11,7 @@
                 </div>
                 <div class="mt-8 sm:mt-0 img-hed relative">
                     <div class="cover-head-singleblog"></div>
-                    <img src="../../assets/img/blog.jpg" id="img-head" class="w-full sm:-mt-24 md:-mt-96 -mt-10" alt="">
+                    <img :src="require('../../assets/img/blog.jpg')" id="img-head" class="w-full sm:-mt-24 md:-mt-96 -mt-10" alt="">
                 </div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-11/12 md:w-8/12 m-auto mt-8">
