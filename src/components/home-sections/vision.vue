@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full m-auto relative py-8 pb-24 flex flex-col lg:flex-row pl-1 lg:pl-0 justify-end content-center">
+    <div class="w-full m-auto relative pt-8 sm:pb-24 flex flex-col lg:flex-row pl-1 lg:pl-0 justify-end content-center">
         <div class="grid pt-5 pb-16 px-4 md:bg-blue-900 md:text-white z-10 content-center sm:order-1 sm:shadow-lg box-vision">
             <!-- <img src="../../assets/arrow.png" class="pl-8" alt=""> -->
 

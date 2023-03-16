@@ -1,13 +1,13 @@
 <template>
     <!-- <div id="develop"></div> -->
-   <div class="w-full px-8 lg:px-12 my-10 sm:my-28 md:my-32">
+   <div class="w-full px-8 lg:px-12 mb-10 sm:my-10 sm:my-28 md:my-32">
     <!-- <p class="text-2xl font-bold text-center mb-6">Blog</p> -->
     <div class="flex flex-col lg:flex-row items-center">
-        <div class="w-full  md:w-6/12 lg:w-4/12">
+        <div class="w-full  md:w-6/12 lg:w-4/12 h-80">
             <div class="blog-title flex justify-center items-center">
-                <div class="w-9/12 sm:w-6/12 m-auto mb-12 sm:mb-auto relative">
+                <div class="w-full sm:w-6/12 sm:m-auto sm:mb-12 -mt-20 relative">
                     <h3 class="font-bold Acme">Blog</h3>
-                    <p class="text-base text-gray-500 ml-3 mt-1">
+                    <p class="text-base text-gray-500 ml-2 sm:ml-3 mt-1">
                         Read and subscribe to AFAM Stone company latest News, updates and products surrounding natural stones, quarries, transportation and us.
                     </p>
                     <router-link :to="{name : 'Blog'}" class="absolute left-2 -bottom-12 text-gray-800 border-blue-400 border-2 px-5 py-1 rounded-full hover:bg-blue-400 hover:text-white">Show all</router-link>
