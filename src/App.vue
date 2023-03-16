@@ -11,7 +11,7 @@
 </div>
   <div >
     <button @click="scrollTop('hed')" :class="upBtn" class="bg-blue-400 shadow-md text-white w-10 h-10 rounded-full upBtn fixed bottom-8 font-bold right-10 animate__animated animate__slideInUp"><i class="ti-angle-up text-xl"></i></button>
-    <a href="https://web.whatsapp.com/send?phone=989902774517" :class="upBtn" class="bg-green-500 shadow-md text-white w-10 h-10 rounded-full upBtn fixed bottom-20 font-bold right-10 animate__animated animate__slideInUp "><img src="./assets/whatsapp.png" class="w-7 m-auto mt-1" alt=""></a>
+    <a v-if="statusWA" href="http://wa.me/989132000823" :class="upBtn" class="bg-green-500 shadow-md text-white w-10 h-10 rounded-full upBtn fixed bottom-20 font-bold right-10 animate__animated animate__slideInUp "><img src="./assets/whatsapp.png" class="w-7 m-auto mt-1" alt=""></a>
   </div>
 </template>
 
@@ -26,7 +26,7 @@ import { useStore } from 'vuex';
 const store =useStore()
 
 const loadingPage=computed(() => store.state.statusLoader)
-
+const statusWA = ref(sessionStorage.getItem('whatsapp'))
 onMounted(() => {
     AOS.init();
 })
