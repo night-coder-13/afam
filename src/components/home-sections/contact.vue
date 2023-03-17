@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full my-20" id="contact-us">
+    <div class="w-full mb-20 mt-4 md:my-20" id="contact-us">
         <div class="header-contact"></div>
         <div class="flex lg:flex-row flex-col justify-center w-11/12 m-auto">
             <div class="w-full lg:w-7/12 mt-4 order-2 lg:order-none">

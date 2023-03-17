@@ -8,7 +8,7 @@
     <!-- <Feature data-aos="fade-up" /> -->
     <Vision data-aos="fade-up" />
     <!-- <Quarries data-aos="fade-up" /> -->
-    <Blog data-aos="fade-up" />
+    <!-- <Blog data-aos="fade-up" /> -->
     <Contact data-aos="fade-up" />
     <Footer />
 </template>

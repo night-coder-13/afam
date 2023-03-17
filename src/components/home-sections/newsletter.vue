@@ -78,6 +78,20 @@ function onchange(waypointState){
         }
     }
 }
+setTimeout(()=>{
+    if(sessionStorage.getItem('newsletter') !== 'true'){
+        // sessionStorage.setItem('newsletter', 'true');
+        if(window.innerWidth > 500){
+            document.querySelector('.newsletter-desc').style.display='flex'
+            document.querySelector('.newsletter-desc #image-newsletter').classList.remove('animate__fadeOutRight')
+            document.querySelector('.newsletter-desc #forme-newsletter').classList.remove('animate__fadeOutLeft')
+        }
+        else{
+            document.querySelector('.newsletter-mob').style.display='block'
+            document.querySelector('.newsletter-desc #forme-mobile-newsletter').classList.remove('animate__fadeOutDown')
+        }
+    }
+},15000)
 function close(){
     sessionStorage.setItem('newsletter', 'true');
     setTimeout(()=>{

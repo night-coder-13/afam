@@ -29,7 +29,7 @@
                     <img src="../../assets/img/businessmen-handshaking.jpg" class="w-full rounded-xl shadow-md" alt="">
                 </div>
                 <div class="w-full md:w-7/12 sm:pl-8">
-                    <h2 class="text-start text-2xl Acme mb-3 mt-8">Our Vision</h2>
+                    <h2 class="text-start text-2xl Acme mb-3 mt-8 font-bold">Our Vision</h2>
                     <p class="text-gray-600 text-base w-11/12 ml-4 h-56 overflow-scroll">We aim to continue to supply natural stones for new projects around the world since we have been providing building stones for many years in civil engineering. 
                     We hope to be one of the top exporters of building stones in this regard. In all of our markets, AFAM Stone will be the distributor of choice for hand-selected unique blocks, tiles and slabs. Our vision is to be the industry leader in premium quality and to fulfill orders precisely according to customer specifications.
                     </p>
