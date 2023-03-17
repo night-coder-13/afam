@@ -3,8 +3,8 @@
         <div class="w-full" data-aos="fade-up">
             <div class="w-full h-52 overflow-hidden">
                 <div class="mt-10 sm:mt-0 img-hed relative">
-                    <img v-if="contentArchive.img_bg" :src="contentArchive.img_bg[0]" id="img-head" class="w-full -mt-80" alt="">
-                    <img v-else :src="contentArchive.img[0]" id="img-head" class="w-full -mt-80" alt="">
+                    <img v-if="contentArchive.img_bg" :src="contentArchive.img_bg" id="img-head" class="w-full -mt-80" alt="">
+                    <img v-else :src="contentArchive.img" id="img-head" class="w-full -mt-80" alt="">
                 </div>
             </div>
             <div class="flex md:flex-row flex-col">
@@ -12,7 +12,7 @@
                     <div>
                         <v-lazy-image class="w-9/12 md:w-10/12 m-auto rounded-xl shadow-md -mt-32"
                             :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                            :src="contentArchive.img[0]" alt="Image blog"/> 
+                            :src="contentArchive.img" alt="Image blog"/> 
                     </div>
                     
                 </div>
@@ -31,19 +31,19 @@
                                 <img :src="require('../../assets/gif/loader-img.gif')" alt="">
                             </div>      
                             <div v-else>
-                                <router-link :to="{name:'Product',params:{id:item.id}}">
+                                <div @click="viewgallery">
                                     <div class="mx-4 mt-3 mb-5 h-60 relative archive rounded-xl overflow-hidden">
                                         <div class="w-full bg-name rounded-b-xl h-full"></div>
                                         <v-lazy-image v-if="item.image1" class="img h-full w-full "
                                             :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                                            :src="item.image1[0]" :alt="item.name"/> 
+                                            :src="item.image1" :alt="item.name"/> 
                                         <v-lazy-image v-else class="img h-full w-full rounded-xl"
                                             :src-placeholder="require('../../assets/gif/loader-img.gif')"
                                             :src="require('../../assets/img/340719-200.png')" :alt="item.name == '' ? item.title : item.name"/> 
                                         <div>
                                             <v-lazy-image v-if="item.image2" class="box-img img rounded-lg absolute -right-4 shadow-md -bottom-4 w-5/12 h-24"
                                                 :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                                                :src="item.image2[0]" :alt="item.name == '' ? item.title : item.name"/> 
+                                                :src="item.image2" :alt="item.name == '' ? item.title : item.name"/> 
                                             <!-- <v-lazy-image v-else class="box-img img rounded-lg absolute -right-4 shadow-md -bottom-4 w-5/12 h-24"
                                                 :src-placeholder="require('../../assets/gif/loader-img.gif')"
                                                 :src="require('../../assets/img/340719-200.png')" :alt="item.name"/>  -->
@@ -52,7 +52,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </router-link>
+                                </div>
                             </div>
                         </div> 
                     
@@ -61,6 +61,11 @@
            
         </div>
 
+        <div :class="view == true ? 'block' : 'hidden'" class="absolute inline-gallery-body top-0">
+            <div :class="view == true ? 'block' : 'hidden'" id="inline-gallery-container" class="inline-gallery-container " ></div>
+            <i @click="viewgallery"  class="z-50 absolute btn-close left-2 ti-close text-gray-400 hover:text-gray-600 cursor-pointer font-bold mr-1 top-2 hover:border-red-400 border border-gray-400 p-1 rounded-full"></i>
+        </div>
+        
     <Footer />
 </template>
 
@@ -75,6 +80,9 @@ import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'
 import { Waypoint } from "vue-waypoint";
 
+import lightGallery from '../../../node_modules/lightgallery/lightgallery.min.js'
+import lgZoom from '../../../node_modules/lightgallery/plugins/zoom/lg-zoom.min.js'
+import lgThumbnail from '../../../node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js'
 
 const route=useRoute();
 const store=useStore();
@@ -82,6 +90,8 @@ const slod=computed(()=>store.getters.getLoader)
 const loader=ref(true)
 const archive=computed(()=>store.state.archive)
 const contentArchive=computed(()=>store.state.contentArchive)
+const view = ref(false);
+
 async function getArchive(){
     if(!slod.value)
         store.commit('ChangeLoader')
@@ -91,24 +101,66 @@ async function getArchive(){
         store.commit('ChangeLoader')
 
 }
-getArchive();
 
 async function onChange(waypointState) {
     if(waypointState.going === 'IN'||waypointState.going === 'OUT'||waypointState.direction === 'UP'){
         if(!loader.value)
-            loader.value = !loader.value
+        loader.value = !loader.value
         await store.dispatch('GetArchive',route.params.id)
         if(loader.value)
-            loader.value = !loader.value 
+        loader.value = !loader.value 
     }
 }
 
-onMounted(()=>{
+onMounted(async ()=>{
+    getArchive();
+    await store.dispatch('GetArchive',route.params.id)
     clickScroll('.items--slider')
-})
+    console.log(archive.value)
+    console.log('kkk')
+    const lgContainer = document.getElementById('inline-gallery-container');
+    const inlineGallery = lightGallery(lgContainer, {
+    container: lgContainer,
+    dynamic: true,
+    hash: false,
+    closable: false,
+    showMaximizeIcon: true,
+    appendSubHtmlTo: '.lg-item',
+    slideDelay: 400,
+    plugins: [lgZoom, lgThumbnail],
+    dynamicEl: archive.value,
+});
+
+// Since we are using dynamic mode, we need to programmatically open lightGallery
+inlineGallery.openGallery();
+
+
+});
+function viewgallery(){
+  view.value = !view.value;
+  document.querySelector('.lg-img-wrap').style.padding = '0 0 90px 0'
+  var html = document.querySelector('.lg-toolbar').innerHTML
+  document.querySelector('.lg-toolbar').innerHTML = '<i @click="viewgallery" class="p-4"></i>'+html
+}
+
 </script>
 
 <style scoped>
+ @import 'lightgallery/css/lightgallery.css';
+  @import 'lightgallery/css/lg-thumbnail.css';
+  @import 'lightgallery/css/lg-zoom.css';
+  .inline-gallery-container {
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 65%;
+}
+.inline-gallery-body{
+    width: 100%;
+    height: 70vh !important;
+    z-index: 9999;
+}
+
+
 #img-head{
     filter: grayscale(.9) blur(1px);
     position: absolute;
