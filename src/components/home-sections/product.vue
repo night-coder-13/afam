@@ -16,7 +16,7 @@
                
                   <v-lazy-image
                   :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                  :src="item.img[0]" class="w-full h-full" :alt="item.name"/>                  
+                  :src="item.img" class="w-full h-full" :alt="item.name"/>                  
                </div>
             </div>
             

@@ -99,7 +99,6 @@ const store = createStore({
             //  const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/archive/'+id)
              const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/archive/'+id)
              commit('GetArchive',response.data)
-            //  console.log(response.data);
          }catch(error){
              Swal.fire({
                  icon: 'warning',

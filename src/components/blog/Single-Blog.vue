@@ -70,7 +70,7 @@
     import { useStore } from 'vuex'
     import { onMounted , computed } from '@vue/runtime-core';
     import {clickScroll} from '../../scroll'
-import { ref } from 'vue';
+    import { ref } from 'vue';
 
     const route=useRoute();
     const store=useStore();
