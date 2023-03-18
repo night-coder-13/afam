@@ -201,6 +201,7 @@ function viewgallery(){
     height: 80vh !important;
     margin-top: 55px !important;
 }
+
 .inline-gallery-body{
     width: 100%;
     height: 70vh !important;
@@ -235,6 +236,11 @@ function viewgallery(){
 @media only screen and (max-width: 400px){
     .img-hed{
         margin-top: 130px !important;
+    }
+    .lg-image:not(.no-transition){
+        width: 90% !important;
+        height: auto !important;
+        margin-top: 55px !important;
     }
 }
 @media only screen and (max-width: 500px){

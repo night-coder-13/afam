@@ -1,8 +1,8 @@
 <template>
 
   <div class="bg-gray-100 shadow">
-    <nav id="hed" class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
-      <div class="flex items-center justify-between">
+    <nav id="hed" class="container px-6 py-4 mx-auto flex md:justify-center justify-between md:items-center">
+      <div class="flex md:hidden items-center justify-between">
         <router-link to="/" class="text-xl ml-1 sm:ml-8 font-bold nav-item md:text-2xl">
             <img src="../../assets/logoname.png" class="w-44" alt="">
         </router-link>
@@ -30,20 +30,15 @@
       <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
       <ul
         :class="showMenu ? 'flex animate__animated animate__fadeInLeft' : 'hidden'"
-        class=" flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 z-20">
+        class="h-10 flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 z-20 ">
         <li class="nav-item font-bold">
             <router-link :to="{name : 'Home'}">Home</router-link>
         </li>
         
-        <!-- <li class="nav-item font-bold">
-            <router-link :to="{name : 'Quarries'}">Quarries</router-link>
-        </li> -->
         <li class="nav-item font-bold">
             <router-link :to="{name : 'Catalog'}">Catalog</router-link>
         </li>
-        <!-- <li class="nav-item font-bold">
-            <router-link :to="{name : 'Blog'}">Blog</router-link>
-        </li> -->
+        
         <li class="nav-item font-bold">
           <Popper arrow>
             <button class="font-bold flex items-center"> Product </button>
@@ -55,6 +50,12 @@
               </div>
             </template>
           </Popper>
+        </li>
+        <li  class="font-bold relative top-4">
+          <!-- <div class="absolute top-4 bg-gray-100 p-3 rounded-lg shadow w-52 p-3 h-20 -z-50"></div> -->
+          <router-link to="/" class="text-xl ml-1 font-bold md:text-2xl ">
+            <img src="../../assets/logoname.png" class="w-52 bg-gray-100 p-3 rounded-lg shadow w-52 p-3" alt="">
+          </router-link>
         </li>
         <li class="nav-item font-bold">
             <router-link :to="{name : 'About'}">About us</router-link>
@@ -77,8 +78,8 @@
   </div>
           <!-- nav sticky -->
   <div class="nav--sticky animate__animated animate__slideInDown" id="nav--sticky">
-    <nav id="hed" class="container px-6 mx-auto md:flex md:justify-between md:items-center">
-      <div class="flex items-center justify-between">
+    <nav id="hed" class="container px-6 mx-auto md:flex md:justify-center justify-between md:items-center">
+      <div class="flex md:hidden items-center justify-between">
         <router-link to="/" class="text-xl font-bold nav-item md:text-2xl">
             <img src="../../assets/logoname.png" class="w-40" alt="">
         </router-link>
@@ -106,20 +107,13 @@
       <!-- nav stiky ******** -->
       <ul
         :class="showMenu ? 'flex animate__animated animate__fadeInLeft' : 'hidden'"
-        class=" flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 z-20">
+        class="h-10 flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 z-20">
         <li class="nav-item font-bold">
             <router-link :to="{name : 'Home'}">Home</router-link>
         </li>
-        
-        <!-- <li class="nav-item font-bold">
-            <router-link :to="{name : 'Quarries'}">Quarries</router-link>
-        </li> -->
         <li class="nav-item font-bold">
             <router-link :to="{name : 'Catalog'}">Catalog</router-link>
         </li>
-        <!-- <li class="nav-item font-bold">
-            <router-link :to="{name : 'Blog'}">Blog</router-link>
-        </li> -->
         <li class="nav-item font-bold">
           <Popper arrow>
               <button class=" flex items-center font-bold"> Product </button>
@@ -131,6 +125,11 @@
                 </div>
               </template>
             </Popper>
+        </li>
+        <li  class="font-bold relative top-0">
+          <router-link to="/" class="text-xl ml-1 font-bold md:text-2xl ">
+            <img src="../../assets/logoname.png" class="w-52 bg-white p-3 rounded-lg shadow p-3" alt="">
+          </router-link>
         </li>
         <li class="nav-item font-bold">
             <router-link :to="{name : 'About'}">About us</router-link>

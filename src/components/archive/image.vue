@@ -1,7 +1,7 @@
 <template>
     <div @click="lightImage" id="zoom" :bg="src">
         <div id="zoomS" :style="'background: url('+ src +');background-size: 100% 100%;'"></div>
-        <img id="zoomC" :src="src" class="h-120 rounded-lg" alt="">
+        <img id="zoomC" :src="src" class="w-11/12 m-auto sm:h-120 sm:w-auto rounded-lg" alt="">
     </div>
     
 </template>
