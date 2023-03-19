@@ -28,7 +28,7 @@
             <p class="text-base text-gray-100 ml-8">We supply and transport all kinds of stone to meet the needs of our customers globally. we use our skills and expertise in extraction and production of stone to promote Esfahan, Iran and our brand worldwide.</p>
          </div>
          <div class="pl-10 pt-4 mt-4 relative w-11/12">
-            <p class="text-xl text-white">Access</p>
+            <p class="text-xl text-white">Menu</p>
             <ul class=" mt-8 text-white md:items-center pl-4 md:mt-4 z-20">
                <li class="nav-item font-bold">
                      <router-link :to="{name : 'Home'}">Home</router-link>

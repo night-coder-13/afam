@@ -1,7 +1,7 @@
 <template>
 
   <div class="bg-gray-100 shadow">
-    <nav id="hed" class="container px-6 py-4 mx-auto flex md:justify-center justify-between md:items-center">
+    <nav id="hed" class="container px-6 py-4 mx-auto md:flex md:justify-center justify-between md:items-center">
       <div class="flex md:hidden items-center justify-between">
         <router-link to="/" class="text-xl ml-1 sm:ml-8 font-bold nav-item md:text-2xl">
             <img src="../../assets/logoname.png" class="w-44" alt="">
@@ -30,7 +30,7 @@
       <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
       <ul
         :class="showMenu ? 'flex animate__animated animate__fadeInLeft' : 'hidden'"
-        class="h-10 flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 z-20 ">
+        class="sm:h-10 flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 ">
         <li class="nav-item font-bold">
             <router-link :to="{name : 'Home'}">Home</router-link>
         </li>
@@ -51,10 +51,10 @@
             </template>
           </Popper>
         </li>
-        <li  class="font-bold relative top-4">
+        <li  class="hidden sm:inline-block font-bold relative top-4">
           <!-- <div class="absolute top-4 bg-gray-100 p-3 rounded-lg shadow w-52 p-3 h-20 -z-50"></div> -->
           <router-link to="/" class="text-xl ml-1 font-bold md:text-2xl ">
-            <img src="../../assets/logoname.png" class="w-52 bg-gray-100 p-3 rounded-lg shadow w-52 p-3" alt="">
+            <img src="../../assets/logoname.png" class="w-52 bg-gray-100 p-3 relative rounded-lg shadow w-52 p-3 z-10" alt="">
           </router-link>
         </li>
         <li class="nav-item font-bold">
@@ -107,7 +107,7 @@
       <!-- nav stiky ******** -->
       <ul
         :class="showMenu ? 'flex animate__animated animate__fadeInLeft' : 'hidden'"
-        class="h-10 flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 z-20">
+        class="md:h-10 flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
         <li class="nav-item font-bold">
             <router-link :to="{name : 'Home'}">Home</router-link>
         </li>
@@ -126,7 +126,7 @@
               </template>
             </Popper>
         </li>
-        <li  class="font-bold relative top-0">
+        <li  class="hidden md:block font-bold relative top-0">
           <router-link to="/" class="text-xl ml-1 font-bold md:text-2xl ">
             <img src="../../assets/logoname.png" class="w-52 bg-white p-3 rounded-lg shadow p-3" alt="">
           </router-link>
