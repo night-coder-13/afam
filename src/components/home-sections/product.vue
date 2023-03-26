@@ -1,7 +1,7 @@
 <template>  <i class="fi fi-ro-user"></i>
 
-   <div class="py-8 w-full lg:w-10/12 m-auto px-4 md:px-12 mt-10 mb-24 sm:my-32">
-    <h3 class="font-bold text-center mb-6 Acme">Product</h3>
+   <div id="products" class="py-8 w-full lg:w-10/12 m-auto px-4 md:px-12 mt-10 mb-24 sm:my-32">
+    <h3 class="font-bold text-center mb-6 Acme">Products</h3>
     <div class="sm:grid sm:grid-cols-2 lg:grid-cols-4 items product--slider">
       <div v-for="item in items" :key="item.id" class="item--slider">
          <router-link :to="{name:'Archive',params:{id:item.id}}" class="">

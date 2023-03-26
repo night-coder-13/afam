@@ -83,7 +83,7 @@ import { ref } from '@vue/reactivity'
 import { computed, onMounted } from '@vue/runtime-core'
 import {clickScroll} from '../../scroll'
 import VLazyImage from 'v-lazy-image'
-import { useRoute } from 'vue-router'
+import { onBeforeRouteLeave, useRoute, useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 import { Waypoint } from "vue-waypoint";
 import Image from './image.vue'
@@ -92,6 +92,7 @@ import lightGallery from '../../../node_modules/lightgallery/lightgallery.min.js
 import lgZoom from '../../../node_modules/lightgallery/plugins/zoom/lg-zoom.min.js'
 import lgThumbnail from '../../../node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js'
 
+const router= useRouter();
 const route=useRoute();
 const store=useStore();
 const slod=computed(()=>store.getters.getLoader)
@@ -102,6 +103,16 @@ const view = ref(false);
 const src = ref('');
 const oldRouteId = ref(0);
 oldRouteId.value = oldRouteId.value === 0 ? route.params.id : oldRouteId;
+
+onBeforeRouteLeave( (to, from) => {
+    console.log('to')
+    console.log(to.fullPath)
+    console.log('from')
+    console.log(from.fullPath)
+    // router.push({ name: 'Home', hash: '#products' })
+    // console.log(location.host+'/#products')
+    // location.href = location.host+'/#products'
+})
 
 const hasItems = computed( async () => {
     await store.dispatch('GetArchive',route.params.id)

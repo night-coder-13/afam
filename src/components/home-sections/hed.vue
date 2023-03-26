@@ -30,7 +30,7 @@
       <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
       <ul
         :class="showMenu ? 'flex animate__animated animate__fadeInLeft' : 'hidden'"
-        class="sm:h-10 flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 ">
+        class="sm:h-11 flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 ">
         <li class="nav-item font-bold">
             <router-link :to="{name : 'Home'}">Home</router-link>
         </li>
@@ -41,7 +41,7 @@
         
         <li class="nav-item font-bold">
           <Popper arrow>
-            <button class="font-bold flex items-center"> Product </button>
+            <button class="font-bold flex items-center"> Products </button>
             <template #content="{}" >
               <div class="px-4 py-2"> 
                 <p v-for="cat in category" :key="cat.id" class="text-gray-500 text-start capitalize ">
@@ -51,10 +51,10 @@
             </template>
           </Popper>
         </li>
-        <li  class="hidden sm:inline-block font-bold relative top-4">
+        <li  class="hidden sm:inline-block font-bold ">
           <!-- <div class="absolute top-4 bg-gray-100 p-3 rounded-lg shadow w-52 p-3 h-20 -z-50"></div> -->
-          <router-link to="/" class="text-xl ml-1 font-bold md:text-2xl ">
-            <img src="../../assets/logoname.png" class="w-52 bg-gray-100 p-3 relative rounded-lg shadow w-52 p-3 z-10" alt="">
+          <router-link to="/" class="text-xl ml-1 font-bold relative -top-4 md:text-2xl">
+            <img src="../../assets/logoname.png" class="w-52 z-10" alt="">
           </router-link>
         </li>
         <li class="nav-item font-bold">
@@ -107,7 +107,7 @@
       <!-- nav stiky ******** -->
       <ul
         :class="showMenu ? 'flex animate__animated animate__fadeInLeft' : 'hidden'"
-        class="md:h-10 flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
+        class="md:h-11 flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
         <li class="nav-item font-bold">
             <router-link :to="{name : 'Home'}">Home</router-link>
         </li>
@@ -116,7 +116,7 @@
         </li>
         <li class="nav-item font-bold">
           <Popper arrow>
-              <button class=" flex items-center font-bold"> Product </button>
+              <button class=" flex items-center font-bold"> Products </button>
               <template #content="{}" >
                 <div class="px-4 py-2">
                   <p v-for="cat in category" :key="cat.id" class="text-gray-500 text-start capitalize ">
@@ -126,9 +126,9 @@
               </template>
             </Popper>
         </li>
-        <li  class="hidden md:block font-bold relative top-0">
-          <router-link to="/" class="text-xl ml-1 font-bold md:text-2xl ">
-            <img src="../../assets/logoname.png" class="w-52 bg-white p-3 rounded-lg shadow p-3" alt="">
+        <li  class="hidden md:block font-bold ">
+          <router-link to="/" class="text-xl ml-1 relative -top-4 font-bold md:text-2xl ">
+            <img src="../../assets/logoname.png" class="w-52 " alt="">
           </router-link>
         </li>
         <li class="nav-item font-bold">
@@ -196,13 +196,13 @@ const toggleNav = () => (showMenu.value = !showMenu.value);
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .nav-item{
-  color: rgb(112, 112, 112);
+  color: rgb(42, 42, 42);
 }
-.nav-item .router-link-active {
+/* .nav-item .router-link-active {
   color: #333;
   font-weight: 800;
   margin-top: 5px;
-}
+} */
 .nav--sticky{
     display: none;
     position: fixed;

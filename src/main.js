@@ -10,11 +10,12 @@ import Popper from "vue3-popper";
 import store from './store/index.js'
 import VueMeta from 'vue-meta'
 import { createMetaManager } from 'vue-meta'
-
+import { VueTypedJs } from 'vue-typed-js'
 
 
 
 const app=createApp(App)
+app.use(VueTypedJs)
 app.use(store)
 app.component("Popper", Popper)
 app.use(router)

@@ -26,6 +26,13 @@ import Blog from './home-sections/blog.vue'
 import Contact from './home-sections/contact.vue'
 import Footer from './home-sections/footer.vue'
 import Newsletter from './home-sections/newsletter.vue'
+// import { onBeforeRouteUpdate } from 'vue-router'
+
+
+// onBeforeRouteUpdate(async (to, from) => {
+//     console.log(to.fullPath)
+//     console.log(from.fullPath)
+// })
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

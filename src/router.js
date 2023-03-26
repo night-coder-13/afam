@@ -3,7 +3,13 @@ import store from './store/index.js'
     // const store=useStore();
     const routes = [
       {
-        path: '/', name: 'Home', component: () => import('./components/home.vue'),meta :{title:'AFAM Trading | HOME',description: "This is the home page",}
+        path: '/', name: 'Home', component: () => import('./components/home.vue'),meta :{title:'AFAM Trading | HOME',description: "This is the home page",},
+        // beforeEnter: (to, from,next) => {
+        //   console.log(to.path)
+        //   console.log(from.name)
+        //   if(from.name === 'Archive')
+        //     next()
+        // },  
       },
       {
         path: '/product/:id', name: 'Product', component: () => import('./components/product/index.vue'),meta :{title:'AFAM Trading | Product'}
@@ -48,7 +54,11 @@ import store from './store/index.js'
         store.getters.changeLoader;
       
       // if the user is not authenticated, `next` is called twice
-      next()
+      console.log(from.name)
+      if(from.name === 'Archive')
+        next({name : 'Home' , hash : '#products'})
+      else
+        next()
     })
     router.afterEach((to,from) => {
       if(to.fullPath !== from.fullPath)

@@ -1,16 +1,22 @@
 <template>
     <div class="w-full m-auto relative pt-8 sm:pb-24 flex flex-col lg:flex-row pl-1 lg:pl-0 justify-end content-center">
-        <div class="grid pt-5 pb-16 px-4 md:bg-blue-900 md:text-white z-10 content-center sm:order-1 sm:shadow-lg box-vision">
+        <div class="grid w-4/12 pt-5 pb-16 pl-6 pr-4 md:bg-blue-900 md:text-white z-10 content-center sm:order-1 sm:shadow-lg box-vision">
             <!-- <img src="../../assets/arrow.png" class="pl-8" alt=""> -->
 
-            <h3 class="text-2xl font-bold mb-2 Acme" >Building new visions</h3>
+            <h3 class="text-2xl font-bold mb-2 Acme" >Registration to Sending process</h3>
             <p class="text-sm sm:text-base ml-4 max-h-56 overflow-hidden">
                 Our compony mission is to provide high quality materials and great customer services all around the world, that's why we participate in exhibitions, design objects and site-specific installations to extend the boundaries of these materials.
             </p>
+            <!-- <div>
+                <i class=" ti-arrow-left" @click="prevSlide"></i>
+                <i class=" ti-arrow-right " @click="nextSlide"></i>
+            </div> -->
         </div>
-        <div id="bg--image" class="w-full center--center lg:w-9/12 h-80 sm:h-96 md:h-128 sm:order-2 mb-8 sm:mb-0 overflow-hidden rounded ">
-           
-            <div v-for="(img , i) in list_image" :key="i" :style="' background: url('+require('../../assets/img/'+img)+');'" class="bg--image block w-full h-full animate__animated " :id="i == showimg ? 'active' : ''">
+        <div id="bg--image" class="w-full w-8/12 center--center lg:w-9/12 h-80 sm:h-96 md:h-128 sm:order-2 mb-8 sm:mb-0 overflow-hidden rounded relative">
+            <div class="absolute w-full bottom-0 ">
+                <p class="px-4 pb-4 pt-6 text-lg md:text-xl font-bold" id="title">1. Customer consultation and order registration</p>
+            </div>
+            <div v-for="(img , i) in list_image" :key="i" :style="' background: url('+require('../../assets/slider/'+img.img)+');'" class="bg--image block w-full h-full animate__animated " :id="i == showimg ? 'active' : ''">
             </div>
             <!-- <div v-for="(img , i) in list_image" :key="i" >
                 <img v-show="i === showimg" :src="require('../../assets/img/'+img)" class="w-full" alt="">
@@ -20,49 +26,111 @@
 </template>
 
 <script setup>
-
-const { onMounted, watch, ref }=require("@vue/runtime-core")
+const { onMounted, ref }=require("@vue/runtime-core")
 
 const list_image=[
-    'lq12.jpg',
-    'lq1.jpg',
-    'q1.jpg',
+    {img:'1.png' , title : '1. Customer consultation and order registration'},
+    {img:'2.jpg' , title : '2. Purchase order with best quality'},
+    {img:'3.jpg' , title : '3. Stone processing under the direct supervision of experts'},
+    {img:'4.jpg' , title : '4. Loading packages'},
+    {img:'5.jpg' , title : '5. Transfer all over the world'},
 ]
+let isTyping = ref(false) ;
 let showimg= ref(0)
 let imgbg=''
 onMounted(()=>{
     // console.log(document.getElementById('bg--image').childNodes[1])
 })
-// watch(showimg, (currentValue, oldValue) => {
-//   console.log(currentValue);
-//   console.log(oldValue);
-// });
-
-
-setInterval(()=>{
-    const listItem = document.getElementsByClassName('bg--image')
-    for (let i = 0; i < listItem.length; i++) {
-        listItem[i].classList.remove('animate__fadeOutLeft');
-        listItem[i].classList.remove('animate__fadeInRight');
-    }
-    listItem[showimg.value].classList.add('animate__fadeOutLeft')
-    listItem[(showimg.value < listItem.length -1 ? showimg.value + 1 : 0 )].classList.add('animate__fadeInRight')
-    setTimeout(()=>{
-        if(showimg.value < (list_image.length-1)){
-            showimg.value++
-        }else{
-            showimg.value=0
+var i = 0;
+var speed = 80;
+function _typeWriter(txt){
+    document.getElementById("title").innerHTML = ''
+    function typeWriter() {
+        isTyping.value = true
+        if (i < txt.length) {
+            document.getElementById("title").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
         }
-    },1000)
+        if(i == txt.length)
+            isTyping.value = false
+    }
+    i=0
+    typeWriter()
+}
+
+// setInterval(()=>{
+//     const listItem = document.getElementsByClassName('bg--image')
+//     for (let i = 0; i < listItem.length; i++) {
+//         listItem[i].classList.remove('animate__fadeOutLeft');
+//         listItem[i].classList.remove('animate__fadeInRight');
+//     }
+//     listItem[showimg.value].classList.add('animate__fadeOutLeft')
+//     listItem[(showimg.value < listItem.length -1 ? showimg.value + 1 : 0 )].classList.add('animate__fadeInRight')
+//     _typeWriter(list_image[showimg.value < listItem.length -1 ? showimg.value + 1 : 0].title)
+//     setTimeout(()=>{
+//         if(showimg.value < (list_image.length-1)){
+//             showimg.value++
+//         }else{
+//             showimg.value=0
+//         }
+//     },1000)
     
-
-},8000)
-
-
+// },8000)
+var nSlide = setInterval(nextSlide , 8000)
+function nextSlide(){
+    if(!isTyping.value){
+        const listItem = document.getElementsByClassName('bg--image')
+        for (let i = 0; i < listItem.length; i++) {
+            listItem[i].classList.remove('animate__fadeOutLeft');
+            listItem[i].classList.remove('animate__fadeInRight');
+        }
+        listItem[showimg.value].classList.add('animate__fadeOutLeft')
+        listItem[(showimg.value < listItem.length -1 ? showimg.value + 1 : 0 )].classList.add('animate__fadeInRight')
+        _typeWriter(list_image[showimg.value < listItem.length -1 ? showimg.value + 1 : 0].title)
+        setTimeout(()=>{
+            if(showimg.value < (list_image.length-1)){
+                showimg.value++
+            }else{
+                showimg.value=0
+            }
+        },1000)
+        clearInterval(nSlide)
+        nSlide = setInterval(nextSlide , 8000)
+        console.log(showimg.value < listItem.length ? showimg.value : 1 )
+        console.log(showimg.value < listItem.length -1 ? showimg.value + 1 : 0 )
+    }
+}
+// function prevSlide(){
+//     if(!isTyping.value){
+//         const listItem = document.getElementsByClassName('bg--image')
+//         for (let i = 0; i < listItem.length; i++) {
+//             listItem[i].classList.remove('animate__fadeOutLeft');
+//             listItem[i].classList.remove('animate__fadeInRight');
+//         }
+//         listItem[showimg.value].classList.add('animate__fadeOutLeft')
+//         listItem[(showimg.value < listItem.length ? showimg.value : 1 )].classList.add('animate__fadeInRight')
+//         _typeWriter(list_image[showimg.value < listItem.length -1 ? showimg.value + 1 : 0].title)
+//         setTimeout(()=>{
+//             if(showimg.value < (list_image.length-1)){
+//                 showimg.value--
+//             }else{
+//                 showimg.value=0
+//             }
+//         },1000)
+//         clearInterval(nSlide)
+//         nSlide = setInterval(nextSlide , 8000)
+//     }
+// }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+#title{
+    background: linear-gradient(to bottom, #ffffff00  -5%, #ffffff  100%);
+    z-index: 99;
+}
 .animate__fadeOutLeft{
     animation-delay: .3s;
 }
@@ -93,14 +161,7 @@ setInterval(()=>{
         transition: .5s;
 }
 .box-vision{
-    position: absolute;
-    top: 220px;
-    left: 200px;
-    width: 550px;
-    /* background: #ffffff; */
-    /* padding: 30px 10px 30px 40px; */
-    border-radius: 10px;
-    /* backdrop-filter: blur(1px); */
+   
 }
 .bg--image{
     background-size: 100% auto !important;

@@ -14,7 +14,7 @@
       <div class="w-full bg-blue-900 md:w-10/12 m-auto sm:pl-12 mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
          <div class="mt-4 mb-10">
             <div class="sm:w-11/12 text-center rounded-xl shadow-md bg-gray-50 px-3 py-5">
-               <h4 class="font-bold Acme text-lg" id="">Subscribe to afam stone to inform tips and discounts</h4>
+               <h4 class="font-bold Acme text-lg" id="">Subscribe to AFAM Stone to inform tips and discounts</h4>
             <div class="mt-4 mb-4 text-center relative">
                 <input type="text" placeholder="Email" class="rounded-full h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
                 <button class="btn-in-input absolute right-2 ml-2 px-6 py-1 text-lg rounded-full bg-gray-200 shadow text-blue-400 font-bold btn-send">Send</button>
@@ -25,7 +25,7 @@
             <div class="flex justify-start items-center">
                <img src="../../assets/logoname_w.png" class="w-48 mb-2" alt="">
             </div>
-            <p class="text-base text-gray-100 ml-8">We supply and transport all kinds of stone to meet the needs of our customers globally. we use our skills and expertise in extraction and production of stone to promote Esfahan, Iran and our brand worldwide.</p>
+            <p class="text-base text-gray-100 ml-8">We supply and transport all kinds of stone to meet the needs of our customers globally. We use our skills and expertise in extraction and production of stone to promote Esfahan, Iran and our brand worldwide.</p>
          </div>
          <div class="pl-10 pt-4 mt-4 relative w-11/12">
             <p class="text-xl text-white">Menu</p>

@@ -34,7 +34,7 @@
                     </div>
                     <div>
                         <h4 class="text-lg Acme">Wide range of products</h4>
-                        <p class="text-sm ml-2 mt-2 ">We have gathered a wide range of natural stones in the shapes of blocks, tiles and slabs available on different finished surfaces like polished, honed, tumble, bush hammered, sandblast chiseled and etc., to meet the variety of customer needs.</p>
+                        <p class="text-sm ml-2 mt-2 text-description">We have gathered a wide range of natural stones in the shapes of blocks, tiles and slabs available on different finished surfaces like polished, honed, tumble, bush hammered, sandblast chiseled and etc., to meet the variety of customer needs.</p>
                     </div>
                 </div>
                 <div class="box flex">
@@ -47,7 +47,7 @@
                     </div>
                     <div>
                         <h4 class="text-lg Acme">Monitor product quality</h4>
-                        <p class="text-sm ml-2 mt-2">We carefully monitor and control the whole process of supplying the stones; Including block mining, crude stone processing, packaging, and transportation with fair price and in the shortest time.</p>
+                        <p class="text-sm ml-2 mt-2 text-description">We carefully monitor and control the whole process of supplying the stones; Including block mining, crude stone processing, packaging, and transportation with fair price and in the shortest time.</p>
                     </div>
                 </div>
                 <div class="box flex">
@@ -60,7 +60,20 @@
                     </div>
                     <div>
                         <h4 class="text-lg Acme">Advice for customers</h4> <!--- Preparation process -->
-                        <p class="text-sm ml-2 mt-2">We also Have specialists, available for consulting to help our customers finding their optimal product, with absolutely no cost.</p>
+                        <p class="text-sm ml-2 mt-2 text-description">We also Have specialists, available for consulting to help our customers finding their optimal product, with absolutely no cost.</p>
+                    </div>
+                </div>
+                <div class="box flex">
+                    <div>
+                        <span></span>
+                        <!-- <img src="" alt=""> -->
+                    </div>
+                    <div class="p-2 w-3/12">
+                        <img src="../../assets/png/transfer.png" class="image-box" width="300px" alt="">
+                    </div>
+                    <div class="w-9/12">
+                        <h4 class="text-lg Acme">Transfer all over the world</h4> <!--- Preparation process -->
+                        <p id="over" class="text-sm ml-2 mt-2 text-description">Transporting building stone requires careful planning and execution to ensure that the stone arrives at its destination in good condition and on time. Our team considering all the safety parameters in terms of packaging and handling...</p>
                     </div>
                 </div>
                 
@@ -69,7 +82,13 @@
     </div>
 </template>
 
-<script>
+<script setup>
+import { onMounted } from 'vue';
+
+
+onMounted(()=>{
+    document.getElementById('over').addEventListener('overflow' , ()=>{console.log('shod')} , false)
+})
 
 </script>
 
@@ -77,6 +96,10 @@
 <style scoped>
 .box{
     margin: 10px 5px;
+}
+.text-description{
+    max-height: 120px;
+    overflow: hidden;
 }
 .box span{
     display: block;

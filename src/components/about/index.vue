@@ -47,6 +47,8 @@
                             <li>We have gathered a wide range of natural stones in the shapes of blocks, tiles and slabs available on different finished surfaces like polished, honed, tumble, bush hammered, sandblast chiseled and etc., to meet the variety of customer needs.</li>
                             <li>We carefully monitor and control the whole process of supplying the stones; Including block mining, crude stone processing, packaging, and transportation with fair price and in the shortest time.</li>
                             <li>We also Have specialists, available for consulting to help our customers finding their optimal product, with absolutely no cost.</li>
+                            <li>Transporting building stone requires careful planning and execution to ensure that the stone arrives at its destination in good condition and on time. Our team considering all the safety parameters in terms of packaging and handling, transportation vehicles, route planning, documentation and etc., will delivered your order.</li>
+
                             <!-- <li>We also Have specialists, available for customer consulting to help them find their optimal product, with absolutely no cost.</li> -->
                         </ol>
                     </div>
