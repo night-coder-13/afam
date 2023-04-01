@@ -42,6 +42,19 @@ window.addEventListener('scroll',()=>{
 function scrollTop(id){
     smoothScroll(id);
 }
+
+
+
+// window.history.pushState(null, null, window.location.href);
+// window.onpopstate = function () {
+//   // window.history.pushState({ prevUrl: window.location.href }, null, "/new/path/in/your/app")
+//   console.log(location.href)
+//   // console.log(window.history.state.prevUrl)
+//   console.log(location.lasthash)
+
+//   // location.href = 'http://google.com/';
+
+// };
 </script>
 
 <style>
@@ -72,7 +85,7 @@ body{
 }
 .upBtn{
   display: none;
-  z-index: 9999;
+  z-index: 999;
 }
 .upBtn.active{
   display: block;

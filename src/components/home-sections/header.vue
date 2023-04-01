@@ -63,12 +63,13 @@ onMounted(async()=>{
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .bg-img-heder{
-    background-image: url('../../assets/img/a-4.jpg');
+    background-image: url('../../assets/img/h1.jpg');
+    background-position: bottom;
 }
 .bg-img-heder1{
-    background-image: url('../../assets/img/a-3.jpg');
+    background-image: url('../../assets/img/h2.jpg');
 }
 .bg-img-heder2{
-    background-image: url('../../assets/img/a-2.jpg');
+    background-image: url('../../assets/img/h3.jpg');
 }
 </style>

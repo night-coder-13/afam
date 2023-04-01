@@ -54,10 +54,10 @@ import store from './store/index.js'
         store.getters.changeLoader;
       
       // if the user is not authenticated, `next` is called twice
-      console.log(from.name)
-      if(from.name === 'Archive')
-        next({name : 'Home' , hash : '#products'})
-      else
+      // console.log(from.name)
+      // if(from.name === 'Archive')
+      //   next({name : 'Home' , hash : '#products'})
+      // else
         next()
     })
     router.afterEach((to,from) => {

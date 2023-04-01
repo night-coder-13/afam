@@ -7,20 +7,15 @@
             <p class="text-sm sm:text-base ml-4 max-h-56 overflow-hidden">
                 Our compony mission is to provide high quality materials and great customer services all around the world, that's why we participate in exhibitions, design objects and site-specific installations to extend the boundaries of these materials.
             </p>
-            <!-- <div>
-                <i class=" ti-arrow-left" @click="prevSlide"></i>
-                <i class=" ti-arrow-right " @click="nextSlide"></i>
-            </div> -->
+           
         </div>
-        <div id="bg--image" class="w-full w-8/12 center--center lg:w-9/12 h-80 sm:h-96 md:h-128 sm:order-2 mb-8 sm:mb-0 overflow-hidden rounded relative">
+        <div id="bg--image" class="w-full md:w-8/12 center--center lg:w-9/12 h-80 sm:h-96 md:h-128 sm:order-2 mb-8 sm:mb-0 overflow-hidden rounded relative">
             <div class="absolute w-full bottom-0 ">
-                <p class="px-4 pb-4 pt-6 text-lg md:text-xl font-bold" id="title">1. Customer consultation and order registration</p>
+                <p class="px-4 pb-4 pt-6 text-base md:text-xl font-bold" id="title">1. Customer consultation and order registration</p>
             </div>
             <div v-for="(img , i) in list_image" :key="i" :style="' background: url('+require('../../assets/slider/'+img.img)+');'" class="bg--image block w-full h-full animate__animated " :id="i == showimg ? 'active' : ''">
             </div>
-            <!-- <div v-for="(img , i) in list_image" :key="i" >
-                <img v-show="i === showimg" :src="require('../../assets/img/'+img)" class="w-full" alt="">
-            </div> -->
+           
         </div>
     </div>
 </template>
@@ -37,6 +32,7 @@ const list_image=[
 ]
 let isTyping = ref(false) ;
 let showimg= ref(0)
+let countrTyping= ref(0)
 let imgbg=''
 onMounted(()=>{
     // console.log(document.getElementById('bg--image').childNodes[1])
@@ -45,6 +41,8 @@ var i = 0;
 var speed = 80;
 function _typeWriter(txt){
     document.getElementById("title").innerHTML = ''
+    // console.log(txt)
+    // txt = 'hello'
     function typeWriter() {
         isTyping.value = true
         if (i < txt.length) {
@@ -59,69 +57,44 @@ function _typeWriter(txt){
     typeWriter()
 }
 
-// setInterval(()=>{
-//     const listItem = document.getElementsByClassName('bg--image')
-//     for (let i = 0; i < listItem.length; i++) {
-//         listItem[i].classList.remove('animate__fadeOutLeft');
-//         listItem[i].classList.remove('animate__fadeInRight');
-//     }
-//     listItem[showimg.value].classList.add('animate__fadeOutLeft')
-//     listItem[(showimg.value < listItem.length -1 ? showimg.value + 1 : 0 )].classList.add('animate__fadeInRight')
-//     _typeWriter(list_image[showimg.value < listItem.length -1 ? showimg.value + 1 : 0].title)
-//     setTimeout(()=>{
-//         if(showimg.value < (list_image.length-1)){
-//             showimg.value++
-//         }else{
-//             showimg.value=0
-//         }
-//     },1000)
-    
-// },8000)
 var nSlide = setInterval(nextSlide , 8000)
 function nextSlide(){
-    if(!isTyping.value){
-        const listItem = document.getElementsByClassName('bg--image')
-        for (let i = 0; i < listItem.length; i++) {
-            listItem[i].classList.remove('animate__fadeOutLeft');
-            listItem[i].classList.remove('animate__fadeInRight');
+    const listItem = document.getElementsByClassName('bg--image')
+    for (let i = 0; i < listItem.length; i++) {
+        listItem[i].classList.remove('animate__fadeOutLeft');
+        listItem[i].classList.remove('animate__fadeInRight');
+    }
+    listItem[showimg.value].classList.add('animate__fadeOutLeft')
+    listItem[(showimg.value < listItem.length -1 ? showimg.value + 1 : 0 )].classList.add('animate__fadeInRight')
+    // _typeWriter(showimg.value < listItem.length -1 ? showimg.value + 1 : 0)
+    // _typeWriter(list_image[showimg.value < listItem.length -1 ? showimg.value + 1 : 0].title)
+    // console.log(list_image[showimg.value < listItem.length -1 ? showimg.value + 1 : 0].title)
+    setTimeout(()=>{
+        if(showimg.value < (list_image.length-1)){
+            showimg.value++
+        }else{
+            showimg.value=0
         }
-        listItem[showimg.value].classList.add('animate__fadeOutLeft')
-        listItem[(showimg.value < listItem.length -1 ? showimg.value + 1 : 0 )].classList.add('animate__fadeInRight')
-        _typeWriter(list_image[showimg.value < listItem.length -1 ? showimg.value + 1 : 0].title)
-        setTimeout(()=>{
-            if(showimg.value < (list_image.length-1)){
-                showimg.value++
-            }else{
-                showimg.value=0
-            }
-        },1000)
-        clearInterval(nSlide)
-        nSlide = setInterval(nextSlide , 8000)
-        console.log(showimg.value < listItem.length ? showimg.value : 1 )
-        console.log(showimg.value < listItem.length -1 ? showimg.value + 1 : 0 )
+    },1000)
+    // clearInterval(nSlide)
+    // nSlide = setInterval(nextSlide , 8000)
+}
+var _typingRun = setInterval(typingRun , 8000)
+function typingRun(){
+    if(!isTyping.value){
+        // console.log(countrTyping.value + 100)
+        // console.log(showimg.value + 200)
+        // _typeWriter(countrTyping.value < list_image.length -1 ? countrTyping.value + 1 : 0)
+        _typeWriter(list_image[countrTyping.value < list_image.length -1 ? countrTyping.value + 1 : 0].title)
+        // console.log(list_image[showimg.value < listItem.length -1 ? showimg.value + 1 : 0].title)
+        if(countrTyping.value < (list_image.length-1)){
+            countrTyping.value++
+        }else{
+            countrTyping.value=0
+        }
     }
 }
-// function prevSlide(){
-//     if(!isTyping.value){
-//         const listItem = document.getElementsByClassName('bg--image')
-//         for (let i = 0; i < listItem.length; i++) {
-//             listItem[i].classList.remove('animate__fadeOutLeft');
-//             listItem[i].classList.remove('animate__fadeInRight');
-//         }
-//         listItem[showimg.value].classList.add('animate__fadeOutLeft')
-//         listItem[(showimg.value < listItem.length ? showimg.value : 1 )].classList.add('animate__fadeInRight')
-//         _typeWriter(list_image[showimg.value < listItem.length -1 ? showimg.value + 1 : 0].title)
-//         setTimeout(()=>{
-//             if(showimg.value < (list_image.length-1)){
-//                 showimg.value--
-//             }else{
-//                 showimg.value=0
-//             }
-//         },1000)
-//         clearInterval(nSlide)
-//         nSlide = setInterval(nextSlide , 8000)
-//     }
-// }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

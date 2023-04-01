@@ -2,55 +2,44 @@
     <Header />
     <div class="hidden">{{ hasItems }}</div>
         <div class="w-full" data-aos="fade-up">
-            <div class="w-full h-52 overflow-hidden">
-                <div class="mt-10 sm:mt-0 img-hed relative " >
+            <div class="w-full pb-4 overflow-hidden relative">
+                <div class="w-full h-full bg-black absolute top-0 opacity-30 "></div>
+                <div class="mt-10 sm:mt-0 img-hed " >
                     <img v-if="contentArchive.img_bg" :src="contentArchive.img_bg" id="img-head" class="w-full -mt-80" style="z-index: -99;" alt="">
                     <img v-else :src="contentArchive.img" id="img-head" class="w-full -mt-80" style="z-index: -99;" alt="">
+                    <div class="w-full p-4 z-10 relative">
+                        <h4 class="text-2xl text-white font-bold Acme mt-5 mb-2 capitalize notranslate center--center" v-text="contentArchive.name"></h4>
+                        <div class="text-base m-auto text-gray-100 w-7/12">
+                            <p class="mb-2 text-center" v-text="contentArchive.description"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="flex md:flex-row flex-col">
-                <div class="w-full md:w-5/12 p-5">
-                    <div>
-                        <v-lazy-image class="w-9/12 md:w-10/12 m-auto rounded-xl shadow-md -mt-32"
-                            :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                            :src="contentArchive.img" alt="Image blog"/> 
-                    </div>
-                    
-                </div>
-                <div class="w-full md:w-7/12 px-6 md:px-0">
-                    <h4 class="text-2xl font-bold Acme mt-5 mb-2 capitalize notranslate" v-text="contentArchive.name"></h4>
-                    <div class="text-base ml-4 text-gray-600">
-                        <p class="mb-2 " v-text="contentArchive.description"></p>
-                    </div>
-                </div>
-            </div><!---->
+            
             <div class="flex mt-16" data-aos="fade-up">
                 <Waypoint @change="onChange" class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 w-10/12 md:w-11/12 lg:w-10/12 m-auto items--slider">
-                    
-                        <div v-for="item in archive" :key="item.id" class="item--slider">
-                            <div v-if="loader" class="center-center">
-                                <img :src="require('../../assets/gif/loader-img.gif')" alt="">
-                            </div>      
-                            <div v-else>
-                                <div @click="lightImage(item.image1)">
-                                    <div class="mx-4 mt-3 mb-5 h-48 sm:h-60 relative archive rounded-xl overflow-hidden cursor-pointer">
-                                        <div class="w-full bg-name rounded-b-xl h-full"></div>
-                                        <v-lazy-image v-if="item.image1" class="img h-full w-full box-img"
-                                            :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                                            :src="item.image1" :alt="item.name"/> 
-                                        <v-lazy-image v-else class="img h-full w-full rounded-xl"
-                                            :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                                            :src="require('../../assets/img/340719-200.png')" :alt="item.name == '' ? item.title : item.name"/> 
-                                        
+                    <div v-for="item in archive" :key="item.id" class="item--slider">
+                        <div v-if="loader" class="center-center">
+                            <img :src="require('../../assets/gif/loader-img.gif')" alt="">
+                        </div>      
+                        <div v-else>
+                            <div @click="lightImage(item.image1)">
+                                <div class="mx-4 mt-3 mb-5 h-48 sm:h-60 relative archive rounded-xl overflow-hidden cursor-pointer">
+                                    <div class="w-full bg-name rounded-b-xl h-full relative">
+                                        <p class="absolute text-white bottom-3 text-lg left-2 font-bold" v-text="item.title"></p>
                                     </div>
+                                    <v-lazy-image v-if="item.image1" class="img h-full w-full box-img"
+                                        :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                                        :src="item.image1" :alt="item.name"/> 
+                                    <v-lazy-image v-else class="img h-full w-full rounded-xl"
+                                        :src-placeholder="require('../../assets/gif/loader-img.gif')"
+                                        :src="require('../../assets/img/340719-200.png')" :alt="item.name == '' ? item.title : item.name"/> 
                                 </div>
                             </div>
-                        </div> 
-                    
+                        </div>
+                    </div> 
                 </Waypoint>
-                
             </div>
-           
         </div>
 
         <div class="hidden z-50 top-0 w-full h-full center--center lightimage animate__animated">
@@ -83,7 +72,7 @@ import { ref } from '@vue/reactivity'
 import { computed, onMounted } from '@vue/runtime-core'
 import {clickScroll} from '../../scroll'
 import VLazyImage from 'v-lazy-image'
-import { onBeforeRouteLeave, useRoute, useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 import { Waypoint } from "vue-waypoint";
 import Image from './image.vue'
@@ -104,15 +93,15 @@ const src = ref('');
 const oldRouteId = ref(0);
 oldRouteId.value = oldRouteId.value === 0 ? route.params.id : oldRouteId;
 
-onBeforeRouteLeave( (to, from) => {
-    console.log('to')
-    console.log(to.fullPath)
-    console.log('from')
-    console.log(from.fullPath)
-    // router.push({ name: 'Home', hash: '#products' })
-    // console.log(location.host+'/#products')
-    // location.href = location.host+'/#products'
-})
+// onBeforeRouteLeave( (to, from) => {
+//     console.log('to')
+//     console.log(to.fullPath)
+//     console.log('from')
+//     console.log(from.fullPath)
+//     // router.push({ name: 'Home', hash: '#products' })
+//     // console.log(location.host+'/#products')
+//     // location.href = location.host+'/#products'
+// })
 
 const hasItems = computed( async () => {
     await store.dispatch('GetArchive',route.params.id)
