@@ -4,13 +4,13 @@
     <div id="container" class="">
         <div id="bg" class="bg-blue-900"></div>
         <div class="h-full">
-            <div class="flex h-full page active" id="team">
+            <div class="flex h-full page animate__animated active" id="team">
                 <Team />
             </div>
-            <div class="flex h-full page" id="partnership">
+            <div class="flex h-full animate__animated page" id="partnership">
                 <Partnership />
             </div>
-            <div class="flex h-full page" id="contact-us">
+            <div class="flex h-full animate__animated page" id="contact-us">
                 <Contact />
             </div>
         </div>
@@ -43,6 +43,7 @@ function movePage(id){
     }
 
     document.getElementById(id).classList.add('active')
+    document.getElementById(id).classList.add('animate__fadeInRight')
     document.getElementById('tab-'+id).classList.add('active')
 }
 </script>
