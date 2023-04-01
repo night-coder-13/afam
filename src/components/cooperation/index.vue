@@ -1,19 +1,25 @@
 <template>
     <Hed />
 
-    <div id="container" class="bg-blue-900">
-        <div class="flex h-full">
-            <div class="w-5/12 text-white grid content-center pl-4">
-                <h2 class="text-xl sm:text-4xl font-bold ml-2 Acme mt-8 mb-2">Business Cooperation</h2>
-                <p class="text-base ml-6 w-full ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga unde voluptate necessitatibus maiores optio ex earum, cupiditate animi, minus praesentium ab eum id. Eaque autem, nostrum minus iure distinctio recusandae.</p>
+    <div id="container" class="">
+        <div id="bg" class="bg-blue-900"></div>
+        <div class="h-full">
+            <div class="flex h-full page active" id="team">
+                <Team />
             </div>
-            <div class="w-7/12 relative">
-                <div id="image"></div>
-                <div id="image_bg"></div>
+            <div class="flex h-full page" id="partnership">
+                <Partnership />
+            </div>
+            <div class="flex h-full page" id="contact-us">
+                <Contact />
             </div>
         </div>
-        <div>
-
+        <div class="h-16 grid content-center pl-14">
+            <ul class="flex gap-6 Acme text-md">
+                <li id="tab-team" class="tab active" @click="movePage('team')">Our time</li>
+                <li id="tab-partnership" class="tab" @click="movePage('partnership')">Partnership</li>
+                <li id="tab-contact-us" class="tab" @click="movePage('contact-us')">Contact us</li>
+            </ul>
         </div>
     </div>
 
@@ -21,31 +27,46 @@
 
 <script setup>
 import Hed from '../home-sections/hed.vue'
+import Team from './team.vue'
+import Partnership from './partnership.vue'
+import Contact from './contact_us.vue'
+function movePage(id){
+    const listItem = document.getElementsByClassName('page')
+    for (let i = 0; i < listItem.length; i++) {
+        listItem[i].classList.remove('active');
+        listItem[i].classList.remove('active');
+    }
+    const tabItem = document.getElementsByClassName('tab')
+    for (let i = 0; i < tabItem.length; i++) {
+        tabItem[i].classList.remove('active');
+        tabItem[i].classList.remove('active');
+    }
 
-
+    document.getElementById(id).classList.add('active')
+    document.getElementById('tab-'+id).classList.add('active')
+}
 </script>
 
 <style scoped>
+#team.active , #partnership.active , #contact-us.active {
+    display: flex;
+    height: 100%;
+}
+#team , #partnership , #contact-us {
+    display: none;
+}
+#bg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -99;
+}
 #container{
     height: 80vh;
     position: relative;
-    z-index: -99;
 }
-#image{
-    clip-path: polygon(1% 0, 100% 0%, 100% 100%, 25% 100%);
-    background: url('../../assets/img/our-team.jpg') no-repeat center;
-    background-size: cover;
-    height: 100%;
-    position: relative;
-}
-#image_bg{
-    clip-path: polygon(1% 0, 100% 0%, 100% 100%, 25% 100%);
-    background-color: #fff;
-    height: 100%;
-    width: 100%;
-    z-index: -9;
-    position: absolute;
-    top: 0;
-    right: 3px;
+
+ul li.active{
+    list-style-image: url('../../assets/svg/circle.svg');
 }
 </style>
