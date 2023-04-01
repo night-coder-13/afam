@@ -3,7 +3,7 @@
     <div class="w-5/12 text-white grid content-center pl-4 z-10">
         <h2 class="text-xl sm:text-4xl font-bold ml-2 Acme mt-8 mb-2">Business Cooperation</h2>
         <p class="text-base ml-6 w-full ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga unde voluptate necessitatibus maiores optio ex earum, cupiditate animi, minus praesentium ab eum id. Eaque autem, nostrum minus iure distinctio recusandae.</p>
-        <button class="mt-4 ml-4 w-40 h-10 cursor-pointer rounded-full text-base md:text-lg flex justify-center items-center border-white border-2 hover:bg-white hover:text-gray-800">
+        <button @click="$emit('EventMovePage','partnership')" class="mt-4 ml-4 w-40 h-10 cursor-pointer rounded-full text-base md:text-lg flex justify-center items-center border-white border-2 hover:bg-white hover:text-gray-800">
             Cooperation...
         </button>
     </div>

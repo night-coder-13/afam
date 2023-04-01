@@ -5,17 +5,17 @@
         <div id="bg" class="bg-blue-900"></div>
         <div class="h-full">
             <div class="flex h-full page animate__animated active" id="team">
-                <Team />
+                <Team @event-move-page="movePage" />
             </div>
             <div class="flex h-full animate__animated page" id="partnership">
-                <Partnership />
+                <Partnership @event-move-page="movePage" />
             </div>
             <div class="flex h-full animate__animated page" id="contact-us">
-                <Contact />
+                <Contact @event-move-page="movePage" />
             </div>
         </div>
         <div class="h-16 grid content-center pl-14">
-            <ul class="flex gap-6 Acme text-md">
+            <ul class="flex gap-7 Acme text-md">
                 <li id="tab-team" class="tab active" @click="movePage('team')">Our time</li>
                 <li id="tab-partnership" class="tab" @click="movePage('partnership')">Partnership</li>
                 <li id="tab-contact-us" class="tab" @click="movePage('contact-us')">Contact us</li>
