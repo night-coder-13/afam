@@ -8,14 +8,7 @@
         </router-link>
         <!-- Mobile menu button -->
         <div class="flex md:hidden">
-          <Popper arrow>
-            <button class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> En </button>
-            <template #content="{}">
-              <a href="https://company.mehid-abasian.ir"
-                 class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </a>
-                
-            </template>
-          </Popper>
+          
           <button @click="toggleNav" type="button" class=" nav-item hover:text-gray-700 focus:outline-none focus:text-gray-700">
             <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
               <path
@@ -63,15 +56,8 @@
         <li class="nav-item font-bold">
             <router-link  @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }">Contact Us</router-link>
         </li>
-        <li id="flag">
-          <Popper arrow>
-              <button class="text-lg mx-3 flex items-center bg-blue-400 text-white py-1 px-4 rounded-full"><img src="../../assets/flag/en.jpg" class="mx-1 mr-2 w-6 h-4 rounded-full border-1 border-white" alt=""> En </button>
-              <template #content="{}">
-                <a href="https://company.mehid-abasian.ir"
-                 class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </a>
-                
-              </template>
-            </Popper>
+        <li class="nav-item font-bold">
+            <router-link :to="{ name: 'Cooperation'}">Cooperation</router-link>
         </li>
       </ul>
     </nav>
@@ -85,14 +71,7 @@
         </router-link>
         <!-- Mobile menu button -->
         <div class="flex md:hidden">
-            <Popper arrow>
-              <button class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> En </button>
-              <template #content="{}">
-                <a href="https://company.mehid-abasian.ir"
-                 class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </a>
-                
-              </template>
-            </Popper>
+            
           <button @click="toggleNav" type="button" class=" nav-item hover:text-gray-700 focus:outline-none focus:text-gray-700">
             <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
               <path
@@ -137,15 +116,8 @@
         <li class="nav-item font-bold">
             <router-link  @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }">Contact Us</router-link>
         </li>
-        <li id="flag">
-          <Popper arrow>
-              <button class="text-lg mx-3 flex items-center bg-blue-400 text-white py-1 px-4 rounded-full"><img src="../../assets/flag/en.jpg" class="mx-1 w-6 h-4 rounded-full border-1 border-white" alt=""> En </button>
-              <template #content="{}">
-                <a href="https://company.mehid-abasian.ir"
-                 class="text-lg mx-5 flex items-center"><img src="../../assets/flag/en.jpg" class="mx-1 w-4 h-4 rounded-full" alt=""> en </a>
-                
-              </template>
-            </Popper>
+        <li class="nav-item font-bold">
+            <router-link :to="{ name: 'Cooperation'}">Cooperation</router-link>
         </li>
       </ul>
     </nav>

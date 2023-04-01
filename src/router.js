@@ -32,6 +32,9 @@ import store from './store/index.js'
       {
         path: '/blog', name: 'Blog', component: () => import('./components/blog/index.vue'),meta :{title:'AFAM Trading | All Blog'}
       },
+      {
+        path: '/cooperation', name: 'Cooperation', component: () => import('./components/cooperation/index.vue'),meta :{title:'AFAM Trading | All Blog'}
+      },
       
     ]
     const router = createRouter({
