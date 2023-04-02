@@ -11,11 +11,11 @@
         </div>
         <div id="bg--image" class="w-full md:w-8/12 center--center lg:w-9/12 h-80 sm:h-96 md:h-128 sm:order-2 mb-8 sm:mb-0 overflow-hidden rounded relative">
             <div class="absolute w-full bottom-0 ">
-                <p class="px-4 pb-4 pt-6 text-base md:text-xl font-bold" id="title">1. Customer consultation and order registration</p>
+                <p v-for="(title , i) in list_image" :key="i" class="hidden px-4 pb-4 pt-6 text-base md:text-xl font-bold animate__animated title--img" id="title" v-text="title.title" :id="i == showimg ? 'active' : ''"></p>
             </div>
-            <div v-for="(img , i) in list_image" :key="i" :style="' background: url('+require('../../assets/slider/'+img.img)+');'" class="bg--image block w-full h-full animate__animated " :id="i == showimg ? 'active' : ''">
+            <div v-for="(img , i) in list_image" :key="i" :style="' background: url('+require('../../assets/slider/'+img.img)+');'" class="relative bg--image block w-full h-full animate__animated " :id="i == showimg ? 'active' : ''">
+                <p class="absolute w-full bottom-0 px-4 pt-2 pb-6 text-base md:text-xl font-bold" id="title" v-text="img.title" ></p>
             </div>
-           
         </div>
     </div>
 </template>
@@ -30,32 +30,11 @@ const list_image=[
     {img:'4.jpg' , title : '4. Loading packages'},
     {img:'5.jpg' , title : '5. Transfer all over the world'},
 ]
-let isTyping = ref(false) ;
 let showimg= ref(0)
-let countrTyping= ref(0)
 let imgbg=''
 onMounted(()=>{
-    // console.log(document.getElementById('bg--image').childNodes[1])
+
 })
-var i = 0;
-var speed = 80;
-function _typeWriter(txt){
-    document.getElementById("title").innerHTML = ''
-    // console.log(txt)
-    // txt = 'hello'
-    function typeWriter() {
-        isTyping.value = true
-        if (i < txt.length) {
-            document.getElementById("title").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-        }
-        if(i == txt.length)
-            isTyping.value = false
-    }
-    i=0
-    typeWriter()
-}
 
 var nSlide = setInterval(nextSlide , 8000)
 function nextSlide(){
@@ -66,9 +45,7 @@ function nextSlide(){
     }
     listItem[showimg.value].classList.add('animate__fadeOutLeft')
     listItem[(showimg.value < listItem.length -1 ? showimg.value + 1 : 0 )].classList.add('animate__fadeInRight')
-    // _typeWriter(showimg.value < listItem.length -1 ? showimg.value + 1 : 0)
-    // _typeWriter(list_image[showimg.value < listItem.length -1 ? showimg.value + 1 : 0].title)
-    // console.log(list_image[showimg.value < listItem.length -1 ? showimg.value + 1 : 0].title)
+   
     setTimeout(()=>{
         if(showimg.value < (list_image.length-1)){
             showimg.value++
@@ -76,24 +53,9 @@ function nextSlide(){
             showimg.value=0
         }
     },1000)
-    // clearInterval(nSlide)
-    // nSlide = setInterval(nextSlide , 8000)
+    
 }
-var _typingRun = setInterval(typingRun , 8000)
-function typingRun(){
-    if(!isTyping.value){
-        // console.log(countrTyping.value + 100)
-        // console.log(showimg.value + 200)
-        // _typeWriter(countrTyping.value < list_image.length -1 ? countrTyping.value + 1 : 0)
-        _typeWriter(list_image[countrTyping.value < list_image.length -1 ? countrTyping.value + 1 : 0].title)
-        // console.log(list_image[showimg.value < listItem.length -1 ? showimg.value + 1 : 0].title)
-        if(countrTyping.value < (list_image.length-1)){
-            countrTyping.value++
-        }else{
-            countrTyping.value=0
-        }
-    }
-}
+
 
 </script>
 
@@ -101,8 +63,9 @@ function typingRun(){
 <style scoped>
 
 #title{
-    background: linear-gradient(to bottom, #ffffff00  -5%, #ffffff  100%);
+    background: linear-gradient(to top, #ffffff00  5%, #ffffff  100%);
     z-index: 99;
+    position: relative;
 }
 .animate__fadeOutLeft{
     animation-delay: .3s;
@@ -110,20 +73,7 @@ function typingRun(){
 .animate__animated{
     z-index: 1 !important;
 }
-#title{
-    position: relative;
-}
-#title::before{
-    content: url(../../assets/arrow.png);
-    /* background-image: url(../../assets/arrow.png);
-    background-size:cover; */
-    position:absolute;
-    top: -10px;
-    left: -55px;
-    height: 50px;
-    width: 50px;
-    transform: rotateY(200deg);
-}
+
 .grayscale{
 -webkit-filter: grayscale(1);
         filter: grayscale(1);
@@ -150,6 +100,9 @@ function typingRun(){
 }
 .bg--image#active{
     display: inline-block;
+}
+.title--img#active{
+    display: block;
 }
 @media only screen and (max-width: 650px){
 .box-vision{

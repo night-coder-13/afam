@@ -4,21 +4,21 @@
     <div id="container" class="">
         <div id="bg" class="bg-blue-900"></div>
         <div class="h-full">
-            <div class="flex h-full page animate__animated active" id="team">
+            <div class="flex flex-col md:flex-row h-full page animate__animated active" id="team">
                 <Team @event-move-page="movePage" />
             </div>
-            <div class="flex h-full animate__animated page" id="partnership">
+            <div class="flex flex-col md:flex-row h-full animate__animated page" id="partnership">
                 <Partnership @event-move-page="movePage" />
             </div>
-            <div class="flex h-full animate__animated page" id="contact-us">
+            <div class="flex flex-col md:flex-row h-full animate__animated page" id="contact-us">
                 <Contact @event-move-page="movePage" />
             </div>
         </div>
-        <div class="h-16 grid content-center pl-14">
+        <div class="h-16 grid content-center pl-10 md:pl-14">
             <ul class="flex gap-7 Acme text-md">
-                <li id="tab-team" class="tab active" @click="movePage('team')">Our time</li>
-                <li id="tab-partnership" class="tab" @click="movePage('partnership')">Partnership</li>
-                <li id="tab-contact-us" class="tab" @click="movePage('contact-us')">Contact us</li>
+                <li id="tab-team" class="tab cursor-pointer active" @click="movePage('team')">Our time</li>
+                <li id="tab-partnership" class="tab cursor-pointer" @click="movePage('partnership')">Partnership</li>
+                <li id="tab-contact-us" class="tab cursor-pointer" @click="movePage('contact-us')">Contact us</li>
             </ul>
         </div>
     </div>
