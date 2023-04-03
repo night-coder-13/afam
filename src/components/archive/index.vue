@@ -6,10 +6,10 @@
                 <div class="w-full h-full bg-black absolute top-0 opacity-30 "></div>
                 <div class="mt-10 sm:mt-0 img-hed " >
                     <img v-if="contentArchive.img_bg" :src="contentArchive.img_bg" id="img-head" class="w-full -mt-80" style="z-index: -99;" alt="">
-                    <img v-else :src="contentArchive.img" id="img-head" class="w-full -mt-80" style="z-index: -99;" alt="">
-                    <div class="w-full p-4 z-10 relative">
+                    <img v-else :src="contentArchive.img" id="img-head" class="w-full sm:-mt-80" style="z-index: -99;" alt="">
+                    <div class="w-full p-4 -mt-14 sm:mt-0 z-10 relative">
                         <h4 class="text-2xl text-white font-bold Acme mt-5 mb-2 capitalize notranslate center--center" v-text="contentArchive.name"></h4>
-                        <div class="text-base m-auto text-gray-100 w-7/12">
+                        <div class="text-base m-auto text-gray-100 w-11/12 md:w-7/12">
                             <p class="mb-2 text-center" v-text="contentArchive.description"></p>
                         </div>
                     </div>
@@ -234,9 +234,9 @@ function viewgallery(){
 }
 
 @media only screen and (max-width: 400px){
-    .img-hed{
+    /* .img-hed{
         margin-top: 130px !important;
-    }
+    } */
     .lg-image:not(.no-transition){
         width: 90% !important;
         height: auto !important;

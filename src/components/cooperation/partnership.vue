@@ -1,6 +1,6 @@
 <template>
     
-    <div class="w-full md:w-5/12 h-4/6 md:h-auto order-2 md:order-1 text-white grid content-center pl-4 z-10">
+    <div class="w-full md:w-5/12 h-4/6 md:h-auto order-2 md:order-1 overflow-auto text-white grid content-center pl-4 z-10">
         <p class="text-base ml-6 w-full ">
             We believe that our partnership would result in a successful marketing and advertising campaign that showcases both of our businesses and brings value to our customers and help us reach new audiences and achieve our marketing goals. We are excited to announce our new advertising cooperation to promote our natural stone products in different countries. As a leading supplier of natural stones, we are dedicated to providing our customers with high-quality products that meet their unique needs.
         </p>

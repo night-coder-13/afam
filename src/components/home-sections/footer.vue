@@ -47,7 +47,9 @@
                <li class="nav-item font-bold">
                      <router-link  @click.prevent="Scroll('contact-us')" :to="{ name: 'Home', hash: '#contact-us' }">Contact Us</router-link>
                </li>
-               
+               <li class="nav-item font-bold">
+                     <router-link :to="{name : 'Cooperation'}">Cooperation</router-link>
+               </li>
             </ul>
 <!--             
             <ul class="text-sm mt-4 ml-5 text-gray-100">

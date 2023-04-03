@@ -73,7 +73,7 @@
                     </div>
                     <div class="w-9/12">
                         <h4 class="text-lg Acme">Transfer all over the world</h4> <!--- Preparation process -->
-                        <p id="over" class="text-sm ml-2 mt-2 text-description">Transporting building stone requires careful planning and execution to ensure that the stone arrives at its destination in good condition and on time. Our team considering all the safety parameters in terms of packaging and handling...</p>
+                        <p id="over" class="text-sm ml-2 mt-2 text-description">Our team considering all the safety parameters in terms of packaging and handling, transportation vehicles, route planning, documentation and etc., will delivered your order.</p>
                     </div>
                 </div>
                 

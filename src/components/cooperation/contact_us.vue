@@ -1,18 +1,20 @@
 <template>
     
-    <div class="w-full md:w-5/12 h-4/6 md:h-auto order-2 md:order-1 overflow-scroll py-4 text-white grid content-center pl-4 z-10">
-        <p class="text-base ml-6 mt-4 w-full ">
+    <div class="w-full md:w-5/12 h-4/6 md:h-auto order-2 md:order-1 overflow-auto py-4 text-white grid content-center pl-4 z-10">
+        <p class="text-base h-auto pt-2 md:pl-6 md:pt-4 w-full ">
             We are excited to discuss the potential for collaboration and how we can work together to create a successful campaign. Please let us know if you're interested in scheduling a call or meeting to discuss in future.
         </p>
-        <form action="" class="px-10">
-            <input type="text" placeholder="Company name" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
-            <input type="text" placeholder="Email" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
-            <input type="text" placeholder="Country" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
-            <textarea type="text" placeholder="Description" required class="rounded-lg w-full mt-3 px-4 py-3 h-20 bg-transparent border-2 border-gray-100"></textarea>
-        </form>
-        <button class="mt-4 ml-4 w-40 h-10 cursor-pointer rounded-full text-base md:text-lg flex justify-center items-center border-white border-2 hover:bg-white hover:text-gray-800">
-            Sand
-        </button>
+       <div>
+            <form action="" class="px-2 sm:px-10">
+                <input type="text" placeholder="Company name" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
+                <input type="text" placeholder="Email" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
+                <input type="text" placeholder="Country" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
+                <textarea type="text" placeholder="Description" required class="rounded-lg w-full mt-3 px-4 py-3 h-20 bg-transparent border-2 border-gray-100"></textarea>
+            </form>
+            <button class="mt-4 ml-4 w-40 h-10 cursor-pointer rounded-full text-base md:text-lg flex justify-center items-center border-white border-2 hover:bg-white hover:text-gray-800">
+                Sand
+            </button>
+       </div>
     </div>
     <div class="w-full md:w-7/12 h-2/6 md:h-auto order-1 md:order-2 relative">
         <div id="image"></div>
