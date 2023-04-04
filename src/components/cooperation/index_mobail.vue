@@ -28,7 +28,7 @@
                 <textarea type="text" placeholder="Description" required class="rounded-lg w-full mt-3 px-4 py-3 h-20 bg-transparent border-2 border-gray-100"></textarea>
             </form>
             <button class="mt-4 ml-4 w-40 h-10 cursor-pointer rounded-full text-base md:text-lg flex justify-center items-center border-white border-2 hover:bg-white hover:text-gray-800">
-                Sand
+                Send
             </button>
        </div>
     </div>

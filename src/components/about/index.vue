@@ -10,7 +10,7 @@
                 <p class="font-bold text-3xl Acme mb-6 mt-8">About us</p>
                 <div class="flex md:flex-row flex-col">
                     <div class="w-full md:w-8/12 md:ml-4">
-                        <p class="text-base ml-4">We are group of specialists in field of stones and mining and besides we have many business partners in Europe and Asia which made communication easier with customers for us. AFAM Stone company is well known for being accessible, providing customized products with accuracy and being trustworthy.  </p>
+                        <p class="text-base ml-4">We are group of specialists in field of stones and mining which source, process, and supply a variety of natural stones to customers in construction. We have also many business partners in Europe and Asia which made communication easier with customers for us. AFAM Stone company is well known for being accessible, providing customized products with accuracy and being trustworthy.</p>
                         <p class="text-base ml-4 mt-4">As the best source of natural stones, we can supply carefully chosen stones, with a variety of colors, for both indoor and outdoor purposes and in tailored sizes.</p>
                     </div>
                     <div class="pl-10 hidden md:block w-10/12 md:w-4/12 pt-6 md:pt-0">
@@ -45,7 +45,7 @@
                     <div class="text-gray-600 text-base pl-5 w-11/12 ml-4">
                         <ol start="1">
                             <li>We have gathered a wide range of natural stones in the shapes of blocks, tiles and slabs available on different finished surfaces like polished, honed, tumble, bush hammered, sandblast chiseled and etc., to meet the variety of customer needs.</li>
-                            <li>We carefully monitor and control the whole process of supplying the stones; Including block mining, crude stone processing, packaging, and transportation with fair price and in the shortest time.</li>
+                            <li>We carefully monitor and control the whole process of supplying the stones; Including block mining, crude stone processing, packaging and transportation with fair price and in the shortest time.</li>
                             <li>We also Have specialists, available for consulting to help our customers finding their optimal product, with absolutely no cost.</li>
                             <li>Our team considering all the safety parameters in terms of packaging and handling, transportation vehicles, route planning, documentation and etc., will delivered your order.</li>
 

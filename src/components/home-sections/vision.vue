@@ -33,10 +33,10 @@ const list_image=[
 let showimg= ref(0)
 let imgbg=''
 onMounted(()=>{
-
+    setTimeout(nextSlide , 8000)
 })
 
-var nSlide = setInterval(nextSlide , 8000)
+// var nSlide = setInterval(nextSlide , 8000)
 function nextSlide(){
     const listItem = document.getElementsByClassName('bg--image')
     for (let i = 0; i < listItem.length; i++) {
@@ -53,9 +53,9 @@ function nextSlide(){
             showimg.value=0
         }
     },1000)
+    setTimeout(nextSlide , 8000)
     
 }
-
 
 </script>
 

@@ -7,8 +7,8 @@
                 <p class="text-sm sm:text-lg mt-1 ml-5">
                     Welcome to AFAM Stone. Please send your request for information and assistance by filling in the below our form or by contacting us on Instagram, WhatsApp or email address enlisted below. We will get back to you in the shortest time possible.
                 </p>
-                <p class="text-center mt-8 text-xl ">
-                    +98(0)3145461111 | +98(0)3145462222 | +98(0)9902774517 <i class="text-xl ti-mobile"></i>
+                <p class="text-center mt-8 text-xl md:text-2xl ">
+                    +98(0)9132000823 | +98(0)9132271121 <i class="text-xl md:text-2xl ti-mobile"></i>
                 </p>
             </div>
             <div class="w-full lg:w-4/12 lg:ml-10 relative order-1 lg:order-none">

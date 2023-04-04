@@ -1,6 +1,5 @@
 <template>
     <Header />
-    <div class="hidden">{{ hasItems }}</div>
         <div class="w-full" data-aos="fade-up">
             <div class="w-full pb-4 overflow-hidden relative">
                 <div class="w-full h-full bg-black absolute top-0 opacity-30 "></div>
@@ -80,6 +79,7 @@ import Image from './image.vue'
 import lightGallery from '../../../node_modules/lightgallery/lightgallery.min.js'
 import lgZoom from '../../../node_modules/lightgallery/plugins/zoom/lg-zoom.min.js'
 import lgThumbnail from '../../../node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js'
+import { watchEffect } from 'vue'
 
 const router= useRouter();
 const route=useRoute();
@@ -103,9 +103,10 @@ oldRouteId.value = oldRouteId.value === 0 ? route.params.id : oldRouteId;
 //     // location.href = location.host+'/#products'
 // })
 
-const hasItems = computed( async () => {
-    await store.dispatch('GetArchive',route.params.id)
-    await store.dispatch('GetContentArchive',route.params.id)
+watchEffect(async ()=>{
+    let id = route.params.id
+    await store.dispatch('GetContentArchive',id)
+    await store.dispatch('GetArchive',id)
 })
 
 async function getArchive(){
