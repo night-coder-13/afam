@@ -23,7 +23,8 @@
         <div class="pb-12">
             <form action="" class="px-2 sm:px-10">
                 <input type="text" placeholder="Company name" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
-                <input type="text" placeholder="Email" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
+                <input type="email" placeholder="Email" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
+                <input type="text" placeholder="Phone number" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
                 <input type="text" placeholder="Country" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
                 <textarea type="text" placeholder="Description" required class="rounded-lg w-full mt-3 px-4 py-3 h-20 bg-transparent border-2 border-gray-100"></textarea>
             </form>

@@ -30,9 +30,31 @@
             </div>
         </div>
     </div>
+    
 </template>
 
-<script>
+<script setup>
+// import axios from 'axios';
+
+// async function send() {
+//     let post = await axios.post('http://panel.mehdi-abasian.ir/add-contact', 
+//         {
+//             name : 'mehdi'
+//         },
+//         {
+//             headers: {
+//                 'Content-Type': 'application/json',
+//                 'accept' : 'application/json',
+//                 'Access-Control-Allow-Origin' : '*',
+//                 'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+//             }
+//         }
+
+//     )
+//     console.log(post.data)
+    
+// }
+// send()
 
 </script>
 
