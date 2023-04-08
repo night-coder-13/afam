@@ -15,17 +15,17 @@
                 <form class=" sm:w-9/12 p-2 lg:absolut -mt-24 mb-8 m-auto rounded-xl shadow-md bg-gray-50" action="">
                     <div class="grid my-4 mx-2">
                         <label for="">Name</label>
-                        <input type="text" placeholder="Name" required class="w-11/12 rounded-lg px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
+                        <input type="text" placeholder="Name" v-model="form.name" required class="w-11/12 rounded-lg px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
                     </div>
                     <div class="grid my-4 mx-2">
                         <label for="">Email</label>
-                        <input type="email" placeholder="Email" required class="w-11/12 rounded-lg px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
+                        <input type="email" placeholder="Email" v-model="form.email" required class="w-11/12 rounded-lg px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
                     </div>
                     <div class="grid my-4 mx-2">
                         <label for="">Masseage</label>
-                        <textarea type="text" placeholder="Masseage" required class="rounded-lg  px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400"></textarea>
+                        <textarea type="text" placeholder="Masseage" v-model="form.description" required class="rounded-lg  px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400"></textarea>
                     </div>
-                    <button class="ml-10 flex items-center -mt-2 px-5 py-1 text-lg rounded-lg bg-blue-400 text-white">send <img src="../../assets/Untitled-1-Recdovered.svg" class="w-6 mx-2" alt=""></button>
+                    <button @click.prevent="send" class="ml-10 flex items-center -mt-2 px-5 py-1 text-lg rounded-lg bg-blue-400 text-white">send <img src="../../assets/Untitled-1-Recdovered.svg" class="w-6 mx-2" alt=""></button>
                 </form>
             </div>
         </div>
@@ -34,27 +34,52 @@
 </template>
 
 <script setup>
-// import axios from 'axios';
+import axios from 'axios';
+import Swal from 'sweetalert2';
+import { ref } from 'vue';
 
-// async function send() {
-//     let post = await axios.post('http://panel.mehdi-abasian.ir/add-contact', 
-//         {
-//             name : 'mehdi'
-//         },
-//         {
-//             headers: {
-//                 'Content-Type': 'application/json',
-//                 'accept' : 'application/json',
-//                 'Access-Control-Allow-Origin' : '*',
-//                 'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-//             }
-//         }
+const form = ref({
+    name : '',
+    email : '',
+    description: ''
+})
+async function send() {
+    let post = await axios.post('http://localhost/afam-panel/content', 
+        form.value,
+        {
+            headers: {
+                'Content-Type': 'application/json',
+                'accept' : 'application/json',
+                'Access-Control-Allow-Origin' : '*',
+                'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+            }
+        }
 
-//     )
-//     console.log(post.data)
+    )
+    if (post.data == true) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'Your information has been registered and we will contact you soon !',
+        })
+        form.value.name = '';
+        form.value.email = '';
+        form.value.description = '';
+    }else if(post.data == false){
+      Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Contact support!',
+        })
+    }else{
+      Swal.fire({
+            icon: 'info',
+            text: post.data,
+        })
+    }
     
-// }
-// send()
+}
+
 
 </script>
 

@@ -6,15 +6,15 @@
         </p>
        <div>
             <form action="" class="px-2 sm:px-10">
-                <input type="text" placeholder="Company name" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
-                <input type="email" placeholder="Email" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
-                <input type="text" placeholder="Phone number" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
-                <input type="text" placeholder="Country" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
-                <textarea type="text" placeholder="Description" required class="rounded-lg w-full mt-3 px-4 py-3 h-20 bg-transparent border-2 border-gray-100"></textarea>
+                <input type="text" v-model="form.company_name" placeholder="Company name" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
+                <input type="email" v-model="form.email" placeholder="Email" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
+                <input type="text" v-model="form.phone" placeholder="Phone number" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
+                <input type="text" v-model="form.country" placeholder="Country" class="rounded-lg text-base mt-3 h-9 px-4 w-full py-5 bg-transparent shadow border-2 border-gray-100">
+                <textarea type="text" v-model="form.description" placeholder="Description" required class="rounded-lg w-full mt-3 px-4 py-3 h-20 bg-transparent border-2 border-gray-100"></textarea>
+                <button @click.prevent="send" class="mt-4 ml-4 w-40 h-10 cursor-pointer rounded-full text-base md:text-lg flex justify-center items-center border-white border-2 hover:bg-white hover:text-gray-800">
+                    Send
+                </button>
             </form>
-            <button class="mt-4 ml-4 w-40 h-10 cursor-pointer rounded-full text-base md:text-lg flex justify-center items-center border-white border-2 hover:bg-white hover:text-gray-800">
-                Send
-            </button>
        </div>
     </div>
     <div class="w-full md:w-7/12 h-2/6 md:h-auto order-1 md:order-2 relative">
@@ -25,6 +25,55 @@
 </template>
 
 <script setup>
+import axios from 'axios';
+import Swal from 'sweetalert2';
+import { ref } from 'vue';
+
+const form = ref({
+    company_name : '',
+    email : '',
+    phone : '',
+    country : '',
+    description: ''
+})
+async function send() {
+    let post = await axios.post('http://localhost/afam-panel/content-cooperation', 
+        form.value,
+        {
+            headers: {
+                'Content-Type': 'application/json',
+                'accept' : 'application/json',
+                'Access-Control-Allow-Origin' : '*',
+                'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+            }
+        }
+
+    )
+    if (post.data == true) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'Your information has been registered and we will contact you soon !',
+        })
+        form.value.company_name = '';
+        form.value.email = '';
+        form.value.phone = '';
+        form.value.country = '';
+        form.value.description = '';
+    }else if(post.data == false){
+      Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Contact support!',
+        })
+    }else{
+      Swal.fire({
+            icon: 'info',
+            text: post.data,
+        })
+    }
+    
+}
 
 </script>
 

@@ -14,22 +14,22 @@
                     <div class="mt-4 mb-4 text-center relative">
                         <div class="grid grid-cols-2 gap-3">
                             <div>
-                                <input type="text" placeholder="Name" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                                <input type="text" v-model="form.name" placeholder="Name" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
                             </div>
                             <div>
-                                <input type="text" placeholder="Email" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                                <input type="text" v-model="form.email" placeholder="Email" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
                             </div>
                             <div>
-                                <input type="text" placeholder="Phone" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                                <input type="text" v-model="form.phone" placeholder="Phone" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
                             </div>
                             <div>
-                                <input type="text" placeholder="Country" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                                <input type="text" v-model="form.country" placeholder="Country" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
                             </div>
                             <div>
-                                <input type="text" placeholder="Company name" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                                <input type="text" v-model="form.company_name" placeholder="Company name" class="rounded-lg h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
                             </div>
                         </div>
-                        <button class="mt-6 right-2 ml-2 px-10 py-1 text-lg rounded-lg bg-blue-500 shadow text-gray-100">Send</button>
+                        <button @click.prevent="send" class="mt-6 right-2 ml-2 px-10 py-1 text-lg rounded-lg bg-blue-500 shadow text-gray-100">Send</button>
                     </div>
                 </div>
             </div>
@@ -44,12 +44,12 @@
         <div class="p-5 pb-1 mt-5 ">
             <h4 class="font-bold Acme text-lg" id="">Subscribe to AFAM Stone to inform tips and discounts</h4>
             <div class="mt-4 mb-4 text-center relative">
-                <input type="text" placeholder="Name" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
-                <input type="text" placeholder="Email" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
-                <input type="text" placeholder="Company name" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
-                <input type="text" placeholder="Phone" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
-                <input type="text" placeholder="Country" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
-                <button class="mt-5 right-2 ml-2 px-8 py-1 text-lg rounded-lg bg-blue-500 shadow text-gray-100 ">Send</button>
+                <input type="text" v-model="form.name" placeholder="Name" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                <input type="text" v-model="form.email" placeholder="Email" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                <input type="text" v-model="form.phone" placeholder="Company name" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                <input type="text" v-model="form.country" placeholder="Phone" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                <input type="text" v-model="form.company_name" placeholder="Country" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                <button @click.prevent="send" class="mt-5 right-2 ml-2 px-8 py-1 text-lg rounded-lg bg-blue-500 shadow text-gray-100 ">Send</button>
             </div>
         </div>
     </div>
@@ -61,6 +61,17 @@
 
 <script setup>
 import { Waypoint } from "vue-waypoint";
+import axios from 'axios';
+import Swal from 'sweetalert2';
+import { ref } from 'vue';
+
+const form = ref({
+    name: '',
+    company_name : '',
+    email : '',
+    phone : '',
+    country : '',
+})
 
 function onchange(waypointState){
     if(waypointState.going === 'IN'){
@@ -92,8 +103,9 @@ setTimeout(()=>{
         }
     }
 },15000)
-function close(){
-    sessionStorage.setItem('newsletter', 'true');
+function close(statusSession = true){
+    if(statusSession)
+        sessionStorage.setItem('newsletter', 'true');
     setTimeout(()=>{
         document.querySelector('.newsletter-desc').style.display='none'
         document.querySelector('.newsletter-mob').style.display='none'
@@ -101,6 +113,46 @@ function close(){
     document.querySelector('.newsletter-desc #image-newsletter').classList.add('animate__fadeOutRight')
     document.querySelector('.newsletter-desc #forme-newsletter').classList.add('animate__fadeOutLeft')
     document.querySelector('.newsletter-mob #forme-mobile-newsletter').classList.add('animate__fadeOutDown')
+}
+
+async function send() {
+    let post = await axios.post('http://localhost/afam-panel/newsletter', 
+        form.value,
+        {
+            headers: {
+                'Content-Type': 'application/json',
+                'accept' : 'application/json',
+                'Access-Control-Allow-Origin' : '*',
+                'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+            }
+        }
+
+    )
+    if (post.data == true) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'Your information has been registered and we will contact you soon !',
+        })
+        form.value.name = '';
+        form.value.company_name = '';
+        form.value.email = '';
+        form.value.phone = '';
+        form.value.country = '';
+    }else if(post.data == false){
+      Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Contact support!',
+        })
+    }else{
+      Swal.fire({
+            icon: 'info',
+            text: post.data,
+        })
+    }
+    close()
+    
 }
 
 </script>

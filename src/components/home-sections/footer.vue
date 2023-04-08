@@ -16,8 +16,8 @@
             <div class="sm:w-11/12 text-center rounded-xl shadow-md bg-gray-50 px-3 py-5">
                <h4 class="font-bold Acme text-lg" id="">Subscribe to AFAM Stone to inform tips and discounts</h4>
             <div class="mt-4 mb-4 text-center relative">
-                <input type="text" placeholder="Email" class="rounded-full h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
-                <button class="btn-in-input absolute right-2 ml-2 px-6 py-1 text-lg rounded-full bg-gray-200 shadow text-blue-400 font-bold btn-send">Send</button>
+                <input type="text" v-model="form.email" placeholder="Email" class="rounded-full h-12 px-3 w-full py-2 bg-gray-150 shadow border-none">
+                <button @click.value="send" class="btn-in-input absolute right-2 ml-2 px-6 py-1 text-lg rounded-full bg-gray-200 shadow text-blue-400 font-bold btn-send">Send</button>
             </div>
             </div>
          </div>
@@ -66,8 +66,49 @@
    </div>
 </template>
 
-<script>
+<script setup>
+import axios from 'axios';
+import Swal from 'sweetalert2';
+import { ref } from 'vue';
 
+const form = ref({
+    email : '',
+})
+
+
+async function send() {
+    let post = await axios.post('http://localhost/afam-panel/newsletter-fotter', 
+        form.value,
+        {
+            headers: {
+                'Content-Type': 'application/json',
+                'accept' : 'application/json',
+                'Access-Control-Allow-Origin' : '*',
+                'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+            }
+        }
+
+    )
+    if (post.data == true) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'Your information has been registered and we will contact you soon !',
+        })
+        form.value.email = '';
+    }else if(post.data == false){
+      Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Contact support!',
+        })
+    }else{
+      Swal.fire({
+            icon: 'info',
+            text: post.data,
+        })
+    }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
