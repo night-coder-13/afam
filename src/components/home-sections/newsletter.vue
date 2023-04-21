@@ -65,6 +65,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import { ref } from 'vue';
 
+const btnStatus = ref(false);
 const form = ref({
     name: '',
     company_name : '',
@@ -74,20 +75,20 @@ const form = ref({
 })
 
 function onchange(waypointState){
-    if(waypointState.going === 'IN'){
-        if(sessionStorage.getItem('newsletter') !== 'true'){
-            // sessionStorage.setItem('newsletter', 'true');
-            if(window.innerWidth > 500){
-                document.querySelector('.newsletter-desc').style.display='flex'
-                document.querySelector('.newsletter-desc #image-newsletter').classList.remove('animate__fadeOutRight')
-                document.querySelector('.newsletter-desc #forme-newsletter').classList.remove('animate__fadeOutLeft')
-            }
-            else{
-                document.querySelector('.newsletter-mob').style.display='block'
-                document.querySelector('.newsletter-desc #forme-mobile-newsletter').classList.remove('animate__fadeOutDown')
-            }
-        }
-    }
+    // if(waypointState.going === 'IN'){
+    //     if(sessionStorage.getItem('newsletter') !== 'true'){
+    //         // sessionStorage.setItem('newsletter', 'true');
+    //         if(window.innerWidth > 500){
+    //             document.querySelector('.newsletter-desc').style.display='flex'
+    //             document.querySelector('.newsletter-desc #image-newsletter').classList.remove('animate__fadeOutRight')
+    //             document.querySelector('.newsletter-desc #forme-newsletter').classList.remove('animate__fadeOutLeft')
+    //         }
+    //         else{
+    //             document.querySelector('.newsletter-mob').style.display='block'
+    //             document.querySelector('.newsletter-desc #forme-mobile-newsletter').classList.remove('animate__fadeOutDown')
+    //         }
+    //     }
+    // }
 }
 setTimeout(()=>{
     if(sessionStorage.getItem('newsletter') !== 'true'){
@@ -102,7 +103,7 @@ setTimeout(()=>{
             document.querySelector('.newsletter-desc #forme-mobile-newsletter').classList.remove('animate__fadeOutDown')
         }
     }
-},15000)
+},35000)
 function close(statusSession = true){
     if(statusSession)
         sessionStorage.setItem('newsletter', 'true');
@@ -116,18 +117,14 @@ function close(statusSession = true){
 }
 
 async function send() {
-    let post = await axios.post('http://localhost/afam-panel/newsletter', 
-        form.value,
-        {
-            headers: {
-                'Content-Type': 'application/json',
-                'accept' : 'application/json',
-                'Access-Control-Allow-Origin' : '*',
-                'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-            }
-        }
-
-    )
+    btnStatus.value = true
+    let formData = new FormData();
+    formData.append('name' , form.name)
+    formData.append('company_name' , form.company_name)
+    formData.append('email' , form.email)
+    formData.append('phone' , form.phone)
+    formData.append('country' , form.country)
+    let post = await axios.post('https://cor.afambuild.com/newsletter', formData )
     if (post.data == true) {
         Swal.fire({
             icon: 'success',
@@ -152,7 +149,7 @@ async function send() {
         })
     }
     close()
-    
+    btnStatus.value = false
 }
 
 </script>

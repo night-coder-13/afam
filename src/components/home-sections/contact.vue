@@ -12,7 +12,7 @@
                 </p>
             </div>
             <div class="w-full lg:w-4/12 lg:ml-10 relative order-1 lg:order-none">
-                <form class=" sm:w-9/12 p-2 lg:absolut -mt-24 mb-8 m-auto rounded-xl shadow-md bg-gray-50" action="">
+                <form @submit.prevent="send()" class=" sm:w-9/12 p-2 lg:absolut -mt-24 mb-8 m-auto rounded-xl shadow-md bg-gray-50" action="">
                     <div class="grid my-4 mx-2">
                         <label for="">Name</label>
                         <input type="text" placeholder="Name" v-model="form.name" required class="w-11/12 rounded-lg px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400">
@@ -25,7 +25,7 @@
                         <label for="">Masseage</label>
                         <textarea type="text" placeholder="Masseage" v-model="form.description" required class="rounded-lg  px-3 py-2 mx-3 my-2 bg-gray-50 border border-gray-400"></textarea>
                     </div>
-                    <button @click.prevent="send" class="ml-10 flex items-center -mt-2 px-5 py-1 text-lg rounded-lg bg-blue-400 text-white">send <img src="../../assets/Untitled-1-Recdovered.svg" class="w-6 mx-2" alt=""></button>
+                    <button class="ml-10 flex items-center -mt-2 px-5 py-1 text-lg rounded-lg bg-blue-400 text-white">send <img src="../../assets/Untitled-1-Recdovered.svg" class="w-6 mx-2" alt=""></button>
                 </form>
             </div>
         </div>
@@ -43,19 +43,15 @@ const form = ref({
     email : '',
     description: ''
 })
-async function send() {
-    let post = await axios.post('http://localhost/afam-panel/content', 
-        form.value,
-        {
-            headers: {
-                'Content-Type': 'application/json',
-                'accept' : 'application/json',
-                'Access-Control-Allow-Origin' : '*',
-                'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-            }
-        }
+const btnStatus = ref(false);
 
-    )
+async function send() {
+    btnStatus.value = true
+    let formData = new FormData();
+    formData.append('company_name' , form.company_name)
+    formData.append('email' , form.email)
+    formData.append('description' , form.description)
+    let post = await axios.post('https://cor.afambuild.com/contact', formData )
     if (post.data == true) {
         Swal.fire({
             icon: 'success',
@@ -77,7 +73,7 @@ async function send() {
             text: post.data,
         })
     }
-    
+    btnStatus.value = false
 }
 
 

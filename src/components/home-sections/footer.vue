@@ -74,40 +74,33 @@ import { ref } from 'vue';
 const form = ref({
     email : '',
 })
-
+const btnStatus = ref(false);
 
 async function send() {
-    let post = await axios.post('http://localhost/afam-panel/newsletter-fotter', 
-        form.value,
-        {
-            headers: {
-                'Content-Type': 'application/json',
-                'accept' : 'application/json',
-                'Access-Control-Allow-Origin' : '*',
-                'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-            }
-        }
-
-    )
-    if (post.data == true) {
-        Swal.fire({
-            icon: 'success',
-            title: 'Success',
-            text: 'Your information has been registered and we will contact you soon !',
-        })
-        form.value.email = '';
-    }else if(post.data == false){
+   btnStatus.value = true
+   let formData = new FormData();
+   formData.append('email' , form.email)
+   let post = await axios.post('http://localhost/afam-panel/newsletter-fotter', formData )
+   if (post.data == true) {
       Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'Contact support!',
-        })
-    }else{
-      Swal.fire({
-            icon: 'info',
-            text: post.data,
-        })
-    }
+         icon: 'success',
+         title: 'Success',
+         text: 'Your information has been registered and we will contact you soon !',
+      })
+      form.value.email = '';
+   }else if(post.data == false){
+   Swal.fire({
+         icon: 'error',
+         title: 'Error',
+         text: 'Contact support!',
+      })
+   }else{
+   Swal.fire({
+         icon: 'info',
+         text: post.data,
+      })
+   }
+   btnStatus.value = false
 }
 </script>
 
