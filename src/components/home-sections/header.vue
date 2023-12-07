@@ -3,8 +3,8 @@
 <header class="w-full">
     <div data-aos="fade-up" class="flex flex-col sm:flex-row w-full mt-3 sm:mt-0 md:py-9 px-8 sm:px-16 justify-between items-center">
         <div class="md:p-4 pt-4 w-full lg:w-7/12 sm:w-6/12 order-2">
-            <h1 class="text-xl sm:text-4xl font-bold ml-2 Acme mt-8">AFAM STONE</h1>
-            <h3 class="text-sm sm:text-lg ml-6 w-full sm:w-10/12">We supply and transport all kinds of stone to meet the needs of our customers globally. We use our skills and expertise in extraction and production of stone to promote Esfahan, Iran and our brand worldwide.</h3>
+            <h1 class="text-xl sm:text-4xl font-bold ml-2 Acme mt-8">AFAM BUILD</h1>
+            <h3 class="text-sm sm:text-lg ml-6 w-full sm:w-10/12">We supply and transport all kinds of stone to meet the needs of our customers globally. We use our skills and expertise in extraction and production of stone to promote and our brand worldwide.</h3>
             <div class="flex mt-9">
                 <router-link :to="{name : 'Catalog'}" class="mr-2 w-40 h-11 cursor-pointer rounded-full text-base md:text-lg flex justify-start items-center text-white bg-blue-400 
                 hover:bg-transparent border-2 border-blue-400 hover:text-gray-900
@@ -17,15 +17,15 @@
             </div>
             <div class="grid grid-cols-3 w-11/12 mt-5">
                 <div class="mt-4 lg:mt-0 flex grid grid-cols-1 justify-items-center items-center px-4 py-8">
-                    <p class="text-4xl flex Anton"><span class="font-bold">+</span> <count-up :end-val="number.product > 0 ? number.product : 0"></count-up></p>
+                    <p class="text-4xl flex Anton"><span class="font-bold">+</span> <count-up :end-val="number.product > 0 ? number.product : 274"></count-up></p>
                     <p class="mt-3 font-bold uppercase text-center">Product</p>
                 </div>
                 <div class="mt-4 lg:mt-0 flex grid grid-cols-1 justify-items-center items-center px-4 py-8">
-                    <p class="text-4xl flex Anton"><span class="font-bold">+</span> <count-up :end-val="number.years > 0 ? number.years : 0"></count-up></p>
+                    <p class="text-4xl flex Anton"><span class="font-bold">+</span> <count-up :end-val="number.years > 0 ? number.years : 5"></count-up></p>
                     <p class="mt-3 font-bold uppercase text-center">years of experience</p>
                 </div>
                 <div class="mt-4 lg:mt-0 grid grid-cols-1 justify-items-center items-center px-4 py-8">
-                    <p class="text-4xl flex Anton"><span class="font-bold">+</span> <count-up :end-val="number.work > 0 ? number.work : 0"></count-up></p>
+                    <p class="text-4xl flex Anton"><span class="font-bold">+</span> <count-up :end-val="number.work > 0 ? number.work : 10"></count-up></p>
                     <p class="mt-3 font-bold uppercase text-center">Work samples</p>
                 </div>
             </div>

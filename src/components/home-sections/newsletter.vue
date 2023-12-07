@@ -10,7 +10,7 @@
             <div class="bg-white rounded-lg shadow-md center--center relative">
                 <i @click="close" class="absolute btn-close right-2 ti-close text-gray-400 hover:text-gray-600 cursor-pointer font-bold mr-1 top-2 hover:border-red-400 border border-gray-400 p-1 rounded-full"></i>
                 <div class="p-3 mt-5 w-11/12">
-                    <h4 class="font-bold Acme text-lg" id="">Subscribe to AFAM Stone to inform tips and discounts</h4>
+                    <h4 class="font-bold Acme text-lg" id="">Subscribe to AFAM Build to inform tips and discounts</h4>
                     <div class="mt-4 mb-4 text-center relative">
                         <div class="grid grid-cols-2 gap-3">
                             <div>
@@ -42,7 +42,7 @@
     <div id="forme-mobile-newsletter" class="box-alert-mobail animate__animated animate__fadeInUp pt-3 pb-4">
         <i @click="close" class="absolute btn-close right-2 ti-close text-white font-bold mr-1 cursor-pointer"></i>
         <div class="p-5 pb-1 mt-5 ">
-            <h4 class="font-bold Acme text-lg" id="">Subscribe to AFAM Stone to inform tips and discounts</h4>
+            <h4 class="font-bold Acme text-lg" id="">Subscribe to AFAM Build to inform tips and discounts</h4>
             <div class="mt-4 mb-4 text-center relative">
                 <input type="text" v-model="form.name" placeholder="Name" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
                 <input type="text" v-model="form.email" placeholder="Email" class="rounded-lg text-sm mt-2 h-9 px-3 w-full py-2 bg-gray-150 shadow border-none">
@@ -73,7 +73,7 @@ const form = ref({
     phone : '',
     country : '',
 })
-
+const email = ref('');
 function onchange(waypointState){
     // if(waypointState.going === 'IN'){
     //     if(sessionStorage.getItem('newsletter') !== 'true'){
@@ -103,7 +103,7 @@ setTimeout(()=>{
             document.querySelector('.newsletter-desc #forme-mobile-newsletter').classList.remove('animate__fadeOutDown')
         }
     }
-},35000)
+},33000)
 function close(statusSession = true){
     if(statusSession)
         sessionStorage.setItem('newsletter', 'true');
@@ -119,11 +119,11 @@ function close(statusSession = true){
 async function send() {
     btnStatus.value = true
     let formData = new FormData();
-    formData.append('name' , form.name)
-    formData.append('company_name' , form.company_name)
-    formData.append('email' , form.email)
-    formData.append('phone' , form.phone)
-    formData.append('country' , form.country)
+    formData.append('name' , form.value.name)
+    formData.append('company_name' , form.value.company_name)
+    formData.append('email' , form.value.email)
+    formData.append('phone' , form.value.phone)
+    formData.append('country' , form.value.country)
     let post = await axios.post('https://cor.afambuild.com/newsletter', formData )
     if (post.data == true) {
         Swal.fire({

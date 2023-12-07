@@ -8,18 +8,16 @@
             <div class="h-full pb-5">
                <div class="box-productimg mx-2 my-3 rounded-xl relative overflow-hidden h-full">
                   <div class="w-9 h-9 bg-gray-50 center--center absolute z-20 rounded-full top-4 right-3 text-blue-500
-                  hover:text-white hover:bg-blue-500 
-                  ">
+                  hover:text-white hover:bg-blue-500 ">
                      <i class="ti-bookmark font-bold text-xl"></i>
                   </div>
-                  <div class="w-full absolute h-full flex justify-center items-center title"><p class="text-lg text-white" v-text="item.name"></p></div>
+                  <div class="w-full absolute h-10 bottom-0 flex justify-center items-center title"><p class="text-lg text-white" v-text="item.title"></p></div>
                
                   <v-lazy-image
                   :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                  :src="item.img" class="w-full h-full" :alt="item.name"/>                  
+                  :src="'https://cor.afambuild.com/public/upload/'+item.image" class="w-full h-full" :alt="item.name"/>                  
                </div>
             </div>
-            
          </router-link>
       </div>
         
@@ -50,14 +48,13 @@ onMounted(()=>{
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .box-productimg .title{
-   opacity: 0;
    z-index: 20;
-   background: rgba(12, 12, 12, 0.103);
+   background: rgba(12, 12, 12, 0.325);
 }
-.box-productimg:hover .title{
+/* .box-productimg:hover .title{
    opacity: 1;
    transition: .5s;
-}
+} */
 .box-productimg:hover img{
     filter: grayscale(1);
     transform: scale(1.2);

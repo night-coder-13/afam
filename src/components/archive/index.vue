@@ -4,10 +4,10 @@
             <div class="w-full pb-4 overflow-hidden relative">
                 <div class="w-full h-full bg-black absolute top-0 opacity-30 "></div>
                 <div class="mt-10 sm:mt-0 img-hed " >
-                    <img v-if="contentArchive.img_bg" :src="contentArchive.img_bg" id="img-head" class="w-full -mt-80" style="z-index: -99;" alt="">
-                    <img v-else :src="contentArchive.img" id="img-head" class="w-full sm:-mt-80" style="z-index: -99;" alt="">
+                    <img v-if="contentArchive.image_bg" :src="'https://cor.afambuild.com/public/upload/'+contentArchive.image_bg" id="img-head" class="w-full -mt-80" style="z-index: -99;" alt="">
+                    <img v-else :src="'https://cor.afambuild.com/public/upload/'+contentArchive.image" id="img-head" class="w-full sm:-mt-80" style="z-index: -99;" alt="">
                     <div class="w-full p-4 -mt-14 sm:mt-0 z-10 relative">
-                        <h4 class="text-2xl text-white font-bold Acme mt-5 mb-2 capitalize notranslate center--center" v-text="contentArchive.name"></h4>
+                        <h4 class="text-2xl text-white font-bold Acme mt-5 mb-2 capitalize notranslate center--center" v-text="contentArchive.title"></h4>
                         <div class="text-base m-auto text-gray-100 w-11/12 md:w-7/12">
                             <p class="mb-2 text-center" v-text="contentArchive.description"></p>
                         </div>
@@ -22,17 +22,17 @@
                             <img :src="require('../../assets/gif/loader-img.gif')" alt="">
                         </div>      
                         <div v-else>
-                            <div @click="lightImage(item.image1)">
+                            <div @click="lightImage('https://cor.afambuild.com/public/upload/'+item.image_url)">
                                 <div class="mx-4 mt-3 mb-5 h-48 sm:h-60 relative archive rounded-xl overflow-hidden cursor-pointer">
                                     <div class="w-full bg-name rounded-b-xl h-full relative">
                                         <p class="absolute text-white bottom-3 text-lg left-2 font-bold" v-text="item.title"></p>
                                     </div>
-                                    <v-lazy-image v-if="item.image1" class="img h-full w-full box-img"
+                                    <v-lazy-image v-if="item.image_url" class="img h-full w-full box-img"
                                         :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                                        :src="item.image1" :alt="item.name"/> 
+                                        :src="'https://cor.afambuild.com/public/upload/'+item.image_url" :alt="item.title"/> 
                                     <v-lazy-image v-else class="img h-full w-full rounded-xl"
                                         :src-placeholder="require('../../assets/gif/loader-img.gif')"
-                                        :src="require('../../assets/img/340719-200.png')" :alt="item.name == '' ? item.title : item.name"/> 
+                                        :src="require('../../assets/img/340719-200.png')" :alt="item.title"/> 
                                 </div>
                             </div>
                         </div>
@@ -112,11 +112,9 @@ watchEffect(async ()=>{
 async function getArchive(){
     if(!slod.value)
         store.commit('ChangeLoader')
-    
     await store.dispatch('GetContentArchive',route.params.id)
     if(slod.value)
         store.commit('ChangeLoader')
-
 }
 
 async function onChange(waypointState) {

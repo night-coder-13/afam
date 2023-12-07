@@ -10,7 +10,7 @@
                 <p class="font-bold text-3xl Acme mb-6 mt-8">About us</p>
                 <div class="flex md:flex-row flex-col">
                     <div class="w-full md:w-8/12 md:ml-4">
-                        <p class="text-base ml-4">We are group of specialists in field of stones and mining which source, process, and supply a variety of natural stones to customers in construction. We have also many business partners in Europe and Asia which made communication easier with customers for us. AFAM Stone company is well known for being accessible, providing customized products with accuracy and being trustworthy.</p>
+                        <p class="text-base ml-4">We are group of specialists in field of stones and mining which source, process, and supply a variety of natural stones to customers in construction. We have also many business partners in Europe and Asia which made communication easier with customers for us. AFAM Build company is well known for being accessible, providing customized products with accuracy and being trustworthy.</p>
                         <p class="text-base ml-4 mt-4">As the best source of natural stones, we can supply carefully chosen stones, with a variety of colors, for both indoor and outdoor purposes and in tailored sizes.</p>
                     </div>
                     <div class="pl-10 hidden md:block w-10/12 md:w-4/12 pt-6 md:pt-0">
@@ -31,7 +31,7 @@
                 <div class="w-full md:w-7/12 sm:pl-8">
                     <h2 class="text-start text-2xl Acme mb-3 mt-8 font-bold">Our Vision</h2>
                     <p class="text-gray-600 text-base w-11/12 ml-4 h-56 overflow-scroll">We aim to continue to supply natural stones for new projects around the world since we have been providing building stones for many years in civil engineering. 
-                    We hope to be one of the top exporters of building stones in this regard. In all of our markets, AFAM Stone will be the distributor of choice for hand-selected unique blocks, tiles and slabs. Our vision is to be the industry leader in premium quality and to fulfill orders precisely according to customer specifications.
+                    We hope to be one of the top exporters of building stones in this regard. In all of our markets, AFAM Build will be the distributor of choice for hand-selected unique blocks, tiles and slabs. Our vision is to be the industry leader in premium quality and to fulfill orders precisely according to customer specifications.
                     </p>
                 </div>
             </div>

@@ -4,7 +4,7 @@
             <div class="w-full sm:w-5/12 py-6 pr-5 grid content-between">
                 <div>
                     <h3 class="Acme">About us</h3>
-                    <p class="text-base ml-4">We are group of specialists in field of stones and mining and besides we have many business partners in Europe and Asia which made communication easier with customers for us. AFAM Stone company is well known for being accessible, providing customized products with accuracy and being trustworthy.  </p>
+                    <p class="text-base ml-4">We are group of specialists in field of stones and mining and besides we have many business partners in Europe and Asia which made communication easier with customers for us. AFAM Build company is well known for being accessible, providing customized products with accuracy and being trustworthy.  </p>
                     <p class="text-base ml-4 mt-2">As the best source of natural stones, we can supply carefully chosen stones, with a variety of colors, for both indoor and outdoor purposes and in tailored sizes.</p>
                 </div>
                 

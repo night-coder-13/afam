@@ -76,9 +76,7 @@ const store = createStore({
     actions:{
       async GetCategory({commit}){
          try{
-            //  const response = await axios.get('http://192.168.1.102/afam-wp/wp-json/wl/v1/product_cat')
-            //  const response = await axios.get('http://192.168.1.100/afam-wp/wp-json/wl/v1/product_cat')
-             const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/product_cat')
+             const response = await axios.get('https://cor.afambuild.com/get-category')
              commit('GetCategory',response.data)
             //  console.log(response.data)
          }catch(error){
@@ -95,10 +93,9 @@ const store = createStore({
      },
       async GetArchive({commit},id){
          try{
-            //  const response = await axios.get('https//mehdi-abasian.ir/wp-json/wl/v1/archive/'+id)
-            //  const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/archive/'+id)
-             const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/archive/'+id)
+             const response = await axios.get('https://cor.afambuild.com/get-product/'+id)
              commit('GetArchive',response.data)
+            //  console.log(response.data)
          }catch(error){
              Swal.fire({
                  icon: 'warning',
@@ -113,9 +110,7 @@ const store = createStore({
      },
       async GetContentArchive({commit},id){
          try{
-            //  const response = await axios.get('https//mehdi-abasian.ir/wp-json/wl/v1/product_cat/'+id)
-            //  const response = await axios.get('http://localhost/afam-wp/wp-json/wl/v1/product_cat/'+id)
-             const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/product_cat/'+id)
+             const response = await axios.get('https://cor.afambuild.com/get-category-id/'+id)
              commit('GetContentArchive',response.data)
             //   console.log(response.data)
          }catch(error){
@@ -152,7 +147,7 @@ const store = createStore({
       async GetCatalog({commit}){
          try{
             
-             const response = await axios.get('http://panel.mehdi-abasian.ir/wp-json/wl/v1/catalog')
+             const response = await axios.get('https://cor.afambuild.com/catalog')
              commit('GetCatalog',response.data)
             //   console.log(response.data)
          }catch(error){

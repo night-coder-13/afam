@@ -16,7 +16,7 @@
         </div>
         <div class="h-16 grid content-center pl-10 md:pl-14">
             <ul class="flex gap-7 Acme text-md">
-                <li id="tab-team" class="tab cursor-pointer active" @click="movePage('team')">Our time</li>
+                <li id="tab-team" class="tab cursor-pointer active" @click="movePage('team')">Our team</li>
                 <li id="tab-partnership" class="tab cursor-pointer" @click="movePage('partnership')">Partnership</li>
                 <li id="tab-contact-us" class="tab cursor-pointer" @click="movePage('contact-us')">Contact us</li>
             </ul>

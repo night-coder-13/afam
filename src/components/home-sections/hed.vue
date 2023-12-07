@@ -1,7 +1,7 @@
 <template>
 
   <div class="bg-gray-100 shadow">
-    <nav id="hed" class="container px-6 py-4 mx-auto md:flex md:justify-center justify-between md:items-center">
+    <nav id="hed" class="container relative z-50 px-6 py-4 mx-auto md:flex md:justify-center justify-between md:items-center">
       <div class="flex md:hidden items-center justify-between">
         <router-link to="/" class="text-xl ml-1 sm:ml-8 font-bold nav-item md:text-2xl">
             <img src="../../assets/logoname.png" class="w-44" alt="">
@@ -38,7 +38,7 @@
             <template #content="{}" >
               <div class="px-4 py-2"> 
                 <p v-for="cat in category" :key="cat.id" class="text-gray-500 text-start capitalize ">
-                  <router-link :to="{name:'Archive',params:{id:cat.id}}" @click="changeArchive" v-text="cat.name"></router-link>
+                  <router-link :to="{name:'Archive',params:{id:cat.id}}" @click="changeArchive" v-text="cat.title"></router-link>
                 </p>
               </div>
             </template>
@@ -105,7 +105,7 @@
               </template>
             </Popper>
         </li>
-        <li  class="hidden md:block font-bold ">
+        <li class="hidden md:block font-bold ">
           <router-link to="/" class="text-xl ml-1 relative -top-4 font-bold md:text-2xl ">
             <img src="../../assets/logoname.png" class="w-52 " alt="">
           </router-link>
